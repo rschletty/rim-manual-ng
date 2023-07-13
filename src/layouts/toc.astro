@@ -1,0 +1,39 @@
+---
+const { title } = Astro.props.frontmatter || Astro.props;
+---
+<html>
+  <head>
+  <title>{title}</title>
+  </head>
+  <body>
+    <nav>
+		<ul>
+			<li><a href="../en/">Welcome</a></li>
+			<li><a href="../en/systemspecs">System Requirements</a></li>
+			<li><a href="../en/installation">Installation</a></li>
+			<li><a href="../en/gettingconnected">Getting Connected</a></li>
+			<li><a href="../en/workingwithsessions">Working within a Session</a></li>
+			<li><a href="../en/dashboard">RIM Dashboard</a></li>
+			<li><a href="../en/faq">Frequently Asked Questions</a></li>
+			<li><a href="../en/pricing">Pricing</a></li>
+			<li><a href="../en/changelog">Change Log</a></li>
+		</ul>
+	</nav>
+	<h1>{title}</h1>
+    <slot />
+  </body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
