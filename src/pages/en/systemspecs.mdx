@@ -1,0 +1,55 @@
+---
+layout: ../../layouts/toc.astro
+title: "System Requirements"
+author: "Jack Falejczyk - Pneuma Solutions"
+date: "13 Jul 2023"
+---
+{() => {
+  const getOperatingSystem = (() => {
+    if (typeof window === "undefined") {
+      // If the code is not running in the browser (e.g., server-side), return null - we don't want errors
+      return "don't know";
+    }
+
+        if (window.navigator.platform.indexOf("Win") != -1) {
+      return "Windows";
+    } else if (window.navigator.platform.indexOf("Mac") != -1) {
+      return "Mac";
+    } else {
+      return "Unknown";
+    }
+  })();
+
+  const platform = getOperatingSystem();
+
+  <p>In order to run Remote Incident Manager, your computer should meet or exceed the following minimum requirements</p>
+  if (platform === "Windows") {
+    return (
+      <>
+        <p>Windows Requirements:</p>
+        <ul>
+          <li>Windows 7 SP1 or later</li>
+          <li>Windows Server 2012 or later</li>
+          <li>At least 4GB of RAM</li>
+          <li>Admin privileges for initial installation (not required for automatic updates)</li>
+        </ul>
+      </>
+    );
+  }
+
+  else if (platform === "Mac") {
+    return (
+      <>
+        <p>Mac Requirements:</p>
+        <ul>
+          <li>Intel or Apple Silicon</li>
+          <li>Mac OS Ventura</li>
+          <li>At least 4GB of RAM</li>
+          <li>Admin privileges for initial installation (not required for automatic updates)</li>
+        </ul>
+      </>
+    );
+  }
+
+  return ("you are running " + getOperatingSystem); // Handle the case for "Unknown" or other platforms if needed
+}
