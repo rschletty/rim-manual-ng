@@ -10,10 +10,10 @@ date: "13 Jul 2023"
        //If the code is not running in the browser (e.g., server-side), return null - we don't want errors
       return null;
     }
-
-        if (window.navigator.platform.indexOf("Win") != -1) {
+let runnningOS=window.navigator.platform;
+        if (runnningOS.indexOf("Win") != -1) {
       return "Windows";
-    } else if (window.navigator.platform.indexOf("Mac") != -1) {
+    } else if (runnningOS.indexOf("Mac") != -1) {
       return "Mac";
     } else {
       return "Unknown";
