@@ -10,7 +10,7 @@ date: "13 Jul 2023"
        //If the code is not running in the browser (e.g., server-side), return null - we don't want errors
       return null;
     }
-let runnningOS=window.navigator.platform;
+let runningOS=window.navigator.platform;
         if (runnningOS.indexOf("Win") != -1) {
       return "Windows";
     } else if (runnningOS.indexOf("Mac") != -1) {
@@ -51,5 +51,5 @@ let runnningOS=window.navigator.platform;
     );
   }
 
-  return ("you are currently running " + getOperatingSystem); // Handle the case for "Unknown" or other platforms if needed
+  return ("you are currently running {runningOS}); // Handle the case for "Unknown" or other platforms if needed
 }}
