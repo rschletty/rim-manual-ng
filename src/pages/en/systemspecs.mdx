@@ -5,12 +5,13 @@ author: "Jack Falejczyk - Pneuma Solutions"
 date: "13 Jul 2023"
 ---
 {() => {
-  const getOperatingSystem = (() => {
-    if (typeof window === "undefined") {
+
+const getOperatingSystem = (() => {
+  const runningOS=window.navigator.platform;
+      if (typeof window === "undefined") {
        //If the code is not running in the browser (e.g., server-side), return null - we don't want errors
       return null;
     }
-let runningOS=window.navigator.platform;
         if (runnningOS.indexOf("Win") != -1) {
       return "Windows";
     } else if (runnningOS.indexOf("Mac") != -1) {
@@ -51,5 +52,5 @@ let runningOS=window.navigator.platform;
     );
   }
 
-  return ("you are currently running {runningOS}"); // Handle the case for "Unknown" or other platforms if needed
+  return ("you are currently running " + runningOS + " as far as we can tell"); // Handle the case for "Unknown" or other platforms if needed
 }}
