@@ -1,57 +1,57 @@
 ---
-layout: ../../layouts/toc.astro
 title: "System Requirements"
-author: "Jack Falejczyk - Pneuma Solutions"
-date: "13 Jul 2023"
 ---
-{() => {
-  
-const getOperatingSystem = (() => {
-      let oSystem=navigator.userAgent;
-      let osString="";
-      if (typeof window === "undefined") {
-       //If the code is not running in the browser (e.g., server-side), return null - we don't want errors
-      return null;
-    }
-        if (oSystem.search("Win") !== -1) {
-      osString = "Windows";
-    } else if (oSystem.search("Mac") !== -1) {
-      osString = "Mac";
+
+import React from 'react';
+
+const SystemRequirementsPage = () => {
+  const oSystem = navigator.userAgent;
+
+  const getOperatingSystem = () => {
+    if (oSystem.search(/Win/i) !== -1) {
+      return 'Windows';
+    } else if (oSystem.search(/Mac/i) !== -1) {
+      return 'Mac';
     } else {
-      return "Unknown";
+      return 'Unknown';
     }
-return osString;
-  })();
+  };
 
-  
-  <p>In order to run Remote Incident Manager, your computer should meet or exceed the following minimum requirements</p>
-  if (getOperatingSystem === "Windows") {
-    return (
-      <>
-        <p>Windows Requirements:</p>
-        <ul>
-          <li>Windows 7 SP1 or later</li>
-          <li>Windows Server 2012 or later</li>
-          <li>At least 4GB of RAM</li>
-          <li>Admin privileges for initial installation (not required for automatic updates)</li>
-        </ul>
-      </>
-    );
-  }
+  const operatingSystem = getOperatingSystem();
 
-  else if (getOperatingSystem=== "Mac") {
-    return (
-      <>
-        <p>Mac Requirements:</p>
-        <ul>
-          <li>Intel or Apple Silicon</li>
-          <li>Mac OS Ventura</li>
-          <li>At least 4GB of RAM</li>
-          <li>Admin privileges for initial installation (not required for automatic updates)</li>
-        </ul>
-      </>
-    );
-  }
+  return (
+    <>
+      <h1>{operatingSystem} System Requirements</h1>
 
-  return ("That should be the system requirements for " + getOperatingSystem + " as far as we can tell"); // Handle the case for "Unknown" or other platforms if needed
-}}
+      {operatingSystem === 'Windows' && (
+        <>
+          <h2>Windows Requirements:</h2>
+          <ul>
+            <li>Windows 7 SP1 or later</li>
+            <li>Windows Server 2012 or later</li>
+            <li>At least 4GB of RAM</li>
+            <li>Admin privileges for initial installation (not required for automatic updates)</li>
+          </ul>
+        </>
+      )}
+
+      {operatingSystem === 'Mac' && (
+        <>
+          <h2>Mac Requirements:</h2>
+          <ul>
+            <li>Intel or Apple Silicon</li>
+            <li>Mac OS Ventura</li>
+            <li>At least 4GB of RAM</li>
+            <li>Admin privileges for initial installation (not required for automatic updates)</li>
+          </ul>
+        </>
+      )}
+
+      {operatingSystem === 'Unknown' && (
+        <p>We were not able to produce system requirments, you may be running an operating system RIM does not suppor, or there is an error with the rendering of the page. Sorry!</p>
+      )}
+    </>
+  );
+};
+
+export default SystemRequirementsPage;
