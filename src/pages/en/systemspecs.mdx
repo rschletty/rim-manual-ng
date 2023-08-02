@@ -5,12 +5,12 @@ title: "System Requirements"
 import React from 'react';
 
 const SystemRequirementsPage = () => {
-  const oSystem = navigator.userAgent;
+  const platform= navigator.userAgent;
 
   const getOperatingSystem = () => {
-    if (oSystem.search(/Win/i) !== -1) {
+    if (platform.search(/Win/i) !== -1) {
       return 'Windows';
-    } else if (oSystem.search(/Mac/i) !== -1) {
+    } else if (platform.search(/Mac/i) !== -1) {
       return 'Mac';
     } else {
       return 'Unknown';
@@ -21,8 +21,8 @@ const SystemRequirementsPage = () => {
 
   return (
     <>
-      <h1>{operatingSystem} System Requirements</h1>
-
+      <h1>Remote Incident Manager System Requirements</h1>
+<p>In order to run Remote Incident Manager, your system must meet or exceed the following requirements:
       {operatingSystem === 'Windows' && (
         <>
           <h2>Windows Requirements:</h2>
@@ -48,7 +48,7 @@ const SystemRequirementsPage = () => {
       )}
 
       {operatingSystem === 'Unknown' && (
-        <p>We were not able to produce system requirments, you may be running an operating system RIM does not suppor, or there is an error with the rendering of the page. Sorry!</p>
+        <p>I'm not sure what you're running.</p>
       )}
     </>
   );
