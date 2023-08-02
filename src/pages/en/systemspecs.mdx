@@ -5,12 +5,12 @@ title: "System Requirements"
 import React from 'react';
 
 const SystemRequirementsPage = () => {
-  const platform= navigator.userAgent;
+  const userAgent = navigator.userAgent;
 
   const getOperatingSystem = () => {
-    if (platform.search(/Win/i) !== -1) {
+    if (userAgent.search(/Win/i) !== -1) {
       return 'Windows';
-    } else if (platform.search(/Mac/i) !== -1) {
+    } else if (userAgent.search(/Mac/i) !== -1) {
       return 'Mac';
     } else {
       return 'Unknown';
@@ -21,35 +21,35 @@ const SystemRequirementsPage = () => {
 
   return (
     <>
-      <h1>Remote Incident Manager System Requirements</h1>
-<p>In order to run Remote Incident Manager, your system must meet or exceed the following requirements:
-      {operatingSystem === 'Windows' && (
-        <>
-          <h2>Windows Requirements:</h2>
-          <ul>
-            <li>Windows 7 SP1 or later</li>
-            <li>Windows Server 2012 or later</li>
-            <li>At least 4GB of RAM</li>
-            <li>Admin privileges for initial installation (not required for automatic updates)</li>
-          </ul>
-        </>
-      )}
+      <h1>{Remote Incident Manager} System Requirements</h1>
 
-      {operatingSystem === 'Mac' && (
-        <>
-          <h2>Mac Requirements:</h2>
-          <ul>
-            <li>Intel or Apple Silicon</li>
-            <li>Mac OS Ventura</li>
-            <li>At least 4GB of RAM</li>
-            <li>Admin privileges for initial installation (not required for automatic updates)</li>
-          </ul>
-        </>
-      )}
-
-      {operatingSystem === 'Unknown' && (
-        <p>I'm not sure what you're running.</p>
-      )}
+      {{
+        Windows: (
+          <>
+            <h2>Windows Requirements:</h2>
+            <ul>
+              <li>Windows 7 SP1 or later</li>
+              <li>Windows Server 2012 or later</li>
+              <li>At least 4GB of RAM</li>
+              <li>Admin privileges for initial installation (not required for automatic updates)</li>
+            </ul>
+          </>
+        ),
+        Mac: (
+          <>
+            <h2>Mac Requirements:</h2>
+            <ul>
+              <li>Intel or Apple Silicon</li>
+              <li>Mac OS Ventura</li>
+              <li>At least 4GB of RAM</li>
+              <li>Admin privileges for initial installation (not required for automatic updates)</li>
+            </ul>
+          </>
+        ),
+        Unknown: (
+          <p>Sorry, system requirements for your operating system are not available.</p>
+        )
+      }[operatingSystem]}
     </>
   );
 };
