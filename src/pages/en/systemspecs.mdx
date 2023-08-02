@@ -5,7 +5,6 @@ author: "Jack Falejczyk - Pneuma Solutions"
 date: "13 Jul 2023"
 ---
 {() => {
-const runningOS = navigator.userAgent;
   
 const getOperatingSystem = (() => {
       let oSystem=navigator.userAgent;
@@ -15,7 +14,7 @@ const getOperatingSystem = (() => {
       return null;
     }
         if (oSystem.search("Win") !== -1) {
-      oSystem = "Windows";
+      osString = "Windows";
     } else if (oSystem.search("Mac") !== -1) {
       osString = "Mac";
     } else {
