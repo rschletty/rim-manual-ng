@@ -5,10 +5,9 @@ title: "System Requirements"
 
 import React from 'react';
 import platform from '../components/runningPlatform';
-      <>
 const platformComponent = () => {
   return (
-    <div>
+    <>
       {platform === 'Windows' && (
         <div>
           {/* Content for Windows */}
@@ -37,8 +36,8 @@ const platformComponent = () => {
           <p>Sorry, I am having difficulties identifying what platform you are running.</p>
         </div>
       )}
-    </div>
+    </>
   );
 };
-</>
+
 export default MyComponent;
