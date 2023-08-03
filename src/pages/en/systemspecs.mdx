@@ -1,57 +1,44 @@
 ---
+layout: ../../layouts/toc.astro
 title: "System Requirements"
 ---
 
 import React from 'react';
-
-const SystemRequirementsPage = () => {
-  const userAgent = navigator.userAgent;
-
-  const getOperatingSystem = () => {
-    if (userAgent.search(/Win/i) !== -1) {
-      return 'Windows';
-    } else if (userAgent.search(/Mac/i) !== -1) {
-      return 'Mac';
-    } else {
-      return 'Unknown';
-    }
-  };
-
-  const operatingSystem = getOperatingSystem();
-
+import platform from '../components/runningPlatform.js';
+      <h1>System Requirements</h1>
+const platformComponent = () => {
   return (
-    <>
-      <h1>{Remote Incident Manager} System Requirements</h1>
-
-      {{
-        Windows: (
-          <>
-            <h2>Windows Requirements:</h2>
-            <ul>
+    <div>
+      {platform === 'Windows' && (
+        <div>
+          {/* Content for Windows */}
+<ul>
               <li>Windows 7 SP1 or later</li>
               <li>Windows Server 2012 or later</li>
               <li>At least 4GB of RAM</li>
               <li>Admin privileges for initial installation (not required for automatic updates)</li>
             </ul>
-          </>
-        ),
-        Mac: (
-          <>
-            <h2>Mac Requirements:</h2>
+                    </div>
+      )}
+      {platform === 'Mac' && (
+        <div>
+          {/* Content for Mac */}
             <ul>
               <li>Intel or Apple Silicon</li>
               <li>Mac OS Ventura</li>
               <li>At least 4GB of RAM</li>
               <li>Admin privileges for initial installation (not required for automatic updates)</li>
             </ul>
-          </>
-        ),
-        Unknown: (
-          <p>Sorry, system requirements for your operating system are not available.</p>
-        )
-      }[operatingSystem]}
-    </>
+        </div>
+      )}
+      {platform === 'Unknown' && (
+        <div>
+          {/* Content for unknown platforms */}
+          <p>Sorry, I am having difficulties identifying what platform you are running.</p>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default SystemRequirementsPage;
+export default MyComponent;
