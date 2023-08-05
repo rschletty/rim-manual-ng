@@ -5,6 +5,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'manual-ng.getrim.app',
+  site: 'https://manual-ng.getrim.app',
   integrations: [mdx(), react()]
 });
