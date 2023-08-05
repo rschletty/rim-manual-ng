@@ -83,7 +83,7 @@ The remote accessibility feature is now compatible with NVDA 2023.1.
 
 ## 3.1.34
 ### Mac
-When a Mac controller connects to a Windows target that's not running a screen reader, you can now run the remote accessibility module on the Windows target and get speech output on the Mac controller. Note that you still need to use NVDA keyboard commands when interacting with the Windows target, not VoiceOver commands, and we're using the NVDA laptop keyboard layout. 
+When a Mac controller connects to a Windows target that's not running a screen reader, you can now run the remote accessibility module on the Windows target and get speech output on the Mac controller. Note that you still need to use NVDA keyboard commands when interacting with the Windows target, not VoiceOver commands, and we're using the NVDA laptop keyboard layout by default. 
 ## 3.1.33
 In response to user feedback, we removed the sound effect when displaying notifications about the status of a remote session.
 ## 3.1.32

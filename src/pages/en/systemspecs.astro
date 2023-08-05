@@ -1,12 +1,16 @@
 ---
-import Layout from '../../layouts/toc.astro';
 title: "System Requirements"
+import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-<h1>System Requirements</h1>
-<p>In order to run Remote Incident Manager, your system must meed or exceed the following requirements:</p>
-<div id="windows-requirements" style="display: none;">
+  <Layout title="System Requirements">
+<p>In order to run Remote Incident Manager, your system must meet or exceed the following requirements:</p>
+<div id="platformButtons">
+<button id="showWindows">Switch to Windows requirements</button>
+<button id="showMac">Switch to Mac OS requirements</button>
+</div>
+<div class="win" style="display: none;">
   <ul>
         <li>Windows 7 SP1 or later</li>
         <li>Windows Server 2012 or later</li>
@@ -14,7 +18,7 @@ import react from "react";
         <li>Admin privileges for initial installation (not required for automatic updates)</li>
       </ul>
     </div>
-      <div id="mac-requirements" style="display: none;">
+      <div class="mac" style="display: none;">
         <ul>
         <li>Intel or Apple Silicon</li>
         <li>Mac OS Ventura</li>
@@ -23,6 +27,6 @@ import react from "react";
       </ul>
     </div>
       <div id="unknown-content" style="display: none">
-        <p>Sorry, I am having difficulties identifying what platform you are running.</p>
+        <p>Please select an operating system using the above buttons.</p>
     </div>
-  
+</Layout>
