@@ -1,7 +1,7 @@
 ---
 import { languages } from '../i18n/ui';
 ---
-<html>
+
   <button id="changeLang">Change Language</button>
 <ul id="langMenu" style="display: none";>
   {Object.entries(languages).map(([lang, label]) => (
@@ -10,7 +10,7 @@ import { languages } from '../i18n/ui';
     </li>
   ))}
 </ul>
-</html>
+
 <script>
 function ariaAlert(message) {
     const alertDiv = document.createElement('div');
