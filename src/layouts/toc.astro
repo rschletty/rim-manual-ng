@@ -1,22 +1,26 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const { title } = Astro.props.frontmatter || Astro.props;
 ---
-<html>
+<html lang={lang}>
   <head>
   <title>{title}</title>
   </head>
   <body>
     <nav>
 		<ul>
-			<li><a href="../">Welcome</a></li>
-			<li><a href="../../en-US/systemspecs">System Requirements</a></li>
-			<li><a href="../../en-US/installation">Installation</a></li>
-			<li><a href="../../en-US/gettingconnected">Getting Connected</a></li>
-			<li><a href="../../en-US/workingwithsessions">Working within a Session</a></li>
-			<li><a href="../../en-US/dashboard">RIM Dashboard</a></li>
-			<li><a href="../../en-US/faq">Frequently Asked Questions</a></li>
-			<li><a href="../../en-US/pricing">Pricing</a></li>
-			<li><a href="../../en-US/changelog">Change Log</a></li>
+			<li><a href="../">{t('nav.welcome')]</a></li>
+			<li><a href={`../../${lang}/systemspecs`}>{t('nav.systemspecs')}</a></li>
+			<li><a href={`../../${lang}/installation`}>{t('nav.installation')}</a></li>
+			<li><a href={`../../${lang}/gettingconnected`}>{t('nav.gettinconnected')}</a></li>
+			<li><a href={`../../${lang}/workingwithsessions`}>{t('nav.workingwithsessions')}</a></li>
+
+			<li><a href={`../../${lang}/dashboard`}>{t('nav.dashboard')}</a></li>
+			<li><a href={`../../${lang}/faq`}>{t('nav.faq')}</a></li>
+			<li><a href={`../../${lang}/pricing`}>{t('nav.pricing')}</a></li>
+			<li><a href={`../../${lang}/changelog`}>{t('nav.changelog')}</a></li>
 		</ul>
 	</nav>
 <main>
