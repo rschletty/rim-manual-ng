@@ -5,119 +5,119 @@ import react from "react";
 <script src="../../components/runningPlatform.js"></script>
 <Layout title="Working within a Session">
     <div id="platformButtons">
-        <button id="showWindows">Switch to Windows Installation Instructions</button>
-        <button id="showMac">Switch to Mac OS Installation Instructions</button>
+        <button id="showWindows">Instrucciones para cambiar a Windows</button>
+        <button id="showMac">Instrucciones para cambiar a Mac OS</button>
         </div>
-<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Things to Know before you Begin</a></h2>
-<p>A few things will happen immediately after the connection is established.</p>
+<h2 id="cosas-a-saber-antes-de-empezar"><a class="header" href="#cosas-a-saber-antes-de-empezar">Cosas a saber antes de empezar</a></h2>
+<p>Inmediatamente después de que se establezca la conexión ocurrirán algunas cosas.</p> <ul>
 <ul>
-<li>The remote control window for the session will appear.</li>
-<li>You will be informed about the status of the running screen reader, or lack thereof, on the client's machine.</li>
-<li>If the client is running a screen reader, a toast notification 
-informing the user that the remote session has begun will provide 
-instant confirmation that the user's system audio is working.</li>
-<li>A Mac target will pop up the keyboard setup assistant if this is the first time a controller has connected to it.
+<li>Aparecerá la ventana de control remoto de la sesión.</li> <li>Se le informará de que ha iniciado la sesión
+<li>Se le informará del estado del lector de pantalla en ejecución, o de la ausencia del mismo, en el equipo del cliente.</li> <li>Se le informará del estado del lector de pantalla en ejecución, o de la ausencia del mismo, en el equipo del cliente
+<li>Si el cliente está ejecutando un lector de pantalla, aparecerá una notificación tostada
+informando al usuario de que la sesión remota ha comenzado proporcionará
+confirmación instantánea de que el audio del sistema del usuario está funcionando.</li> <li>Si el cliente está ejecutando un lector de pantalla, aparecerá una notificación de tostado
+<li>Un objetivo Mac mostrará el asistente de configuración del teclado si es la primera vez que un controlador se conecta a él.
     <ul>
-    <li>This is for the Karabiner virtual keyboard, which listens to keyboard commands sent to it by a controller.</li>
-    <li>As such, you will want to walk the target computer through the setup
-     assistant, because it will be listening for remote keyboard presses in 
-    the identification process, not the Mac's own keyboard.</li>
+    <li>Esto es para el teclado virtual Karabiner, que escucha los comandos de teclado que le envía un controlador.</li> <li>Para el teclado virtual Karabiner, que escucha los comandos de teclado que le envía un controlador
+    <li>Como tal, usted querrá caminar el equipo de destino a través de la configuración
+     asistente de configuración, ya que estará escuchando las pulsaciones de teclado remoto en
+    el proceso de identificación, no el propio teclado del Mac.</li>
     </ul>
-    <li>Last but not least, all keyboard and mouse input will immediately be
- directed to the target computer. To direct control back to your 
-machine, do either of the following:
+    <li>Por último, pero no menos importante, todas las entradas de teclado y ratón serán inmediatamente
+ dirigidas al ordenador de destino. Para dirigir el control de nuevo a su
+máquina, realice una de las siguientes acciones:
 <ul class="winCmd" style="display: none;">
-<li>press Windows+Shift+Backspace.</li>
-<li>right click the RIM window's title bar.</li>
-<li>left click the RIM icon.</li>
+<li>presione Windows+Mayús+Retroceso.</li>
+<li>haga clic con el botón derecho en la barra de título de la ventana del RIM.</li>
+<li>haga clic con el botón izquierdo en el icono de RIM.</li>
 </ul>
 <ul class="macCmd" style="display: none;">
-    <li>press Option+Shift+Backspace.</li>
-    <li>Click on the large RIM icon in the upper left hand corner of the session window.</li>
+    <li>Presione Opción+Mayús+Retroceso.</li>
+    <li>Haga clic en el icono grande de RIM en la esquina superior izquierda de la ventana de sesión.</li>
     </ul>
     
 </ul>
-<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Remote Control Zone</a></h2>
-<p>At this point, you're all set to perform whatever tasks need doing on
- the client side. Should you need to switch back to controlling your own
- machine, bring up the RIM menu, then select the "Minimize session" 
-option. You will be taken back to your machine until you switch back 
-into the session window or press Windows+Shift+Backspace again. When you
- go back into the session window, keyboard and mouse input will once again be 
-directed to the client computer.<br>
-Once you're done, either the controller or the target can go into the 
-RIM menu and choose the "Disconnect Session" option. When the session 
-ends, the target machine will get a toast notification informing them of
- this.</p>
-<h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">The RIM Menu</a></h2>
-<p>As mentioned earlier, accessing the RIM menu directs you back to your
- machine. There are a number of options in this menu. They include:</p>
+<h2 id="zona-control-remoto"><a class="header" href="#zona-control-remoto">Zona de Control Remoto</a></h2>
+<p>En este punto, ya está todo listo para realizar cualquier tarea que necesite hacer en
+ el lado del cliente. Si necesita volver a controlar su propia máquina
+ máquina, abra el menú RIM y seleccione la opción "Minimizar sesión"
+minimizar sesión". Volverá a su máquina hasta que vuelva a cambiar
+a la ventana de sesión o vuelva a pulsar Windows+Mayús+Retroceso. Cuando
+ cuando vuelva a la ventana de la sesión, el teclado y el ratón se dirigirán de nuevo al ordenador cliente
+al ordenador cliente.<br>
+Una vez que haya terminado, el controlador o el objetivo pueden ir al menú
+Menú RIM y elegir la opción "Desconectar sesión". Cuando la sesión
+finaliza, el equipo de destino recibirá una notificación tostada informándole de
+ esto.</p>
+<h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">El menú RIM</a></h2>
+<p>Como se ha mencionado anteriormente, acceder al menú RIM te dirige de nuevo a tu
+ máquina. Hay una serie de opciones en este menú. Entre ellas se encuentran:</p>
 <ul>
-<li>Update RIM on Target: Forces an update of RIM on the target computer
+<li>Actualizar RIM en el objetivo: Fuerza una actualización de RIM en el ordenador de destino
 <ul>
-<li>This option shows if the target's machine is running an older version of RIM</li>
+<li>Esta opción muestra si el equipo de destino está ejecutando una versión antigua de RIM</li>
 </ul>
-<li>Minimize Session: brings control back to your machine as described above
+<li>Minimizar sesión: devuelve el control a su máquina como se ha descrito anteriormente
 <ul>
-<li>You can also use the shortcut
-    <em class="winCmd" style="display: none;">Windows+Shift+M</em>
-    <em class="macCmd" style="display: none;">Option+Shift+M</em>
-         to minimize the session.</li>
+<li>También puede utilizar el acceso directo
+    <em class="winCmd" style="display: none;">Windows+Mayús+M</em>
+    <em class="macCmd" style="display: none;">Opción+Mayús+M</em>
+         para minimizar la sesión.</li> 
 </ul>
-<li>Transfer File to Target: Appears if a file is on the clipboard.
+<li>Transferir archivo al destino: Aparece si hay un archivo en el portapapeles.
 <ul>
-<li>Although this alternate method of completing a file transfer is 
-always available, it is only necessary for transferring files to Mac 
-targets.</li>
+<li>Aunque este método alternativo para completar una transferencia de archivos está
+siempre disponible, sólo es necesario para transferir archivos a Mac
+objetivos.</li>
 </ul>
-<li>Flip Session: Allows your client to remote control your machine and 
-hear its audio. As the original controller, you can flip the session 
-back by selecting this option a second time.
+<li>Flip Session: Permite a su cliente controlar remotamente su máquina y
+escuchar su audio. Como controlador original, puede invertir la sesión
+seleccionando esta opción por segunda vez.
 <ul>
-<li>You can also use the keyboard shortcut
-    <em class="winCmd" style="display: none;">Windows+Shift+F</em>
-    <em class="macCmd" style="display: none;">Option+Shift+F</em>
-    to flip the session back and forth.</li>
+<li>También puede utilizar el atajo de teclado
+    <em class="winCmd" style="display: none;">Windows+Mayús+F</em>
+    <em class="macCmd" style="display: none;">Opción+Mayús+F</em>
+    para invertir la sesión.</li>
 </ul>
-<li>Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
+<li>Iniciar/detener conversación de voz: Te permite activar o desactivar la conversación de voz para tu sesión.
 <ul>
-<li>Note that this option is unavailable in unattended sessions as they 
-do not support voice chat. However, prompted sessions still support 
-this.</li>
+<li>Tenga en cuenta que esta opción no está disponible en sesiones desatendidas ya que éstas
+no admiten el chat de voz. Sin embargo, las sesiones activadas aún admiten
+esto.</li>
 </ul>
-<li>Start Remote Accessibility: This option appears when no screen 
-reader is running on the remote computer. This will enable speech on 
-your end, but the client will not need to worry about hearing speech.</li>
+<li>Iniciar accesibilidad remota: Esta opción aparece cuando no hay ningún lector de pantalla
+lector de pantalla se está ejecutando en el equipo remoto. Esto habilitará el habla en
+su extremo, pero el cliente no tendrá que preocuparse por escuchar el habla.</li>
 <ul>
-<li>If a screen reader (including Remote Accessibility) is running, this option turns into a force quit for the running screen reader. This is useful when a target's screen reader stops responding to the extent you are unable to restart it normally.</li>
+<li>Si se está ejecutando un lector de pantalla (incluida la Accesibilidad Remota), esta opción se convierte en un cierre forzado para el lector de pantalla en ejecución. Esto es útil cuando el lector de pantalla de un objetivo deja de responder hasta el punto de que no puede reiniciarlo normalmente.</li> <li>Si el lector de pantalla de un objetivo deja de responder hasta el punto de que no puede reiniciarlo normalmente
 </ul>
-<li>Reboot and Reconnect: Allows you to reboot the computer and automatically reconnect the session.</li>
+<li>Reiniciar y volver a conectar: Le permite reiniciar el ordenador y volver a conectar automáticamente la sesión.</li> <li>Puede reiniciar el ordenador y volver a conectar automáticamente la sesión
 <ul>
-    <li>Note that a Mac target cannot start RIM pre-login due to platform limitations, notably FileVault.</li>
-    <li>As such, RIM will reconnect once the user logs in.</li>
+    <li>Tenga en cuenta que un objetivo Mac no puede iniciar el preinicio de sesión de RIM debido a las limitaciones de la plataforma, en particular FileVault.</li> <li>Por lo tanto, RIM no puede reiniciar la sesión
+    <li>Como tal, RIM se reconectará una vez que el usuario inicie sesión.</li>
     </ul>
-        <li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.</li>
+        <li>Enviar Control+Alt+Supr: Envía esta combinación de teclas a la máquina remota.</li> <li>Enviar Control+Alt+Supr
         <ul>
-            <li>An equivalent for this option is not yet implemented for Mac targets.</li>
+            <li>Aún no se ha implementado un equivalente para esta opción en los objetivos Mac.</li> <li>Enviar Control+Alt+Supr: envía esta pulsación de tecla a la máquina remota
             </ul>
-<li>Request Unattended or Prompted Access: Allows you to send a request 
-for unattended access to the client computer. This is useful if you are a
- sysadmin and need to perform routine maintenance, or even for something
- as simple as controlling your home machine while on the go.</li>
-<li>Lock the Target Machine: Performs the equivalent of Windows+L.</li>
-<li>View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:
+<li>Solicitar acceso desatendido o solicitado: Permite enviar una solicitud
+de acceso desatendido al ordenador cliente. Esto es útil si usted es un
+ sysadmin y necesita realizar mantenimiento de rutina, o incluso para algo
+ tan simple como controlar su máquina doméstica mientras está de viaje.</li> <li>Bloquear la máquina de destino
+<li>Bloquear el equipo de destino: Realiza el equivalente a Windows+L.</li>
+<li>Ver detalles de conexión: Proporciona información detallada sobre su conexión, así como la máquina de destino. La información incluye:
 <ul>
-<li>Connection statistics</li>
-<li>Information about the computer, including operating system version, available ram, etc.</li>
-<li>Running processes (Windows targets)</li>
-<li>Installed packages(Windows targets)</li>
+<li>Estadísticas de la conexión</li>
+<li>Información sobre el equipo, incluida la versión del sistema operativo, la memoria RAM disponible, etc.</li> <li>Procesos en ejecución (equipos Windows)
+<li>Procesos en ejecución (objetivos Windows)</li>
+<li>Paquetes instalados(objetivos Windows)</li>
 </ul>
-<li>Disconnect Session: Terminates the session.
+<li>Desconectar sesión: Finaliza la sesión.
 <ul>
-<li>Remember that this option is available to both sides of the session.</li>
-<li>This is also possible via the keyboard command
-    <em class="winCmd" style="display: none;">Windows+Shift+D.</em>
-    <em class="macCmd" style="display: none;">Option+Shift+D.</em>
+<li>Recuerde que esta opción está disponible para ambos lados de la sesión.</li> <li>Desconexión de la sesión
+<li>También es posible mediante el comando de teclado
+    <em class="winCmd" style="display: none;">Windows+Mayúsculas+D.</em>
+    <em class="macCmd" style="display: none;">Opción+Mayúsculas+D.</em>
 </li>
 </ul>
 </ul>
@@ -128,24 +128,23 @@ for unattended access to the client computer. This is useful if you are a
 <li>Select the file(s) and/or folder(s) you want to transfer using your file manager.</li>
 <li>Copy the selected contents to the clipboard in the usual way. You 
 will receive a notification that a file is ready to be transferred. You 
-have two options.
+have two options.</li>li>
 <ol>
-<li>If the target is a Mac
+<li>If the target is a Mac</li>
 <ol>
 <li>Activate the RIM session menu, and click on the "Transfer File to Target" option.</li>
 <li>Upon completion of the transfer, the target Mac will generate a 
 temporary directory containing the transferred contents. These should 
 then be copied and pasted to their intended directories.</li>
 </ol>
-</li>
-<li>If the target is a Windows machine:
+<li>If the target is a Windows machine:</li>
 <ol>
 <li>Switch back to the remote session, and locate the folder on the target machine where you wish to paste the content.</li>
 <li>Last but not least, paste as you normally would.</li>
 </ol>
-</li>
+
 </ol>
-</li>
+
 </ol>
 <!-- end -->
 <p>Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.</p>
