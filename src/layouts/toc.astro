@@ -51,8 +51,8 @@ const { title } = Astro.props.frontmatter || Astro.props;
 			document.body.removeChild(alertDiv);
 		}, 1000);
 	}
-	document.getElementById('changeLanguageBtn').addEventListener('click', () => {
-		const languageList = document.getElementById('languageList');
+	document.getElementById('changeLang').addEventListener('click', () => {
+		const languageList = document.getElementById('langMenu');
 		if (languageList.style.display === 'none') {
 		  languageList.style.display = 'block';
 		  ariaAlert("Select your language.");
