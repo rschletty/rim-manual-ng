@@ -4,9 +4,24 @@ import Card from '../components/Card.astro';
 		---
 ---
 ---
-<meta http-equiv="refresh" content="0;url=en/" />
+<!-- meta http-equiv="refresh" content="0;url=en/" / -->
 <Layout title="Welcome to Astro.">
-	<main>
+	<script>
+		// Function to get the user's preferred language so we can show them the right manual
+		function getUserLanguage() {
+		  return navigator.language || navigator.userLanguage;
+		}
+    // And now we redirect to the appropriate URL.
+    function redirectToLanguage() {
+      var userLanguage = getUserLanguage();
+      var redirectURL = userLanguage + "/";
+      window.location.href = redirectURL;
+    }
+
+    // Redirect on page load
+    redirectToLanguage();
+  </script>
+		<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
