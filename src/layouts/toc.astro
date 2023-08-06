@@ -1,5 +1,5 @@
 ---
-import footer from '../components/footer.astro';
+import bottomNav from '../components/bottomNav.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -29,7 +29,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
     <slot />
 </main>
 <footer>
-	<footer />
+	<bottomNav />
 </footer>
   </body>
 </html>
