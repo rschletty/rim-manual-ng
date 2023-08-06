@@ -13,8 +13,11 @@ import Card from '../components/Card.astro';
 		}
     // And now we redirect to the appropriate URL.
     function redirectToLanguage() {
-      var userLanguage = getUserLanguage();
-      var redirectURL = userLanguage + "/";
+    var userLanguage = getUserLanguage();
+	var langForNow = "en-US";
+//      var redirectURL = userLanguage + "/";
+      var redirectURL = langForNow + "/";
+
       window.location.href = redirectURL;
     }
 
