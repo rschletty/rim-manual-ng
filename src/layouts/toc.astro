@@ -1,6 +1,7 @@
 ---
-import bottomNav from '../components/bottomNav';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { title } = Astro.props.frontmatter || Astro.props;
@@ -29,7 +30,38 @@ const { title } = Astro.props.frontmatter || Astro.props;
     <slot />
 </main>
 <footer>
-	<bottomNav />
+	<button id="changeLang">Change Language</button>
+	<ul id="langMenu" style="display: none";>
+	  {Object.entries(languages).map(([lang, label]) => (
+		<li>
+		  <a href={`/${lang}/`}>{label}</a>
+		</li>
+	  ))}
+	</ul>
+	
+	<script>
+	function ariaAlert(message) {
+		const alertDiv = document.createElement('div');
+		alertDiv.setAttribute('role', 'alert');
+		alertDiv.textContent = message;
+		alertDiv.style.position = 'absolute';
+		alertDiv.style.left = '-9999px';
+		document.body.appendChild(alertDiv);
+		setTimeout(() => {
+			document.body.removeChild(alertDiv);
+		}, 1000);
+	}
+	document.getElementById('changeLanguageBtn').addEventListener('click', () => {
+		const languageList = document.getElementById('languageList');
+		if (languageList.style.display === 'none') {
+		  languageList.style.display = 'block';
+		  ariaAlert("Select your language.");
+		} else {
+		  languageList.style.display = 'none';
+		  ariaAlert("Keeping your language as is.");
+		}
+	  });
+	  </script>
 </footer>
   </body>
 </html>
