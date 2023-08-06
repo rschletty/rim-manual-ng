@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/toc.astro';
+import react from "react";
+---
+<script src="../../components/runningPlatform.js"></script>
+<Layout title="Installation">
+<p>How you acquire and install Remote Incident Manager depends on your 
+    use case and configuration, but in any case the process is quite 
+    straight forward.</p>
+    <div id="platformButtons">
+        <button id="showWindows">Switch to Windows Installation Instructions</button>
+        <button id="showMac">Switch to Mac OS Installation Instructions</button>
+        </div>
+            <div class="win" style="display: none;">
+<h2 id="typical-installation-for-individuals"><a class="header" href="#typical-installation-for-individuals">Typical Installation for Individuals</a></h2>
+<p>There is only one installation package to use, whether you are offering or receiving assistance.</p>
+<ol>
+<li><a href="https://download.pneumasolutions.com/rim/rimsetup.exe">Download Remote Incident Manager</a></li>
+<li>Run the downloaded file.</li>
+<li>If you have user account control enabled, press Alt+Y to approve the installation.</li>
+<li>Once the file is launched, the installation will automatically 
+commence. There are no next buttons to worry about. Just sit back, 
+relax, and let it do its thing. Within seconds, the program will be 
+installed and will launch automatically.</li>
+</ol>
+<p>That's all there is to it! A desktop shortcut will be automatically 
+created to aid in subsequent launches of RIM. Additionally, RIM sets up a
+ multipurpose global hotkey (<em>Windows+Shift+Backspace</em>) which, among other things, automatically launches the program from wherever you are.</p>
+<h2 id="unattended-access-installer"><a class="header" href="#unattended-access-installer">Unattended Access Installer</a></h2>
+<p>If the person providing assistance has provided you a custom 
+installer, you will be advised of this when the installer launches. This
+ is because this installer will automatically configure RIM for what is 
+known as unattended access. This is what will allow the person helping 
+you to initiate a session with your computer without you having to enter
+ a keyword. We will cover unattended access indepth later on in this 
+manual.</p>
+<h2 id="silent-installation"><a class="header" href="#silent-installation">Silent Installation</a></h2>
+<p>You'll want to do this when deploying RIM to multiple machines. Simply use the <em>/S</em> command line parameter in your deployment script. Note that it is case-sensitive, so a capital S is required.</p>
+<h2 id="additional-considerations-for-windows-servers"><a class="header" href="#additional-considerations-for-windows-servers">Additional Considerations for Windows Servers</a></h2>
+<p>To install RIM on your Windows Server, connect to the server via RDP.
+ In order to get the most stable connection experience, we recommend 
+using the Remote Desktop app from the Microsoft Store.</p>
+<h3 id="obtaining-sound-and-running-narrator"><a class="header" href="#obtaining-sound-and-running-narrator">Obtaining Sound and running Narrator</a></h3>
+<p>In order to obtain sound, do the following once connected:</p>
+<ol>
+<li>Press windows key+r.</li>
+<li>Type cmd and hit enter. Wait about ten seconds.</li>
+<li>Type:<br>
+<code class="hljs">net start audiosrv</code><br>
+and hit enter.</li>
+<li>Now, press CTRL+Windows+Enter to enable Narrator. If everything worked properly, you should get speech.</li>
+</ol>
+<p>You can now follow the install procedure as described above.<br>
+Please note that if you need sound for subsequent connections via RIM, 
+you will need to install a virtual sound output device on your server. 
+The free version of <a href="http://virtualaudiocable.org/download/software/VACSetup.exe">Virtual Audio Cable</a> should suffice.</p>
+</div>
+<div class="mac" style="display: none;">
+    <h2 id="typical-installation-for-individuals"><a class="header" href="#typical-installation-for-individuals">Typical Installation for Individuals</a></h2>
+    <p>There is only one installation package to use, whether you are offering or receiving assistance.</p>
+    <ol>
+    <li><a href="https://download.pneumasolutions.com/rim/rimsetup.exe">Download Remote Incident Manager</a></li>
+    <li>Go to your downloads folder via Finder (<em>Option+command+L</em>). Locate the downloaded .pkg file and open it with <em>Command+O</em>.</li>
+    <li>An installation wizard will appear. Follow the onscreen instructions.</li>
+    </ol>
+    <p>You are all set to run Remote Incident Manager for the first time! You may run it from your applications folder, accessed via <em>Command+Shift+A</em> while located in Finder. Additionally, RIM sets up a multipurpose global hotkey (<em>Option+Shift+Backspace</em>) which, among other things, automatically launches the program from wherever you are.</p>
+    <h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
+    <p>Due to Mac OS's precautionary behavior when dealing with applications
+     of this nature for the first time, you will need to grant some 
+    permissions to Remote Incident Manager upon first launch.</p>
+    <h3 id="karabiner-hid-driver"><a class="header" href="#karabiner-hid-driver">Karabiner HID driver</a></h3>
+    <p>This is the driver that processes input that is received by RIM. This
+     is a kernel extension, thus you must manually approve it. Rim will 
+    bring up a system dialogue that will take you to the Privacy and 
+    Security section of system settings. You will then want to scroll until 
+    you locate the Allow button. Clicking this will prompt you for your 
+    password or touch ID, after which you will be informed that you need to 
+    reboot in order to fully enable Karabiner Elements. Whether you reboot 
+    now or later is up to you, but should you decide not to reboot until all
+     the permissions have been approved, exit out of System Settings and go 
+    back into RIM.</p>
+    <h3 id="receiving-input"><a class="header" href="#receiving-input">Receiving Input</a></h3>
+    <p>RIM needs permission to receive all the input directed to it over a remote connection.<br>
+    Click Continue in the RIM window, at which point a system dialogue 
+    requesting accessibility service permissions will appear. If VoiceOver 
+    does not immediately focus it, press <em>VO+F1</em> twice quickly. Then,
+     down arrow to System dialogues, press right arrow, and then down to the
+     keyboard permissions request. Pressing enter on that will open the 
+    alert box, at which point you will want to follow it to System Settings 
+    and check the Remote Incident Manager box in the list of applications.</p>
+    <h3 id="capturing-screen-output"><a class="header" href="#capturing-screen-output">Capturing Screen Output</a></h3>
+    <p>The next permission request from RIM will be for capturing the screen
+     output which will be piped across the remote connection. The procedure 
+    for this is similar to the previous procedure.</p>
+    <h3 id="notifications"><a class="header" href="#notifications">Notifications</a></h3>
+    <p>The final permission request from RIM will be for notifications. RIM 
+    will notify you when a session starts and ends. The procedure for 
+    granting this permission is similar to the previous procedure.</p>
+    <h3 id="welcome-screen"><a class="header" href="#welcome-screen">Welcome Screen!</a></h3>
+    <p>After all the permissions have been approved, the welcome screen will
+     appear. Note that if you chose to reboot later, now would be a good 
+    time to reboot.
+    At this point, RIM is ready to initiate or receive connections.</p>
+    </div>
+    <div id="unknown-content" style="display: none">
+        <p>Please select an operating system using the above buttons.</p>
+    </div>
+
+</Layout>
