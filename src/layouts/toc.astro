@@ -55,10 +55,10 @@ const { title } = Astro.props.frontmatter || Astro.props;
 		const languageList = document.getElementById('langMenu');
 		if (languageList.style.display === 'none') {
 		  languageList.style.display = 'block';
-		  ariaAlert(t('footer.langMenuAlert'));
+		  ariaAlert({t('footer.langMenuAlert')});
 		} else {
 		  languageList.style.display = 'none';
-		  ariaAlert(t('footer.neverMind'));
+		  ariaAlert({t('footer.neverMind')});
 		}
 	  });
 	  </script>
