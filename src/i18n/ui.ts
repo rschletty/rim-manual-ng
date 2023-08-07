@@ -16,6 +16,7 @@ export const ui = {
     'nav.faq': 'Frequently Asked Questions',
     'nav.pricing': 'Pricing',
     'nav.changelog': 'Change Log',
+    'footer.langChange': 'Change Language',
   },
   es: {
     'nav.welcome': 'Bienvenido',
@@ -27,6 +28,7 @@ export const ui = {
     'nav.faq': 'Preguntas frecuentes',
     'nav.pricing': 'Precios',
     'nav.changelog': 'Registro de cambios',
+    'footer.langChange': 'Cambiar idioma',
 
   },
 } as const;

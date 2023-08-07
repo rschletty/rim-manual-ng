@@ -30,7 +30,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
     <slot />
 </main>
 <footer>
-	<button id="changeLang">Change Language</button>
+	<button id="changeLang">{t('footer.langChange')}</button>
 	<ul id="langMenu" style="display: none";>
 	  {Object.entries(languages).map(([lang, label]) => (
 		<li>
