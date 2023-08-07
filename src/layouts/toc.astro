@@ -54,17 +54,14 @@ const footerLangNeverMind = t('footer.neverMind');
 			document.body.removeChild(alertDiv);
 		}, 1000);
 	}
-	const t = useTranslations(lang);
-	const footerLangMenuAlert = t('footer.langMenuAlert');
-const footerLangNeverMind = t('footer.neverMind');
 	document.getElementById('changeLang').addEventListener('click', () => {
 		const languageList = document.getElementById('langMenu');
 		if (languageList.style.display === 'none') {
 		  languageList.style.display = 'block';
-		  ariaAlert(footerLangMenuAlert);
+		  ariaAlert("Select a language from the list below.");
 		} else {
 		  languageList.style.display = 'none';
-		  ariaAlert(footerLangNeverMind);
+		  ariaAlert("Keeping language as is.");
 		}
 	  });
 	  </script>
