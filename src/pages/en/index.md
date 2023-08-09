@@ -32,7 +32,7 @@ A blind IT professional can now easily help a sighted end user, even if they do 
 ## Documentation Conventions and Terminology
 * Because Remote Incident Manager is cross-platform, many sections of this documentation will tailor their contents to the operating system that you are running.
     * In most cases, the manual will recognize whether you are running Windows or Mac, and adjust the content accordingly.
-    * In the event the platform recognition fails or you are reading the documentation on a different device such as a phone or tablet, you will find a buttons or set of buttons on the page to show the content for the platform you use.
+    * In the event the platform recognition fails or you are reading the documentation on a different device such as a phone or tablet, you will find a button or set of buttons on the page to show the content for the platform you use.
 * RIM connections occur between a target and a controller.
     * A target computer is the computer that will be receiving remote support.
     * A controller connects to a target computer for remote support.
