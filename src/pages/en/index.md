@@ -30,7 +30,9 @@ Before RIM, it used to be difficult to assist someone running a different screen
 #### No Screen Reader? No Problem!
 A blind IT professional can now easily help a sighted end user, even if they do not have a screen reader installed on their computer. In the absence of a screen reader on the remote computer, RIM will see to it that you will still be able to get speech provided you are using either the free [NVDA Screen Reader](https://nvaccess.org) or VoiceOver on Mac OS. Remote incident Manager will initiate its accessibility module which allows you to control the client's machine with speech as if they had a screen reader. Not only does the end user not have to worry about installing a screen reader, they don't even hear the speech that you're now hearing while you control their computer.
 ## Documentation Conventions and Terminology
-* Key combinations are denoted by the plus symbol, i.e. Option+Shift+Backspace.
+* Because Remote Incident Manager is cross-platform, many sections of this documentation will tailor their contents to the operating system that you are running.
+    * In most cases, the manual will recognize whether you are running Windows or Mac, and adjust the content accordingly.
+    * In the event the platform recognition fails or you are reading the documentation on a different device such as a phone or tablet, you will find a buttons or set of buttons on the page to show the content for the platform you use.
 * RIM connections occur between a target and a controller.
     * A target computer is the computer that will be receiving remote support.
     * A controller connects to a target computer for remote support.
