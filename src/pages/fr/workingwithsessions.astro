@@ -3,41 +3,41 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-<Layout title="Working within a Session">
+<Layout title="Trabajar en una sesión">
     <div id="platformButtons">
-        <button id="showWindows">Switch to Windows Installation Instructions</button>
-        <button id="showMac">Switch to Mac OS Installation Instructions</button>
+        <button id="showWindows">Instrucciones para cambiar a Windows</button>
+        <button id="showMac">Instrucciones para cambiar a Mac OS</button>
         </div>
-<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Things to Know before you Begin</a></h2>
-<p>A few things will happen immediately after the connection is established.</p>
+<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Lo que hay que saber antes de empezar</a></h2>
+<p>Inmediatamente después de que se establezca la conexión ocurrirán algunas cosas.</p>
 <ul>
-<li>The remote control window for the session will appear.</li>
-<li>You will be informed about the status of the running screen reader, or lack thereof, on the client's machine.</li>
-<li>If the client is running a screen reader, a toast notification 
-informing the user that the remote session has begun will provide 
-instant confirmation that the user's system audio is working.</li>
-<li>A Mac target will pop up the keyboard setup assistant if this is the first time a controller has connected to it.
+<li>Aparecerá la ventana de control remoto de la sesión.</li>
+<li>Se le informará del estado del lector de pantalla en ejecución, o de la ausencia del mismo, en la máquina del cliente.</li>
+<li>Si el cliente utiliza un lector de pantalla, una notificación tostada
+informando al usuario de que la sesión remota ha comenzado proporcionará
+confirmación instantánea de que el sistema de audio del usuario está funcionando.</li>
+<li>Un objetivo Mac mostrará el asistente de configuración del teclado si es la primera vez que se le conecta un controlador.</li>
     <ul>
-    <li>This is for the Karabiner virtual keyboard, which listens to keyboard commands sent to it by a controller.</li>
-    <li>As such, you will want to walk the target computer through the setup
-     assistant, because it will be listening for remote keyboard presses in 
-    the identification process, not the Mac's own keyboard.</li>
+    <li>Esto es para el teclado virtual Karabiner, que escucha los comandos de teclado que le envía un controlador.</li>
+    <li>Como tal, usted querrá caminar el equipo de destino a través del asistente de configuración
+     de configuración, ya que en el proceso de identificación se escucharán las
+    el proceso de identificación, no el propio teclado del Mac.</li>
     </ul>
-    <li>Last but not least, all keyboard and mouse input will immediately be
- directed to the target computer. To direct control back to your 
-machine, do either of the following:
+    <li>Por último, pero no menos importante, todas las entradas de teclado y ratón serán inmediatamente
+ al ordenador de destino. Para devolver el control a su
+máquina, haga lo siguiente:</li>
 <ul class="winCmd" style="display: none;">
-<li>press Windows+Shift+Backspace.</li>
-<li>right click the RIM window's title bar.</li>
-<li>left click the RIM icon.</li>
+<li>pulsa Windows+Mayús+Retroceso.</li>
+<li>haga clic con el botón derecho del ratón en la barra de título de la ventana RIM.</li>
+<li>haz clic con el botón izquierdo del ratón en el icono RIM.</li>
 </ul>
 <ul class="macCmd" style="display: none;">
-    <li>press Option+Shift+Backspace.</li>
-    <li>Click on the large RIM icon in the upper left hand corner of the session window.</li>
+    <li>pulsa Opción+Mayús+Retroceso.</li>
+    <li>Haga clic en el icono grande de RIM situado en la esquina superior izquierda de la ventana de la sesión.</li>
     </ul>
     
 </ul>
-<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Remote Control Zone</a></h2>
+<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Zona de control remoto</a></h2>
 <p>At this point, you're all set to perform whatever tasks need doing on
  the client side. Should you need to switch back to controlling your own
  machine, bring up the RIM menu, then select the "Minimize session" 
@@ -53,18 +53,18 @@ ends, the target machine will get a toast notification informing them of
 <p>As mentioned earlier, accessing the RIM menu directs you back to your
  machine. There are a number of options in this menu. They include:</p>
 <ul>
-<li>Update RIM on Target: Forces an update of RIM on the target computer
+<li>Update RIM on Target: Forces an update of RIM on the target computer</li>
 <ul>
 <li>This option shows if the target's machine is running an older version of RIM</li>
 </ul>
-<li>Minimize Session: brings control back to your machine as described above
+<li>Minimize Session: brings control back to your machine as described above</li>
 <ul>
 <li>You can also use the shortcut
     <em class="winCmd" style="display: none;">Windows+Shift+M</em>
     <em class="macCmd" style="display: none;">Option+Shift+M</em>
          to minimize the session.</li>
 </ul>
-<li>Transfer File to Target: Appears if a file is on the clipboard.
+<li>Transfer File to Target: Appears if a file is on the clipboard.</li>
 <ul>
 <li>Although this alternate method of completing a file transfer is 
 always available, it is only necessary for transferring files to Mac 
@@ -72,14 +72,14 @@ targets.</li>
 </ul>
 <li>Flip Session: Allows your client to remote control your machine and 
 hear its audio. As the original controller, you can flip the session 
-back by selecting this option a second time.
+back by selecting this option a second time.</li>
 <ul>
 <li>You can also use the keyboard shortcut
     <em class="winCmd" style="display: none;">Windows+Shift+F</em>
     <em class="macCmd" style="display: none;">Option+Shift+F</em>
     to flip the session back and forth.</li>
 </ul>
-<li>Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
+<li>Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.</li>
 <ul>
 <li>Note that this option is unavailable in unattended sessions as they 
 do not support voice chat. However, prompted sessions still support 
@@ -105,14 +105,14 @@ for unattended access to the client computer. This is useful if you are a
  sysadmin and need to perform routine maintenance, or even for something
  as simple as controlling your home machine while on the go.</li>
 <li>Lock the Target Machine: Performs the equivalent of Windows+L.</li>
-<li>View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:
+<li>View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:</li>
 <ul>
 <li>Connection statistics</li>
 <li>Information about the computer, including operating system version, available ram, etc.</li>
 <li>Running processes (Windows targets)</li>
 <li>Installed packages(Windows targets)</li>
 </ul>
-<li>Disconnect Session: Terminates the session.
+<li>Disconnect Session: Terminates the session.</li>
 <ul>
 <li>Remember that this option is available to both sides of the session.</li>
 <li>This is also possible via the keyboard command
@@ -128,24 +128,21 @@ for unattended access to the client computer. This is useful if you are a
 <li>Select the file(s) and/or folder(s) you want to transfer using your file manager.</li>
 <li>Copy the selected contents to the clipboard in the usual way. You 
 will receive a notification that a file is ready to be transferred. You 
-have two options.
+have two options.</li>
 <ol>
-<li>If the target is a Mac
+<li>If the target is a Mac:</li>
 <ol>
 <li>Activate the RIM session menu, and click on the "Transfer File to Target" option.</li>
 <li>Upon completion of the transfer, the target Mac will generate a 
 temporary directory containing the transferred contents. These should 
 then be copied and pasted to their intended directories.</li>
 </ol>
-</li>
-<li>If the target is a Windows machine:
+<li>If the target is a Windows machine:</li>
 <ol>
 <li>Switch back to the remote session, and locate the folder on the target machine where you wish to paste the content.</li>
 <li>Last but not least, paste as you normally would.</li>
 </ol>
-</li>
 </ol>
-</li>
 </ol>
 <!-- end -->
 <p>Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.</p>
@@ -228,7 +225,7 @@ There are a few ways to configure machines for unattended access.</p>
 <ol>
 <li>Bring up the RIM menu.</li>
 <li>Select "Request Unattended or Prompted Access."</li>
-<li>You will be asked what kind of connection you want to configure. Your options are:
+<li>You will be asked what kind of connection you want to configure. Your options are:</li>
 <ol>
 <li>Unattended: Allows sessions to be initiated without any intervention whatsoever from the end user.</li>
 <li>Prompted: This configuration presents the user with a prompt 
@@ -253,7 +250,7 @@ with the machine. </p>
 <li>Click on the "Add this machine to your RIM account" button.</li>
 <li>Enter your email, then click next.</li>
 <li>Wait for the two-step login code to arrive, enter it, then you should be logged in.</li>
-<li>You will be asked what type of access you would like configured for this machine. Your options are:
+<li>You will be asked what type of access you would like configured for this machine. Your options are:</li>
 <ol>
 <li>Unattended: Allows sessions to be initiated without any intervention whatsoever from the end user.</li>
 <li>Prompted: This configuration presents the user with a prompt informing them that you are conecting to their machine.</li>
@@ -285,7 +282,6 @@ you to automatically launch unattended sessions. In order to do this:</p>
 <li>Click on the "Create Shortcut" button.</li>
 <li>A shortcut will be automatically added to your desktop.</li>
 </ol>
-<!-- end -->
 <p>Now, when you activate this shortcut, you will either automatically 
 land in the remote session, or send a prompt to the user's machine that 
 they can accept.</p>
@@ -308,7 +304,7 @@ your-session-name.url in the run box.</p>
 can revoke the controller's access. You do not need to be in a session 
 in order to do this.</p>
 <ol class="win" style="display: none;">
-<li>Access the Remote Incident Manager icon in your system tray.
+<li>Access the Remote Incident Manager icon in your system tray.</li>
 <ol>
 <li>If using the keyboard, press windows+b, then space, then left or right arrow until you find the icon.</li>
 </ol>
@@ -318,7 +314,7 @@ in order to do this.</p>
 <li>You will be asked if you wish to revoke the machine; answer yes.</li>
 </ol>
 <ol class="mac" style="display: none;">
-    <li>Access the Remote Incident Manager icon in your menu extras/status menus.
+    <li>Access the Remote Incident Manager icon in your menu extras/status menus.</li>
     <ol>
     <li>If using VoiceOver, press VO+M twice, then locate the Remote Incident Manager menu icon.</li>
     </ol>

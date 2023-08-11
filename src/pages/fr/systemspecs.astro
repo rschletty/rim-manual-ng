@@ -4,29 +4,29 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-  <Layout title="System Requirements">
-<p>In order to run Remote Incident Manager, your system must meet or exceed the following requirements:</p>
-<div id="platformButtons">
-<button id="showWindows">Switch to Windows requirements</button>
-<button id="showMac">Switch to Mac OS requirements</button>
+  <Layout title="Configuration requise">
+    <p>Pour que Remote Incident Manager puisse fonctionner, votre système doit remplir ou dépasser les conditions suivantes :</p>
+    <div id="platformButtons">
+<button id="showWindows">Passer aux exigences de Windows</button>
+<button id="showMac">Passer aux exigences de Mac OS</button>
 </div>
 <div class="win" style="display: none;">
   <ul>
-        <li>Windows 7 SP1 or later</li>
-        <li>Windows Server 2012 or later</li>
-        <li>At least 4GB of RAM</li>
-        <li>Admin privileges for initial installation (not required for automatic updates)</li>
+        <li>Windows 7 SP1 ou version ultérieure</li>
+        <li>Windows Server 2012 ou version ultérieure</li>
+        <li>Au moins 4 Go de RAM</li>
+        <li>Privilèges d'administrateur pour l'installation initiale (non requis pour les mises à jour automatiques)</li>
       </ul>
     </div>
       <div class="mac" style="display: none;">
         <ul>
-        <li>Intel or Apple Silicon</li>
+        <li>Intel ou Apple Silicon</li>
         <li>Mac OS Ventura</li>
-        <li>At least 4GB of RAM</li>
-        <li>Admin privileges for initial installation (not required for automatic updates)</li>
+        <li>Au moins 4 Go de RAM</li>
+        <li>Privilèges d'administrateur pour l'installation initiale (non requis pour les mises à jour automatiques)</li>
       </ul>
     </div>
       <div id="unknown-content" style="display: none">
-        <p>Please select an operating system using the above buttons.</p>
+        <p>Veuillez sélectionner un système d'exploitation à l'aide des boutons ci-dessus.</p>
     </div>
 </Layout>
