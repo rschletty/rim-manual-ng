@@ -20,9 +20,6 @@ export const ui = {
     'nav.faq': 'Frequently Asked Questions',
     'nav.pricing': 'Pricing',
     'nav.changelog': 'Change Log',
-    'footer.langChange': 'Change Language',
-    'footer.langMenuAlert': 'Select your language from the list below.',
-    'footer.neverMind': 'Keeping your language as is.',
   },
   es: {
     'nav.welcome': 'Bienvenido',
@@ -34,9 +31,6 @@ export const ui = {
     'nav.faq': 'Preguntas frecuentes',
     'nav.pricing': 'Precios',
     'nav.changelog': 'Registro de cambios',
-    'footer.langChange': 'Cambiar idioma',
-    'footer.langMenuAlert': 'Seleccione su idioma en la siguiente lista.',
-    'footer.neverMind': 'Mantener su lengua tal cual.',
 
   },
 fr: {

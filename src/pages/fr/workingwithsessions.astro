@@ -3,52 +3,52 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-<Layout title="Working within a Session">
+<Layout title="Travailler au sein d'une session">
     <div id="platformButtons">
-        <button id="showWindows">Switch to Windows Installation Instructions</button>
-        <button id="showMac">Switch to Mac OS Installation Instructions</button>
+       <button id="showWindows">Instructions pour passer à Windows</button>
+       <button id="showMac">Instructions pour passer à Mac OS</button>
         </div>
-<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Things to Know before you Begin</a></h2>
-<p>A few things will happen immediately after the connection is established.</p>
+<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Ce qu'il faut savoir avant de commencer</a></h2>
+<p>Dès que la connexion est établie, il se passe un certain nombre de choses.</p>
 <ul>
-<li>The remote control window for the session will appear.</li>
-<li>You will be informed about the status of the running screen reader, or lack thereof, on the client's machine.</li>
-<li>If the client is running a screen reader, a toast notification 
-informing the user that the remote session has begun will provide 
-instant confirmation that the user's system audio is working.</li>
-<li>A Mac target will pop up the keyboard setup assistant if this is the first time a controller has connected to it.</li>
+<li>La fenêtre de contrôle à distance de la session apparaît.</li>
+<li>Vous serez informé de l'état du lecteur d'écran en cours d'exécution, ou de l'absence de lecteur d'écran, sur la machine du client.</li>
+<li>Si le client utilise un lecteur d'écran, une notification de toast 
+informant l'utilisateur que la session à distance a commencé lui fournira 
+confirmation instantanée que le système audio de l'utilisateur fonctionne.</li>
+<li>Une cible Mac fera apparaître l'assistant de configuration du clavier si c'est la première fois qu'un contrôleur s'y connecte.</li>
     <ul>
-    <li>This is for the Karabiner virtual keyboard, which listens to keyboard commands sent to it by a controller.</li>
-    <li>As such, you will want to walk the target computer through the setup
-     assistant, because it will be listening for remote keyboard presses in 
-    the identification process, not the Mac's own keyboard.</li>
+    <li>Il s'agit du clavier virtuel Karabiner, qui écoute les commandes clavier qui lui sont envoyées par un contrôleur.</li>
+    <li>En tant que tel, vous devrez guider l'ordinateur cible à travers l'assistant d'installation, car il sera à l'écoute des commandes clavier envoyées par un contrôleur
+     l'assistant d'installation, parce qu'il écoutera les pressions du clavier distant dans le 
+    dans le processus d'identification, et non le clavier du Mac.</li>
     </ul>
-    <li>Last but not least, all keyboard and mouse input will immediately be
- directed to the target computer. To direct control back to your 
-machine, do either of the following:</li>
+    <li>Enfin, toutes les saisies du clavier et de la souris seront immédiatement dirigées vers l'ordinateur cible
+ immédiatement dirigées vers l'ordinateur cible. Pour rediriger le contrôle vers votre 
+machine, effectuez l'une des opérations suivantes</li>
 <ul class="winCmd" style="display: none;">
-<li>press Windows+Shift+Backspace.</li>
-<li>right click the RIM window's title bar.</li>
-<li>left click the RIM icon.</li>
+<li>appuyez sur les touches Windows+Shift+Backspace.</li>
+<li>cliquez avec le bouton droit de la souris sur la barre de titre de la fenêtre RIM.</li>
+<li>cliquez avec le bouton gauche de la souris sur l'icône du RIM</li>
 </ul>
 <ul class="macCmd" style="display: none;">
-    <li>press Option+Shift+Backspace.</li>
-    <li>Click on the large RIM icon in the upper left hand corner of the session window.</li>
+    <li>appuyez sur Option+Shift+Backspace.</li>
+    <li>Cliquez sur la grande icône RIM dans le coin supérieur gauche de la fenêtre de session.</li>
     </ul>
     
 </ul>
-<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Remote Control Zone</a></h2>
-<p>At this point, you're all set to perform whatever tasks need doing on
- the client side. Should you need to switch back to controlling your own
- machine, bring up the RIM menu, then select the "Minimize session" 
-option. You will be taken back to your machine until you switch back 
-into the session window or press Windows+Shift+Backspace again. When you
- go back into the session window, keyboard and mouse input will once again be 
-directed to the client computer.<br>
-Once you're done, either the controller or the target can go into the 
-RIM menu and choose the "Disconnect Session" option. When the session 
-ends, the target machine will get a toast notification informing them of
- this.</p>
+<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Zone de contrôle à distance</a></h2>
+<p>À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires du côté client
+ côté client. Si vous souhaitez reprendre le contrôle de votre propre machine, ouvrez le menu RIM
+ machine, faites apparaître le menu RIM, puis sélectionnez l'option "Minimiser la session" 
+l'option "Minimiser la session". Vous serez ramené à votre machine jusqu'à ce que vous reveniez à la fenêtre de session ou que vous appuyiez sur Windows+ 
+dans la fenêtre de session ou en appuyant à nouveau sur les touches Windows+Shift+Backspace. Lorsque vous
+ lorsque vous retournez dans la fenêtre de session, les saisies du clavier et de la souris sont à nouveau dirigées vers l'ordinateur client 
+de la souris seront à nouveau dirigées vers l'ordinateur client.<br>
+Une fois que vous avez terminé, le contrôleur ou la cible peut aller dans le menu RIM et choisir l'option "Déconnecter la session" 
+RIM et choisir l'option "Déconnecter la session". Lorsque la session 
+session, l'ordinateur cible recevra une notification de toast l'en informant
+ ceci.</p>
 <h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">The RIM Menu</a></h2>
 <p>As mentioned earlier, accessing the RIM menu directs you back to your
  machine. There are a number of options in this menu. They include:</p>
@@ -342,3 +342,4 @@ permission for unattended access as described above.</p>
     <tr><td>Decline Incoming Connection Request</td><td>Option+Shift+N</td></tr>
     </tbody></table>
     
+</layout>

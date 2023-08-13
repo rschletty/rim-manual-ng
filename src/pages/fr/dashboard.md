@@ -1,60 +1,60 @@
 ---
 layout: ../../layouts/toc.astro
-title: "The RIM Management Dashboard"
+title: "Le tableau de bord de gestion du RIM"
 author: "Jack Falejczyk - Pneuma Solutions"
 date: "13 Jul 2023"
 ---
-RIM features a  web-based dashboard to facilitate various machine and account management tasks. You can manage your existing unattended computers, create preconfigured installers for target computers, and much more.  
-It should be noted that the feature set of the dashboard is largely dependent on which subscription tier your account is under. For example, enterprise users can assign machines to target groups, as well as create silent and/or MSI-based installers. On the other hand, creating standard (nonsilent) custom installers for unattended machines is possible with a pro subscription or above.
-## Locating the Dashboard
-If you're a controller, the easiest way to get to the dashboard is through the main RIM interface. Clicking the RIM Dashboard button will automatically open the dashboard in your default browser, with the login already taken care of.  
-If you are a network administrator who does not have RIM installed, you can simply log into your account on the RIM website and your dashboard will appear.
-## Managing Targets
-When you click the "Configure Targets" link, you will arrive at a page that allows you to manage all the machines you have configured for unattended access. You can click on any one of these machines in order to manage it. Once inside, you will be able to:
-* Rename the target
-* Move the target to a different group (more on target groups later)
-* Delete the target
+RIM dispose d'un tableau de bord basé sur le web pour faciliter les différentes tâches de gestion des machines et des comptes. Vous pouvez gérer vos ordinateurs existants sans surveillance, créer des installateurs préconfigurés pour les ordinateurs cibles, et bien plus encore.  
+Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs d'entreprise peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux et/ou basés sur des MSI. D'autre part, la création d'installateurs personnalisés standard (non silencieux) pour les machines non surveillées est possible avec un abonnement pro ou supérieur.
+## Localisation du tableau de bord
+Si vous êtes un contrôleur, le moyen le plus simple d'accéder au tableau de bord est de passer par l'interface principale de RIM. En cliquant sur le bouton RIM Dashboard, vous ouvrirez automatiquement le tableau de bord dans votre navigateur par défaut, la connexion étant déjà prise en charge.  
+Si vous êtes un administrateur de réseau et que RIM n'est pas installé, vous pouvez simplement vous connecter à votre compte sur le site Web de RIM et votre tableau de bord apparaîtra.
+## Gestion des cibles
+Lorsque vous cliquez sur le lien "Configure Targets", vous arrivez sur une page qui vous permet de gérer toutes les machines que vous avez configurées pour un accès sans surveillance. Vous pouvez cliquer sur n'importe laquelle de ces machines pour la gérer. Une fois à l'intérieur, vous pourrez
+* Renommer la cible
+* Déplacer la cible vers un groupe différent (plus d'informations sur les groupes de cibles ultérieurement)
+* Supprimer la cible
 <!-- end -->
-## Target Groups (for Pro Accounts and Above)
-Say for instance you're workgroup is spread out among several different locations. Or maybe you want to designate groups of machines to your routine maintenance techs. Target groups allow you to do just that. In order to do this, simply click the "Create Target Group" button, name your group, and submit.  
-You may have as many target groups as is needed for your use case. 
-### Access Control (for Enterprise Organizations)
-If your organizations assign a support technician to a specific set of machines, you probably want to ensure they only have access to that specific set. This is where the access control setting for target groups comes in.  
-When you click on a target group, you are given options to manage the machines in the group, as well as the group itself. The access control section is where you may grant access to this group on a per-account basis. Simply enter the email address of the account you wish to add, then click the "Give Access" button. Once this is done, you will be presented with a table of accounts that are given access to this group. Below each account is a "Revoke Access" button. This button does not require further confirmation.  
-It should be noted that all organization administrators are automatically granted access to manage any and all groups that are created under the organization.
-## Setting up a Preconfigured RIM Installer (Pro or above, Windows targets only)
-One of the easiest ways to set up a machine for unattended or prompted connections is by creating a custom installer. This is incredibly useful if you are configuring mass deployments, or even as a simpler way to get RIM up and running on an end user's computer you plan on providing support for on the regular.
-IN order to do this:
-1. In the target management screen, click the "Build Target Installer" button.
-1. You will first be asked if you want this machine to be configured for fully unattended access, or for prompted access in which the user has to accept a prompt to initiate the connection.
-1. You will then be asked for a target group assignment. Note that the target group selection will automatically go to your chosen target group if you initiate the installer configuration from your group's page.
-1. You will be asked how long you want this installer to be valid for. It can be valid for anywhere between 7 to 30 days. Note that this timeframe only affects the functionality of the installation package. In other words, the machine's RIM configuration will not be disabled when the installation expires.
-1. You are then given the option to assign a bass name. Any machine provisioned via this installation package will have this base name assigned to it.
-1. If you are an enterprise admin, you will see a checkbox that allows you to build the installer as an MSI package. This option is useful for mass deployment of a custom installer to a machine cluster that will be designated to the given target group.
-1. You will be asked to provide an installer name, and optionally some notes. These are for internal records and will not appear within the created installer.
-1. Click on "Build Installer." You will be presented with the download link that you can either copy to the clipboard and send to your end user. Alternatively, you may download the installer directly for use in mass deployments.
+## Groupes cibles (pour les comptes Pro et supérieurs)
+Supposons que votre groupe de travail soit réparti sur plusieurs sites. Ou peut-être voulez-vous désigner des groupes de machines pour vos techniciens de maintenance de routine. Les groupes cibles vous permettent de le faire. Pour ce faire, il vous suffit de cliquer sur le bouton "Créer un groupe cible", de donner un nom à votre groupe et de valider.  
+Vous pouvez avoir autant de groupes cibles que nécessaire pour votre cas d'utilisation. 
+contrôle d'accès ### (pour les entreprises)
+Si votre organisation affecte un technicien de support à un ensemble spécifique de machines, vous voulez probablement vous assurer qu'il n'a accès qu'à cet ensemble spécifique. C'est là qu'intervient le paramètre de contrôle d'accès pour les groupes cibles.  
+Lorsque vous cliquez sur un groupe cible, vous disposez d'options pour gérer les machines du groupe, ainsi que le groupe lui-même. La section de contrôle d'accès vous permet d'accorder l'accès à ce groupe par compte. Saisissez simplement l'adresse électronique du compte que vous souhaitez ajouter, puis cliquez sur le bouton "Donner accès". Une fois cette opération effectuée, vous obtiendrez un tableau des comptes auxquels l'accès à ce groupe a été accordé. Sous chaque compte se trouve un bouton "Révoquer l'accès". Ce bouton ne nécessite pas de confirmation supplémentaire.  
+Il convient de noter que tous les administrateurs d'organisations se voient automatiquement accorder l'accès à la gestion de tous les groupes créés dans le cadre de l'organisation.
+## Mise en place d'un programme d'installation RIM préconfiguré (Pro ou supérieur, cibles Windows uniquement)
+L'un des moyens les plus simples de configurer une machine pour des connexions sans surveillance ou assistées consiste à créer un programme d'installation personnalisé. Cette méthode est extrêmement utile si vous configurez des déploiements de masse, ou même comme moyen plus simple de faire fonctionner RIM sur l'ordinateur d'un utilisateur final pour lequel vous prévoyez de fournir une assistance régulière.
+Pour ce faire, il faut
+1. Dans l'écran de gestion des cibles, cliquez sur le bouton "Build Target Installer".
+1. Il vous sera d'abord demandé si vous souhaitez que cette machine soit configurée pour un accès sans surveillance ou pour un accès avec invite, dans lequel l'utilisateur doit accepter une invite pour initier la connexion.
+1. Il vous sera ensuite demandé d'assigner un groupe cible. Notez que la sélection du groupe cible ira automatiquement au groupe cible que vous avez choisi si vous lancez la configuration de l'installateur à partir de la page de votre groupe.
+1. Il vous sera demandé de préciser la durée de validité du programme d'installation. La durée de validité peut être comprise entre 7 et 30 jours. Notez que cette durée n'affecte que la fonctionnalité du paquet d'installation. En d'autres termes, la configuration RIM de la machine ne sera pas désactivée à l'expiration de l'installation.
+1. Vous avez ensuite la possibilité d'attribuer un nom de basse. Ce nom de base sera attribué à toute machine approvisionnée via ce paquet d'installation.
+1. Si vous êtes un administrateur d'entreprise, vous verrez une case à cocher qui vous permet de créer le programme d'installation en tant que paquet MSI. Cette option est utile pour le déploiement en masse d'un programme d'installation personnalisé sur une grappe de machines qui seront désignées pour le groupe cible donné.
+1. Il vous sera demandé de fournir un nom d'installateur, et éventuellement quelques notes. Celles-ci sont destinées à un usage interne et n'apparaîtront pas dans le programme d'installation créé.
+1. Cliquez sur "Build Installer" Vous obtiendrez un lien de téléchargement que vous pourrez copier dans le presse-papiers et envoyer à l'utilisateur final. Vous pouvez également télécharger directement le programme d'installation pour l'utiliser lors de déploiements massifs.
 <!-- end -->
-Now that you have your installer, it can be run in one of two ways. In either case, the machine will be added to your list of machines in both your account as well as the RIM client after the installer is complete.
-### Normal Execution
-The user will get a prompt when running the installer, containing the following information:
-* The technician's name along with their organization, if applicable
-* the nature of the connection, I.E whether a prompt is required or not
+Maintenant que vous avez votre programme d'installation, vous pouvez l'exécuter de deux manières. Dans les deux cas, la machine sera ajoutée à votre liste de machines dans votre compte et dans le client RIM une fois le programme d'installation terminé.
+### Exécution normale
+Lors de l'exécution du programme d'installation, l'utilisateur reçoit une invite contenant les informations suivantes :
+* Le nom du technicien ainsi que son organisation, le cas échéant
+* la nature de la connexion, c'est-à-dire si une invite est nécessaire ou non
 <!-- end -->
-The user can choose to either answer yes or no to the installation. Answering no will cancel the installation. After the installer finishes, the user will get a prompt informing them that their machine is now set up for remote access.
-### Silent Install (Enterprise Installers Only)
-A silent install can be initiated by running the executable installer with the */S* command line parameter. This is useful when installing RIM as part of a mass deployment routine.
-## Session History
-You can view your entire history of past sessions through the RIM dashboard. The session history currently contains the date and time of each session, the name of the computer you connected to, and the duration of the session. You may also choose to add comments to a session via the "Add Comment" link within the session row. This is useful for adding notes on the current status of an incident for your own sake as well as for the sake of organization administrators.
-## Managing your Subscription (Personal )and Pro Plans)
-The dashboard allows you to easily view and manage your RIM subscription details. Upon clicking the "manage subscription" link, you can:
-* Upgrade your plan
-* Update your payment method
-* Cancel recurring payments
+L'utilisateur peut choisir de répondre par oui ou par non à l'installation. La réponse négative annule l'installation. Une fois le programme d'installation terminé, l'utilisateur reçoit une invite l'informant que son ordinateur est maintenant configuré pour l'accès à distance.
+### Installation silencieuse (installateurs d'entreprise uniquement)
+Une installation silencieuse peut être lancée en exécutant le programme d'installation exécutable avec le paramètre de ligne de commande */S*. Cette fonction est utile lors de l'installation de RIM dans le cadre d'un déploiement de masse.
+## Historique des sessions
+Vous pouvez consulter l'historique complet de vos sessions passées dans le tableau de bord de RIM. L'historique des sessions contient actuellement la date et l'heure de chaque session, le nom de l'ordinateur auquel vous vous êtes connecté et la durée de la session. Vous pouvez également choisir d'ajouter des commentaires à une session en cliquant sur le lien "Ajouter un commentaire" dans la ligne de la session. Cette fonction est utile pour ajouter des notes sur l'état actuel d'un incident, tant pour vous que pour les administrateurs de l'organisation.
+## Gestion de votre abonnement (plans personnel et pro)
+Le tableau de bord vous permet de visualiser et de gérer facilement les détails de votre abonnement RIM. En cliquant sur le lien "gérer l'abonnement", vous pouvez :
+* Passer à un plan supérieur
+* Mettre à jour votre mode de paiement
+* Annuler les paiements récurrents
 <!-- end -->
-### Upgrading your Plan
-You can easily upgrade your subscription. If you are on a monthly plan, you will be prorated the remaining charge from the new amount, with the full new amount being charged for subsequent months. Clicking "Upgrade Subscription" reveals a page nearly identical to the initial plan selection page. There are a few notable differences which we will outline below:
-* You cannot downgrade your plan to one with fewer machines. You can, however, upgrade from a monthly to a yearly plan with the same number of machines as your current plan. In order to downgrade, you would need to cancel your plan, wait for it to expire, then initiate a new plan with fewer machines.
-* Enterprise plans, including the enterprise addon, cannot be acquired directly through this page.
+### Mise à niveau de votre plan
+Vous pouvez facilement mettre à jour votre abonnement. Si vous bénéficiez d'un abonnement mensuel, vous serez facturé au prorata des frais restants du nouveau montant, le nouveau montant total étant facturé pour les mois suivants. En cliquant sur "Upgrade Subscription", vous accédez à une page presque identique à la page de sélection du plan initial. Il existe quelques différences notables que nous décrivons ci-dessous :
+* Vous ne pouvez pas rétrograder votre plan vers un plan comportant moins de machines. Vous pouvez cependant passer d'un abonnement mensuel à un abonnement annuel avec le même nombre de machines que votre abonnement actuel. Pour rétrograder, vous devez annuler votre plan, attendre qu'il expire, puis lancer un nouveau plan avec moins de machines.
+* Les plans d'entreprise, y compris l'addon d'entreprise, ne peuvent pas être achetés directement sur cette page.
 <!-- end -->
-### Canceling Recurring Payments
-When you click "Cancel Automatic Renewal," you will be asked for confirmation, after which your subscription will be set to expire at the end of the current term.
+### Annulation des paiements récurrents
+Lorsque vous cliquez sur "Annuler le renouvellement automatique", une confirmation vous sera demandée, après quoi votre abonnement expirera à la fin de la période en cours.
