@@ -3,346 +3,343 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-<Layout title="Working within a Session">
+<Layout title="Arbeta inom en session">
     <div id="platformButtons">
-        <button id="showWindows">Switch to Windows Installation Instructions</button>
-        <button id="showMac">Switch to Mac OS Installation Instructions</button>
+       <button id="showWindows">Instruktioner för byte till Windows</button>
+       <button id="showMac">Instruktioner för att byta till Mac OS</button>
         </div>
-<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Things to Know before you Begin</a></h2>
-<p>A few things will happen immediately after the connection is established.</p>
+<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Saker att veta innan du börjar</a></h2>
+<p>Några saker kommer att hända omedelbart efter att anslutningen har upprättats.</p>
 <ul>
-<li>The remote control window for the session will appear.</li>
-<li>You will be informed about the status of the running screen reader, or lack thereof, on the client's machine.</li>
-<li>If the client is running a screen reader, a toast notification 
-informing the user that the remote session has begun will provide 
-instant confirmation that the user's system audio is working.</li>
-<li>A Mac target will pop up the keyboard setup assistant if this is the first time a controller has connected to it.
+<li>Fjärrkontrollfönstret för sessionen visas.</li>
+<li>Du kommer att informeras om status för den skärmläsare som körs, eller avsaknaden av en sådan, på klientens dator.</li>
+<li>Om klienten kör en skärmläsare visas ett toastmeddelande 
+som informerar användaren om att fjärrsessionen har påbörjats kommer att ge 
+omedelbar bekräftelse på att användarens systemljud fungerar.</li>
+<li>Ett Mac-mål kommer att visa tangentbordsinställningsassistenten om det är första gången en styrenhet har anslutits till det.</li>
     <ul>
-    <li>This is for the Karabiner virtual keyboard, which listens to keyboard commands sent to it by a controller.</li>
-    <li>As such, you will want to walk the target computer through the setup
-     assistant, because it will be listening for remote keyboard presses in 
-    the identification process, not the Mac's own keyboard.</li>
+    <li>Detta är för det virtuella Karabiner-tangentbordet, som lyssnar på tangentbordskommandon som skickas till det av en styrenhet.</li>
+    <li>Du bör därför gå igenom installationsassistenten med måldatorn
+     installationsassistenten, eftersom den kommer att lyssna efter tangentbordstryckningar i 
+    identifieringsprocessen, inte Mac-datorns eget tangentbord.</li>
     </ul>
-    <li>Last but not least, all keyboard and mouse input will immediately be
- directed to the target computer. To direct control back to your 
-machine, do either of the following:
+    <li>Sist men inte minst kommer alla tangentbords- och musinmatningar omedelbart att
+ direkt till måldatorn. Om du vill återföra kontrollen till din 
+maskin gör du något av följande:</li>
 <ul class="winCmd" style="display: none;">
-<li>press Windows+Shift+Backspace.</li>
-<li>right click the RIM window's title bar.</li>
-<li>left click the RIM icon.</li>
+<li>tryck på Windows+Shift+Backspace.</li>
+<li>högerklicka på titelfältet i RIM-fönstret.</li>
+<li>vänsterklicka på RIM-ikonen.</li>
 </ul>
 <ul class="macCmd" style="display: none;">
-    <li>press Option+Shift+Backspace.</li>
-    <li>Click on the large RIM icon in the upper left hand corner of the session window.</li>
+    <li>tryck på Option+Shift+Backspace.</li>
+    <li>Klicka på den stora RIM-ikonen i det övre vänstra hörnet av sessionsfönstret.</li>
     </ul>
     
 </ul>
-<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Remote Control Zone</a></h2>
-<p>At this point, you're all set to perform whatever tasks need doing on
- the client side. Should you need to switch back to controlling your own
- machine, bring up the RIM menu, then select the "Minimize session" 
-option. You will be taken back to your machine until you switch back 
-into the session window or press Windows+Shift+Backspace again. When you
- go back into the session window, keyboard and mouse input will once again be 
-directed to the client computer.<br>
-Once you're done, either the controller or the target can go into the 
-RIM menu and choose the "Disconnect Session" option. When the session 
-ends, the target machine will get a toast notification informing them of
- this.</p>
-<h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">The RIM Menu</a></h2>
-<p>As mentioned earlier, accessing the RIM menu directs you back to your
- machine. There are a number of options in this menu. They include:</p>
+<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Zonen för fjärrstyrning</a></h2>
+<p>Vid det här laget är du redo att utföra de uppgifter som behöver göras på
+ på klientsidan. Om du behöver växla tillbaka till att styra din egen
+ maskin, ta fram RIM-menyn och välj sedan alternativet "Minimera session" 
+alternativet. Du kommer att återgå till din maskin tills du växlar tillbaka 
+till sessionsfönstret eller trycker på Windows+Shift+Backspace igen. När du
+ återgår till sessionsfönstret kommer tangentbords- och musinmatningar återigen att 
+till klientdatorn.<br>
+När du är klar kan antingen styrenheten eller målet gå till 
+RIM-menyn och välja alternativet "Koppla från session". När sessionen 
+avslutas kommer måldatorn att få ett toastmeddelande som informerar dem om
+ detta.</p>
+<h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">RIM-menyn</a></h2>
+<p>Som tidigare nämnts leder åtkomst till RIM-menyn dig tillbaka till din
+ maskin. Det finns ett antal alternativ i den här menyn. De inkluderar följande</p>
 <ul>
-<li>Update RIM on Target: Forces an update of RIM on the target computer
+<li>Uppdatera RIM på målet: Tvingar fram en uppdatering av RIM på måldatorn</li>
 <ul>
-<li>This option shows if the target's machine is running an older version of RIM</li>
+<li>Det här alternativet visar om måldatorn kör en äldre version av RIM</li>
 </ul>
-<li>Minimize Session: brings control back to your machine as described above
+<li>Minimera session: återför kontrollen till din dator enligt beskrivningen ovan</li>
 <ul>
-<li>You can also use the shortcut
-    <em class="winCmd" style="display: none;">Windows+Shift+M</em>
-    <em class="macCmd" style="display: none;">Option+Shift+M</em>
-         to minimize the session.</li>
+<li>Du kan också använda genvägen
+   <em class="winCmd" style="display: none;">Windows+Skift+M</em>
+   <em class="macCmd" style="display: none;">Alternativ+Skift+M</em>
+         för att minimera sessionen.</li>
 </ul>
-<li>Transfer File to Target: Appears if a file is on the clipboard.
+<li>Överför fil till mål: Visas om en fil finns i Urklipp.</li>
 <ul>
-<li>Although this alternate method of completing a file transfer is 
-always available, it is only necessary for transferring files to Mac 
-targets.</li>
+<li>Även om denna alternativa metod för att slutföra en filöverföring 
+alltid är tillgänglig, är den endast nödvändig för att överföra filer till Mac 
+mål.</li>
 </ul>
-<li>Flip Session: Allows your client to remote control your machine and 
-hear its audio. As the original controller, you can flip the session 
-back by selecting this option a second time.
+<li>Flip-session: Gör det möjligt för din klient att fjärrstyra din maskin och 
+höra dess ljud. Som den ursprungliga styrenheten kan du vända sessionen 
+tillbaka genom att välja det här alternativet en andra gång.</li>
 <ul>
-<li>You can also use the keyboard shortcut
-    <em class="winCmd" style="display: none;">Windows+Shift+F</em>
-    <em class="macCmd" style="display: none;">Option+Shift+F</em>
-    to flip the session back and forth.</li>
+<li>Du kan också använda kortkommandot
+   <em class="winCmd" style="display: none;">Windows+Skift+F</em>
+   <em class="macCmd" style="display: none;">Alternativ+Skift+F</em>
+    för att bläddra fram och tillbaka i sessionen.</li>
 </ul>
-<li>Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
+<li>Starta/stoppa röstkonversation: Här kan du slå på eller av röstchatten för din session.</li>
 <ul>
-<li>Note that this option is unavailable in unattended sessions as they 
-do not support voice chat. However, prompted sessions still support 
-this.</li>
+<li>Observera att detta alternativ inte är tillgängligt i obevakade sessioner eftersom de 
+inte stöder röstchatt. Sessioner med uppmaning stöder dock fortfarande 
+detta.</li>
 </ul>
-<li>Start Remote Accessibility: This option appears when no screen 
-reader is running on the remote computer. This will enable speech on 
-your end, but the client will not need to worry about hearing speech.</li>
+<li>Starta fjärråtkomst: Det här alternativet visas när ingen skärmläsare 
+skärmläsare körs på fjärrdatorn. Detta kommer att aktivera tal på 
+din sida, men klienten behöver inte oroa sig för att höra tal.</li>
 <ul>
-<li>If a screen reader (including Remote Accessibility) is running, this option turns into a force quit for the running screen reader. This is useful when a target's screen reader stops responding to the extent you are unable to restart it normally.</li>
+<li>Om en skärmläsare (inklusive Fjärrtillgänglighet) körs förvandlas det här alternativet till en tvingande avslutning för den skärmläsare som körs. Detta är användbart när målets skärmläsare slutar att svara så mycket att du inte kan starta om den normalt.</li>
 </ul>
-<li>Reboot and Reconnect: Allows you to reboot the computer and automatically reconnect the session.</li>
+<li>Starta om och återanslut: Låter dig starta om datorn och automatiskt återansluta sessionen.</li>
 <ul>
-    <li>Note that a Mac target cannot start RIM pre-login due to platform limitations, notably FileVault.</li>
-    <li>As such, RIM will reconnect once the user logs in.</li>
+    <li>Observera att ett Mac-mål inte kan starta RIM före inloggning på grund av plattformsbegränsningar, särskilt FileVault.</li>
+    <li>RIM kommer därför att återansluta när användaren loggar in.</li>
     </ul>
-        <li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.</li>
+        <li>Skicka Kontroll+Alt+Delete: Skickar denna tangenttryckning till fjärrdatorn.</li>
         <ul>
-            <li>An equivalent for this option is not yet implemented for Mac targets.</li>
+            <li>En motsvarighet till det här alternativet har ännu inte implementerats för Mac-mål.</li>
             </ul>
-<li>Request Unattended or Prompted Access: Allows you to send a request 
-for unattended access to the client computer. This is useful if you are a
- sysadmin and need to perform routine maintenance, or even for something
- as simple as controlling your home machine while on the go.</li>
-<li>Lock the Target Machine: Performs the equivalent of Windows+L.</li>
-<li>View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:
+<li>Begär obevakad eller uppmanad åtkomst: Gör att du kan skicka en begäran 
+om obevakad åtkomst till klientdatorn. Detta är användbart om du är
+ sysadmin och behöver utföra rutinunderhåll, eller till och med för något
+ så enkelt som att styra hemmamaskinen när du är på språng.</li>
+<li>Lås målmaskinen: Utför motsvarande Windows+L.</li>
+<li>Visa anslutningsdetaljer: Ger en detaljerad översikt över din anslutning och målmaskinen. Informationen omfattar bland annat</li>
 <ul>
-<li>Connection statistics</li>
-<li>Information about the computer, including operating system version, available ram, etc.</li>
-<li>Running processes (Windows targets)</li>
-<li>Installed packages(Windows targets)</li>
+<li>Anslutningsstatistik</li>
+<li>Information om datorn, inklusive operativsystemversion, tillgänglig ram, etc.</li>
+<li>Processer som körs (Windows-mål)</li>
+<li>Installerade paket (Windows-mål)</li>
 </ul>
-<li>Disconnect Session: Terminates the session.
+<li>Koppla bort session: Avslutar sessionen.</li>
 <ul>
-<li>Remember that this option is available to both sides of the session.</li>
-<li>This is also possible via the keyboard command
-    <em class="winCmd" style="display: none;">Windows+Shift+D.</em>
-    <em class="macCmd" style="display: none;">Option+Shift+D.</em>
+<li>Kom ihåg att detta alternativ är tillgängligt för båda sidor av sessionen.</li>
+<li>Detta är också möjligt via tangentbordskommandot
+   <em class="winCmd" style="display: none;">Windows+Skift+D.</em>
+   <em class="macCmd" style="display: none;">Alternativ+Skift+D.</em>
 </li>
 </ul>
 </ul>
-<h2 id="file-transfers"><a class="header" href="#file-transfers">File Transfers</a></h2>
-<p>RIM provides a simple avenue for transferring files, irrespective of platform used.</p>
+<h2 id="file-transfers"><a class="header" href="#file-transfers">Filöverföring</a></h2>
+<p>RIM erbjuder en enkel möjlighet att överföra filer, oavsett vilken plattform som används.</p>
 <ol>
-<li>Bring up the RIM menu, and click on "Minimize Session." Control will be directed back to your computer.</li>
-<li>Select the file(s) and/or folder(s) you want to transfer using your file manager.</li>
-<li>Copy the selected contents to the clipboard in the usual way. You 
-will receive a notification that a file is ready to be transferred. You 
-have two options.
+<li>Visa RIM-menyn och klicka på "Minimera session" Kontrollen kommer att skickas tillbaka till din dator.</li>
+<li>Välj den eller de filer och/eller mappar som du vill överföra med hjälp av din filhanterare.</li>
+<li>Kopiera det valda innehållet till Urklipp på vanligt sätt. Du 
+får ett meddelande om att en fil är redo att överföras. Du har 
+har två alternativ.</li>
 <ol>
-<li>If the target is a Mac
+<li>Om målet är en Mac:</li>
 <ol>
-<li>Activate the RIM session menu, and click on the "Transfer File to Target" option.</li>
-<li>Upon completion of the transfer, the target Mac will generate a 
-temporary directory containing the transferred contents. These should 
-then be copied and pasted to their intended directories.</li>
+<li>Aktivera RIM-sessionsmenyn och klicka på alternativet "Transfer File to Target".</li>
+<li>När överföringen är klar kommer målets Mac att generera en 
+temporär katalog som innehåller det överförda innehållet. Dessa bör 
+kopieras och klistras in i de avsedda katalogerna.</li>
 </ol>
-</li>
-<li>If the target is a Windows machine:
+<li>Om målet är en Windows-maskin:</li>
 <ol>
-<li>Switch back to the remote session, and locate the folder on the target machine where you wish to paste the content.</li>
-<li>Last but not least, paste as you normally would.</li>
+<li>Växla tillbaka till fjärrsessionen och leta upp den mapp på måldatorn där du vill klistra in innehållet.</li>
+<li>Sist men inte minst, klistra in som vanligt.</li>
 </ol>
-</li>
 </ol>
-</li>
 </ol>
 <!-- end -->
-<p>Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.</p>
-<h2 id="remote-accessibility-module"><a class="header" href="#remote-accessibility-module">Remote Accessibility Module</a></h2>
-<p>Whether you're assisting a user who doesn't use a screen reader, or 
-you're diagnosing an issue with a malfunctioning screen reader, RIM is 
-fully prepared to come to your aid.</p>
+<p>Observera att överföringstiden beror helt på storleken på det innehåll som skickas samt hastigheten på ditt nätverk.</p>
+<h2 id="remote-accessibility-module"><a class="header" href="#remote-accessibility-module">Modul för tillgänglighet på distans</a></h2>
+<p>Oavsett om du hjälper en användare som inte använder en skärmläsare, eller 
+diagnostiserar ett problem med en skärmläsare som inte fungerar, är RIM 
+fullt förberedd på att hjälpa dig.</p>
 <div class="win" style="display: none;">
-    <p>The remote accessibility module consists of two components:</p>
+    <p>Modulen för fjärråtkomst består av två komponenter:</p>
 <ul>
-<li>An addon for the <a href="https://nvaccess.org/">NVDA screen reader</a> that enables the screen reader to receive output from the remote computer</li>
-<li>A self-contained accessibility module initiated on the target 
-computer at the request of the controller. The advantage to this 
-approach is that the end user does not hear speech on their computer 
-while you're controlling it. Instead, the Remote Accessibility Module 
-pipes the speech output through to the running copy of NVDA on the 
-controller side. This way, you can accessibly assist an end user without
- them having to install or even download a screen reader.</li>
+<li>Ett tillägg för <a href="https://nvaccess.org/">NVDA-skärmläsaren</a> som gör att skärmläsaren kan ta emot utdata från fjärrdatorn</li>
+<li>En fristående tillgänglighetsmodul som startas på måldatorn på 
+på begäran av den personuppgiftsansvarige. Fördelen med detta tillvägagångssätt 
+tillvägagångssätt är att slutanvändaren inte hör tal på sin dator 
+medan du kontrollerar den. Istället skickar fjärrtillgänglighetsmodulen 
+talet genom en pipeline till den körande kopian av NVDA på styrenhetens 
+styrenhetens sida. På så sätt kan du på ett tillgängligt sätt hjälpa en slutanvändare utan
+ behöva installera eller ens ladda ner en skärmläsare.</li>
 </ul>
 </div>
 <div class="mac" style="display: none">
-    <p>The remote accessibility module is a
-    special configuration initiated on the target Mac at the request of a
-    Windows or Mac controller. The advantage to this approach is that the 
-   end user does not hear speech on their computer while you're controlling
-    it. Instead, the Remote Accessibility Module pipes the speech output 
-   through to the speech system on the controller side. This way, you can 
-   accessibly assist an end user without them having to enable a screen 
-   reader.
-   If you are running VoiceOver on the controling Mac, the remote 
-   accessibility module will automatically start during remote sessions in 
-   which the remote computer does not have a screen reader running.
+    <p>Modulen för fjärrtillgänglighet är en
+    speciell konfiguration som initieras på mål-Mac-enheten på begäran av en
+    Windows- eller Mac-styrenhet. Fördelen med detta tillvägagångssätt är att 
+   slutanvändaren inte hör tal på sin dator medan du kontrollerar
+    den. Istället skickar fjärrtillgänglighetsmodulen talutmatningen 
+   till talsystemet på styrenhetens sida. På så sätt kan du 
+   på ett tillgängligt sätt hjälpa en slutanvändare utan att de behöver aktivera en skärm 
+   läsare.
+   Om du kör VoiceOver på den kontrollerande Mac-enheten startar 
+   fjärrtillgänglighetsmodulen automatiskt under fjärrsessioner 
+   där fjärrdatorn inte har en skärmläsare igång.
 </div>
 <div class="win" style="display: none">
-    <h3 id="setup-procedure"><a class="header" href="#setup-procedure">Setup Procedure</a></h3>
-<p>For first-time initialization of the accessibility module, here is what you will need to do:</p>
+    <h3 id="setup-procedure"><a class="header" href="#setup-procedure">Inställningsförfarande</a></h3>
+<p>Här är vad du behöver göra för att initiera tillgänglighetsmodulen för första gången:</p>
 <ol>
-<li>Connect to a computer that does not have a screen reader running.</li>
-<li>If NVDA is currently running, you will be asked to install an addon 
-that will allow your copy of NVDA to communicate with the remote 
-computer during the session. Accept the installation prompts, and wait 
-for NVDA to restart.</li>
-<li>By now, the remote accessibility module will be fully initialized, 
-and you will hear speech output as you control the remote computer.</li>
+<li>Anslut till en dator som inte har en skärmläsare igång.</li>
+<li>Om NVDA körs för närvarande kommer du att bli ombedd att installera ett tillägg 
+som gör att din kopia av NVDA kan kommunicera med fjärrdatorn under 
+fjärrdatorn under sessionen. Acceptera installationsuppmaningarna och vänta 
+på att NVDA startas om.</li>
+<li>Vid det här laget kommer fjärråtkomstmodulen att vara helt initialiserad, 
+och du kommer att höra tal när du styr fjärrdatorn.</li>
 </ol>
-<p>From this point forward, if you are running a screen reader on the 
-controling computer, the remote accessibility module will automatically 
-start during remote sessions in which the remote computer does not have a
- screen reader running. Should you be running a screen reader other than
- NVDA, RIM will disengage that screen reader and then switch you over to
+<p>Från och med nu, om du kör en skärmläsare på den kontrollerande 
+kontrolldator kommer modulen för fjärråtkomst automatiskt att 
+startas automatiskt under fjärrsessioner där fjärrdatorn inte har en
+ skärmläsare igång. Om du kör en annan skärmläsare än
+ NVDA, kommer RIM att koppla ur den skärmläsaren och sedan växla över till
  NVDA.
-If you need to stop the remote accessibility module on the remote 
-machine in order to start another screen reader, simply access the "Stop Remote Accessibility" option off the RIM menu.</p>
+Om du behöver stoppa fjärrtillgänglighetsmodulen på fjärrdatorn för att 
+maskinen för att starta en annan skärmläsare, väljer du helt enkelt alternativet "Stoppa fjärråtkomst" i RIM-menyn.</p>
 </div>
-<h2 id="rebooting-and-reconnecting"><a class="header" href="#rebooting-and-reconnecting">Rebooting and Reconnecting</a></h2>
-<p>Whether you're installing system updates or working your way out of a
- system hang, RIM has got you covered during the reboot process. 
-Selecting the "Reboot and Reconnect" option off the RIM menu will allow 
-you to either perform a graceful reboot or an emergency reboot, 
-depending on what state the computer is in. While the computer is 
-rebooting, RIM will inform you that reconnection attempts are being 
-made.<br>
-Note that if the computer is rebooted by a software installation or 
-manually rebooted in the usual way, you will be asked if you wish to 
-reconnect the session. Of further note is that in either case, Mac 
-targets will only reconnect once the user logs in. This is due to the 
-fact that RIM cannot start automatically on the login screen due to 
-platform limitations, most notably FileVault disk encryption.</p>
-<h2 id="unattended-or-prompted-access"><a class="header" href="#unattended-or-prompted-access">Unattended or Prompted Access</a></h2>
-<p>RIM allows you, as the controller, to configure machines for 
-unattended or prompted access. This allows you to provide remote 
-assistance without the user having to launch RIM, enter a keyword, or 
-even be near the computer. This is useful if you are a sysadmin 
-performing routine maintenance on computers in your workgroup, or for 
-clients you provide support to on the regular. You may also want to 
-allow unattended access for your home computer should you need to access it 
-from someplace else.<br>
-There are a few ways to configure machines for unattended access.</p>
-<h3 id="during-an-interactive-session"><a class="header" href="#during-an-interactive-session">During an Interactive Session</a></h3>
+<h2 id="rebooting-and-reconnecting"><a class="header" href="#rebooting-and-reconnecting">Omstart och återanslutning</a></h2>
+<p>Oavsett om du installerar systemuppdateringar eller arbetar dig ur ett
+ systemhängning, har RIM hjälpt dig under omstartsprocessen. 
+Om du väljer alternativet "Starta om och återanslut" i RIM-menyn kan du 
+du antingen utföra en graciös omstart eller en nödomstart, 
+beroende på vilket tillstånd datorn befinner sig i. När datorn håller på att 
+omstartar informerar RIM dig om att försök till återanslutning 
+görs.<br>
+Observera att om datorn startas om genom en programvaruinstallation eller 
+omstartas manuellt på vanligt sätt, kommer du att tillfrågas om du vill 
+återansluta sessionen. Observera också att i båda fallen kommer Mac 
+targets endast återansluta när användaren loggar in. Detta beror på 
+att RIM inte kan starta automatiskt på inloggningsskärmen på grund av 
+plattformsbegränsningar, framför allt FileVault-diskkryptering.</p>
+<h2 id="unattended-or-prompted-access"><a class="header" href="#unattended-or-prompted-access">Obevakad eller uppmanad åtkomst</a></h2>
+<p>Med RIM kan du, som styrenhet, konfigurera maskiner för 
+obevakad eller uppmanad åtkomst. Detta gör att du kan tillhandahålla fjärr 
+fjärrhjälp utan att användaren behöver starta RIM, ange ett nyckelord eller 
+ens vara i närheten av datorn. Detta är användbart om du är en sysadmin 
+utför rutinunderhåll på datorer i din arbetsgrupp, eller för 
+klienter som du ger support till regelbundet. Du kanske också vill 
+tillåta obevakad åtkomst för din hemdator om du skulle behöva komma åt den 
+från någon annanstans.<br>
+Det finns några sätt att konfigurera maskiner för obevakad åtkomst.</p>
+<h3 id="during-an-interactive-session"><a class="header" href="#during-an-interactive-session">Under en interaktiv session</a></h3>
 <ol>
-<li>Bring up the RIM menu.</li>
-<li>Select "Request Unattended or Prompted Access."</li>
-<li>You will be asked what kind of connection you want to configure. Your options are:
+<li>Visa RIM-menyn.</li>
+<li>Välj "Begär obevakad eller uppmanad åtkomst"</li>
+<li>Du kommer att bli tillfrågad om vilken typ av anslutning du vill konfigurera. Dina alternativ är:</li>
 <ol>
-<li>Unattended: Allows sessions to be initiated without any intervention whatsoever from the end user.</li>
-<li>Prompted: This configuration presents the user with a prompt 
-informing them that you are conecting to their machine. They will need 
-to press <em>Option+Shift+Y</em> on Mac OS, or <em>Windows+Shift+Y</em> on Windows, should they wish to accept the connection.</li>
+<li>Obevakad: Tillåter att sessioner initieras utan någon som helst inblandning från slutanvändaren.</li>
+<li>Med uppmaning: I den här konfigurationen visas ett meddelande till användaren 
+som informerar dem om att du ansluter till deras maskin. De kommer att behöva 
+trycka på <em>Option+Shift+Y</em> på Mac OS, eller <em>Windows+Shift+Y</em> på Windows, om de vill acceptera anslutningen.</li>
 </ol>
-<li>You will be asked to give this machine a name. Enter a personal name
- for the machine, or if applicable, the machine ID as it appears in your
- workgroup.</li>
-<li>Press enter.</li>
-<li>On the client machine, a dialogue pops up asking the user if they're
- fine with their computer being set up for the access you requested. If 
-they answer yes, then you will get a prompt informing you that the 
-access has been approved.</li>
+<li>Du kommer att bli ombedd att ge maskinen ett namn. Ange ett personligt namn
+ för maskinen, eller om tillämpligt, maskinens ID som det visas i din
+ arbetsgrupp.</li>
+<li>Tryck på Enter.</li>
+<li>På klientdatorn visas en dialogruta där användaren tillfrågas om
+ med att datorn konfigureras för den åtkomst du begärde. Om 
+svarar ja, kommer du att få en fråga som informerar dig om att 
+åtkomsten har godkänts.</li>
 </ol>
-<h3 id="registering-a-machine-to-your-rim-account"><a class="header" href="#registering-a-machine-to-your-rim-account">Registering a Machine to your RIM account</a></h3>
-<p>Should you wish to register one of your own machines for unattended 
-access, you can do so without having to start an interactive session 
-with the machine. </p>
+<h3 id="registering-a-machine-to-your-rim-account"><a class="header" href="#registering-a-machine-to-your-rim-account">Registrera en maskin till ditt RIM-konto</a></h3>
+<p>Om du vill registrera en av dina egna maskiner för obevakad åtkomst 
+tillgång, kan du göra det utan att behöva starta en interaktiv session 
+med maskinen. </p>
 <ol>
-<li>Start RIM in Receive Help Mode.</li>
-<li>Click on the "Add this machine to your RIM account" button.</li>
-<li>Enter your email, then click next.</li>
-<li>Wait for the two-step login code to arrive, enter it, then you should be logged in.</li>
-<li>You will be asked what type of access you would like configured for this machine. Your options are:
+<li>Starta RIM i hjälpläge för mottagning.</li>
+<li>Klicka på knappen "Lägg till den här maskinen till ditt RIM-konto".</li>
+<li>Ange din e-postadress och klicka sedan på nästa.</li>
+<li>Vänta tills inloggningskoden i två steg kommer, ange den och sedan bör du vara inloggad.</li>
+<li>Du kommer att bli tillfrågad om vilken typ av åtkomst du vill konfigurera för den här maskinen. Dina alternativ är:</li>
 <ol>
-<li>Unattended: Allows sessions to be initiated without any intervention whatsoever from the end user.</li>
-<li>Prompted: This configuration presents the user with a prompt informing them that you are conecting to their machine.</li>
+<li>Obevakad: Tillåter att sessioner initieras utan någon som helst inblandning från slutanvändaren.</li>
+<li>Uppmanad: Denna konfiguration visar användaren en prompt som informerar dem om att du ansluter till deras maskin.</li>
 </ol>
-<li>Give the machine a name, then activate the "Add Machine" button.</li>
-<li>The machine will be registered to your account, which will allow any
- controller machines logged into your RIM account to connect to this 
-machine.</li>
+<li>Ge maskinen ett namn och aktivera sedan knappen "Lägg till maskin".</li>
+<li>Maskinen kommer att registreras på ditt konto, vilket gör att alla
+ maskiner som är inloggade på ditt RIM-konto att ansluta till den här 
+maskinen.</li>
 </ol>
-<h3 id="getting-connected-1"><a class="header" href="#getting-connected-1">Getting Connected</a></h3>
-<p>Now that we've registered the machine for unattended access, here is how we will start a session.</p>
+<h3 id="getting-connected-1"><a class="header" href="#getting-connected-1">Ansluta till maskinen</a></h3>
+<p>Nu när vi har registrerat maskinen för obevakad åtkomst kan du se här hur vi startar en session.</p>
 <ol>
-<li>Start RIM in controller mode.</li>
-<li>Rather than entering a keyword, locate and activate the"Choose a machine" button.</li>
-<li>When you click this, a list of machines will appear. Choose the one 
-you want, then hit enter. You may also use the search bar to narrow the 
-list down to a specific machine.</li>
+<li>Starta RIM i controller-läge.</li>
+<li>Istället för att ange ett nyckelord, leta reda på och aktivera knappen "Välj en maskin".</li>
+<li>När du klickar på den visas en lista med maskiner. Välj den maskin 
+du vill ha och tryck sedan på enter. Du kan också använda sökfältet för att begränsa 
+listan till en specifik maskin.</li>
 </ol>
-<p>If the target machine is configured for prompted access, the end user
- will get a prompt. Once they answer yes, you'll be connected. If the 
-session is unattended, you will immediately be connected and dropped 
-into the remote control zone.<br>
-Please note: Voice conversations are not supported during fully unattended sessions, however they are supported for prompted sessions.</p>
-<h3 id="creating-a-shortcut-for-an-unattended-session"><a class="header" href="#creating-a-shortcut-for-an-unattended-session">Creating a Shortcut for an Unattended Session</a></h3>
-<p>For extra convenience, you can create desktop shortcuts that allow 
-you to automatically launch unattended sessions. In order to do this:</p>
+<p>Om målmaskinen är konfigurerad för åtkomst med uppmaning får slutanvändaren
+ få en uppmaning. När de svarar ja kommer du att anslutas. Om sessionen 
+sessionen är obevakad kommer du omedelbart att anslutas och 
+in i fjärrstyrningszonen.<br>
+Observera: Röstkonversationer stöds inte under helt obevakade sessioner, men de stöds för sessioner med uppmaning.</p>
+<h3 id="creating-a-shortcut-for-an-unattended-session"><a class="header" href="#creating-a-shortcut-for-an-unattended-session">Skapa en genväg för en obevakad session</a></h3>
+<p>För extra bekvämlighet kan du skapa genvägar på skrivbordet som 
+automatiskt starta obevakade sessioner. För att göra detta:</p>
 <ol>
-<li>Access the list of unattended computers, and select the one you want to create a shortcut for.</li>
-<li>Click on the "Create Shortcut" button.</li>
-<li>A shortcut will be automatically added to your desktop.</li>
+<li>Öppna listan över obevakade datorer och markera den dator du vill skapa en genväg för.</li>
+<li>Klicka på knappen "Skapa genväg".</li>
+<li>En genväg läggs automatiskt till på skrivbordet.</li>
 </ol>
-<!-- end -->
-<p>Now, when you activate this shortcut, you will either automatically 
-land in the remote session, or send a prompt to the user's machine that 
-they can accept.</p>
+<p>När du nu aktiverar genvägen kommer du antingen automatiskt att 
+landa i fjärrsessionen, eller skicka en uppmaning till användarens maskin som 
+de kan acceptera.</p>
 <div class="win" style="display: none">
-    <h4 id="more-ways-to-use-unattended-session-shortcuts"><a class="header" href="#more-ways-to-use-unattended-session-shortcuts">More Ways to use Unattended Session Shortcuts</a></h4>
-<p>Unattended session shortcuts, like any other shortcuts, can have 
-global hotkeys associated with them. This can be extremely useful if you
- are a maintenance tech managing multiple computers in a workgroup. For 
-example, if your workgroup consists of 6 computers that you perform 
-routine maintenance on, you could configure Alt+Control+1 through 6 as 
-hotkeys for each respective machine. This ought to significantly speed 
-up your workflow.<br>
-In addition, you can call up an unattended session via the run box if 
-you copy the shortcut into your user directory. Once you've copied the 
-shortcut, you may start an unattended session by typing 
-your-session-name.url in the run box.</p>
+    <h4 id="more-ways-to-use-unattended-session-shortcuts"><a class="header" href="#more-ways-to-use-unattended-session-shortcuts">Fler sätt att använda obevakade sessionsgenvägar</a></h4>
+<p>Obevakade sessionsgenvägar, som alla andra genvägar, kan ha 
+globala snabbtangenter associerade med dem. Detta kan vara mycket användbart om du
+ är en underhållstekniker som hanterar flera datorer i en arbetsgrupp. Till exempel 
+om din arbetsgrupp består av 6 datorer som du utför rutinunderhåll på 
+rutinunderhåll på, kan du konfigurera Alt+Control+1 till 6 som 
+snabbtangenter för respektive maskin. Detta borde avsevärt påskynda 
+upp ditt arbetsflöde.<br>
+Dessutom kan du starta en obevakad session via körrutan om 
+du kopierar genvägen till din användarkatalog. När du har kopierat genvägen 
+genvägen kan du starta en obevakad session genom att skriva 
+din-sessions-namn.url i körrutan.</p>
 </div>
-<h3 id="revoking-unattended-access"><a class="header" href="#revoking-unattended-access">Revoking Unattended Access</a></h3>
-<p>If you no longer want your machine to be controlled unattended, you 
-can revoke the controller's access. You do not need to be in a session 
-in order to do this.</p>
+<h3 id="revoking-unattended-access"><a class="header" href="#revoking-unattended-access">Återkalla obevakad åtkomst</a></h3>
+<p>Om du inte längre vill att maskinen ska kunna styras utan uppsikt kan du 
+kan du återkalla styrenhetens åtkomst. Du behöver inte vara i en session 
+för att kunna göra detta.</p>
 <ol class="win" style="display: none;">
-<li>Access the Remote Incident Manager icon in your system tray.
+<li>Öppna ikonen Remote Incident Manager i systemfältet.</li>
 <ol>
-<li>If using the keyboard, press windows+b, then space, then left or right arrow until you find the icon.</li>
+<li>Om du använder tangentbordet trycker du på Windows+b, sedan mellanslag, sedan vänster eller höger pil tills du hittar ikonen.</li>
 </ol>
-<li>Right click this icon, or press the applications or shift+f10 key.</li>
-<li>Select the "Revoke Unattended Access" option.</li>
-<li>You will arrive at a list of computers, select the one you want to revoke.</li>
-<li>You will be asked if you wish to revoke the machine; answer yes.</li>
+<li>Högerklicka på ikonen eller tryck på tangenten program eller shift+f10.</li>
+<li>Välj alternativet "Återkalla obevakad åtkomst".</li>
+<li>Du kommer till en lista med datorer, välj den du vill återkalla.</li>
+<li>Du kommer att bli tillfrågad om du vill återkalla maskinen; svara ja.</li>
 </ol>
 <ol class="mac" style="display: none;">
-    <li>Access the Remote Incident Manager icon in your menu extras/status menus.
+    <li>Öppna ikonen Remote Incident Manager i menyn extrafunktioner/statusmenyer.</li>
     <ol>
-    <li>If using VoiceOver, press VO+M twice, then locate the Remote Incident Manager menu icon.</li>
+    <li>Om du använder VoiceOver trycker du på VO+M två gånger och letar sedan upp menyikonen Remote Incident Manager.</li>
     </ol>
-    <li>Click this icon, or press VO+Space.</li>
-    <li>Select the "Revoke Unattended Access" option.</li>
-    <li>You will arrive at a list of computers, select the one you want to revoke.</li>
-    <li>You will be asked if you wish to revoke the machine; answer yes.</li>
+    <li>Klicka på ikonen eller tryck på VO+Space.</li>
+    <li>Välj alternativet "Återkalla obevakad åtkomst".</li>
+    <li>Du kommer till en lista med datorer, välj den du vill återkalla.</li>
+    <li>Du kommer att få frågan om du vill återkalla maskinen; svara ja.</li>
     </ol>
-    <p>That's it! The controller will receive a message stating that this 
-machine is no longer available for unattended access. Should they need 
-unattended access again, they can reinitiate the procedure to request 
-permission for unattended access as described above.</p>
-<h2 id="key-command-reference"><a class="header" href="#key-command-reference">Key Command Reference</a></h1>
-<div class="table-wrapper"><table class="win" style="display: none;"><thead><tr><th>Action</th><th>Command</th></tr></thead><tbody>
-<tr><td>Minimize Session</td><td>Windows+Shift+M</td></tr>
-<tr><td>Flip Session</td><td>Windows+Shift+F</td></tr>
-<tr><td>Disconnect Session (Controller or Target)</td><td>Windows+Shift+D</td></tr>
+    <p>Nu är det klart! Den registeransvarige kommer att få ett meddelande om att denna 
+maskinen inte längre är tillgänglig för obevakad åtkomst. Om de skulle behöva 
+obevakad åtkomst igen kan de återuppta proceduren för att begära 
+tillstånd för obevakad åtkomst enligt beskrivningen ovan.</p>
+<h2 id="key-command-reference"><a class="header" href="#key-command-reference">Nyckelkommando Referens</a></h1>
+<div class="table-wrapper"><table class="win" style="display: none;"><thead><tr><th>Åtgärd</th><th>Kommando</th></tr></thead><tbody>
+<tr><td>Minimera session</td><td>Windows+Skift+M</td></tr>
+<tr><td>Vänd på sessionen</td><td>Windows+Skift+F</td></tr>
+<tr><td>Koppla från session (styrenhet eller mål)</td><td>Fönster+Skift+D</td></tr>
 </tbody></table>
-<div class="table-wrapper"><table class="mac" style="display: none;"><thead><tr><th>Action</th><th>Command</th></tr></thead><tbody>
-    <tr><td>Activate RIM Menu</td><td>Option+Shift+Backspace</td></tr>
-    <tr><td>Minimize Session</td><td>Option+Shift+M</td></tr>
-    <tr><td>Flip Session</td><td>Option+Shift+F</td></tr>
-    <tr><td>Disconnect Session (Controller or Target)</td><td>Option+Shift+D</td></tr>
-    <tr><td>Accept Incoming Connection Request</td><td>Option+Shift+Y</td></tr>
-    <tr><td>Decline Incoming Connection Request</td><td>Option+Shift+N</td></tr>
+<div class="table-wrapper"><table class="mac" style="display: none;"><thead><tr><th>Åtgärd</th><th>Kommando</th></tr></thead><tbody>
+    <tr><td>Aktivera RIM-menyn</td><td>Alternativ+Skift+Bakåt</td></tr>
+    <tr><td>Minimera session</td><td>Alternativ+Skift+M</td></tr>
+    <tr><td>Vänd på sessionen</td><td>Alternativ+Skift+F</td></tr>
+    <tr><td>Koppla bort session (styrenhet eller mål)</td><td>Alternativ+Skift+D</td></tr>
+    <tr><td>Acceptera begäran om inkommande anslutning</td><td>Alternativ+Skift+Y</td></tr>
+    <tr><td>Avvisa begäran om inkommande anslutning</td><td>Alternativ+Skift+N</td></tr>
     </tbody></table>
     
+</layout>

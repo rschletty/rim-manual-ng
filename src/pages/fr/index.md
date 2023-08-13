@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/toc.astro
-title: "Welcome"
+title: "Bienvenue"
 author: "Jack Falejczyk - Pneuma Solutions"
 date: "13 Jul 2023"
 ---

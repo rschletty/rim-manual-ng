@@ -72,5 +72,17 @@ de: {
   'nav.changelog': 'Änderungsprotokoll',
   'footer.langChange': 'Sprache ändern',
 },
+  sv: {
+    'nav.welcome': 'Välkommen till',
+    'nav.systemspecs': 'Systemkrav',
+    'nav.installation': 'Installation',
+    'nav.gettingconnected': 'Att bli uppkopplad',
+    'nav.workingwithsessions': 'Arbeta inom en session',
+    'nav.dashboard': 'RIM:s instrumentpanel',
+    'nav.faq': 'Vanliga frågor och svar',
+    'nav.pricing': 'Prissättning',
+    'nav.changelog': 'Ändra logg',
+    'footer.langChange': 'Ändra språk',
+  },
 
 } as const;
