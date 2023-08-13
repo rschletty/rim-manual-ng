@@ -4,29 +4,29 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-  <Layout title="System Requirements">
-<p>In order to run Remote Incident Manager, your system must meet or exceed the following requirements:</p>
+  <Layout title="Systemanforderungen">
+<p>Um Remote Incident Manager ausführen zu können, muss Ihr System die folgenden Anforderungen erfüllen oder übertreffen:</p>
 <div id="platformButtons">
-<button id="showWindows">Switch to Windows requirements</button>
-<button id="showMac">Switch to Mac OS requirements</button>
+<button id="showWindows">Zu den Windows-Anforderungen wechseln</button>
+<button id="showMac">Zu den Mac OS-Anforderungen wechseln</button>
 </div>
 <div class="win" style="display: none;">
   <ul>
-        <li>Windows 7 SP1 or later</li>
-        <li>Windows Server 2012 or later</li>
-        <li>At least 4GB of RAM</li>
-        <li>Admin privileges for initial installation (not required for automatic updates)</li>
+        <li>Windows 7 SP1 oder höher</li>
+        <li>Windows Server 2012 oder höher</li>
+        <li>Mindestens 4 GB RAM</li>
+        <li>Admin-Rechte für die Erstinstallation (nicht erforderlich für automatische Updates)</li>
       </ul>
     </div>
       <div class="mac" style="display: none;">
         <ul>
-        <li>Intel or Apple Silicon</li>
+        <li>Intel oder Apple Silizium</li>
         <li>Mac OS Ventura</li>
-        <li>At least 4GB of RAM</li>
-        <li>Admin privileges for initial installation (not required for automatic updates)</li>
+        <li>Mindestens 4 GB RAM</li>
+        <li>Admin-Rechte für die Erstinstallation (für automatische Updates nicht erforderlich)</li>
       </ul>
     </div>
       <div id="unknown-content" style="display: none">
-        <p>Please select an operating system using the above buttons.</p>
+        <p>Bitte wählen Sie über die obigen Schaltflächen ein Betriebssystem aus.</p>
     </div>
 </Layout>

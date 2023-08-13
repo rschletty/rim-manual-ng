@@ -3,61 +3,61 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-<Layout title="Getting Connected">
+<Layout title="Verbunden werden">
     <div id="platformButtons">
-        <button id="showWindows">Switch to Windows keyboard commands</button>
-        <button id="showMac">Switch to Mac OS Keyboard Commands</button>
+       <button id="showWindows">Umschalten auf Windows-Tastaturbefehle</button>
+       <button id="showMac">Umschalten auf Mac OS-Tastaturbefehle</button>
         </div>
-<p>Remote Incident Manager's connection process is designed with speed 
-and simplicity in mind, both for the person receiving assistance as well as for the person providing it.</p>
-<h2 id="connecting-to-a-controller"><a class="header" href="#connecting-to-a-controller">Connecting to a Controller</a></h2>
-<p>When you first launch Remote Incident Manager, you will be in target 
-mode by default. This means that you are going to be connecting to a 
-person who has set up a remote support session for you.<br>
-You will land in an edit box labeled "keyword." Enter the keyword issued
- to you by the person assisting you, and then simply hit enter. That's 
-it, you're connected!</p>
-<h2 id="accepting-a-request-to-connect"><a class="header" href="#accepting-a-request-to-connect">Accepting a Request to Connect</a></h2>
-<p>If a technician provides support to you on the regular, your machine 
-may be set up to receive a request to connect without either of you 
-having to enter a keyword. RIM will announce that your technician is 
-attempting to connect. In order to accept the connection, press
-<em class="winCmd" style="display: none;">Windows+Shift+Y,</em>
-<em class="macCmd" style="display: none;">Option+Shift+Y,</em>
-and the session will begin momentarily.</p>
-<h2 id="connecting-to-a-target"><a class="header" href="#connecting-to-a-target">Connecting to a Target</a></h2>
-<p>The process for setting up the session is fairly similar. Rather than
- entering the keyword, you will want to navigate to the "Provide help 
-instead" button. When doing this for the first time, you will be asked 
-to set up an account.</p>
+<p>Der Verbindungsprozess von Remote Incident Manager ist auf Geschwindigkeit 
+und Einfachheit ausgelegt, sowohl für die Person, die Hilfe erhält, als auch für die Person, die sie anbietet.</p>
+<h2 id="connecting-to-a-controller"><a class="header" href="#connecting-to-a-controller">Verbinden mit einem Controller</a></h2>
+<p>Wenn Sie Remote Incident Manager zum ersten Mal starten, befinden Sie sich standardmäßig im Ziel 
+modus. Das bedeutet, dass Sie eine Verbindung zu einer Person herstellen werden 
+person, die eine Fernwartungssitzung für Sie eingerichtet hat.<br>
+Sie landen in einem Bearbeitungsfeld mit der Bezeichnung "Schlüsselwort" Geben Sie das Schlüsselwort ein, das
+ das Ihnen von der Person, die Sie unterstützt, mitgeteilt wurde, und drücken Sie dann einfach die Eingabetaste. Das war's 
+das war's, Sie sind verbunden!</p>
+<h2 id="accepting-a-request-to-connect"><a class="header" href="#accepting-a-request-to-connect">Akzeptieren einer Verbindungsanfrage</a></h2>
+<p>Wenn Sie regelmäßig von einem Techniker unterstützt werden, kann Ihr Rechner 
+möglicherweise so eingestellt, dass er eine Verbindungsanfrage annimmt, ohne dass einer von Ihnen 
+ein Schlüsselwort eingeben müssen. RIM meldet dann, dass Ihr Techniker 
+versucht, eine Verbindung herzustellen. Um die Verbindung zu akzeptieren, drücken Sie
+<em class="winCmd" style="display: none;">Windows+Umschalt+Y,</em>
+<em class="macCmd" style="display: none;">Wahl+Umschalt+Y,</em>
+und die Sitzung wird kurzzeitig gestartet.</p>
+<h2 id="connecting-to-a-target"><a class="header" href="#connecting-to-a-target">Verbinden mit einem Ziel</a></h2>
+<p>Das Verfahren zum Aufbau der Sitzung ist ziemlich ähnlich. Anstatt das
+ das Schlüsselwort einzugeben, navigieren Sie zur Schaltfläche "Hilfe bereitstellen 
+stattdessen". Wenn Sie dies zum ersten Mal tun, werden Sie aufgefordert 
+ein Konto einzurichten.</p>
 <ol>
-<li>Enter your email address.</li>
-<li>Check your email for a verification code, and then enter it into RIM.</li>
-<li>You will then be asked to enter your name, location and phone number.</li>
-<li>Lastly, you will receive another verification code on your phone. Enter this code into RIM.
+<li>Geben Sie Ihre E-Mail-Adresse ein.</li>
+<li>Überprüfen Sie Ihre E-Mail auf einen Verifizierungscode, und geben Sie diesen in RIM ein.</li>
+<li>Sie werden dann aufgefordert, Ihren Namen, Ihren Standort und Ihre Telefonnummer einzugeben.</li>
+<li>Schließlich erhalten Sie einen weiteren Bestätigungscode auf Ihr Telefon. Geben Sie diesen Code bei RIM ein.</li>
 <ol>
-<li>If you do not have a mobile phone capable of receiving text messages, please <a href="https://pneumasolutions.com/products/rim/account-verification/">fill out this form.</a> We will assist you in getting your account verified.</li>
-<li>A note for international numbers: If your verification code doesn't 
-come through, make sure the country code before your number is denoted 
-by the plus sign, rather than 00.</li>
+<li>Wenn Sie kein Mobiltelefon haben, das Textnachrichten empfangen kann, füllen Sie bitte <a href="https://pneumasolutions.com/products/rim/account-verification/">dieses Formular aus.</a> Wir werden Ihnen bei der Verifizierung Ihres Kontos helfen.</li>
+<li>Ein Hinweis für internationale Nummern: Wenn Ihr Verifizierungscode nicht 
+vergewissern Sie sich, dass die Landesvorwahl vor Ihrer Nummer mit einem 
+mit einem Pluszeichen und nicht mit 00.</li>
 </ol>
 </ol>
-<p>Now that you're logged in, enter the keyword that the target will use
- to connect to you. When you navigate past the edit box, you will come 
-across a checkbox that determines whether or not to start a voice 
-conversation during the session (this can be toggled on or off during 
-the session as well). After that, you will find the "Start" button. When
- you click this, you will be in the waiting room until your target 
-connects. At this point, you will want to send the keyword you just 
-entered to the person you'll be connecting to, as this is what they will
- use to connect. Once they have connected, you will receive an alert 
-informing you that the remote session is about to begin. Take note of 
-the mentioned
-<em class="winCmd" style="display: none;">Windows+Shift+Backspace</em>
-<em class="macCmd" style="display: none;">Option+Shift+Backspace</em>
-shortcut as that will 
-bring up the RIM menu on your machine. If you rely on the keyboard 
-exclusively, this is the only way to direct keyboard input back to your 
-own system. After you dismiss this dialogue, the remote session will be 
-initiated.</p>
+<p>Wenn Sie nun angemeldet sind, geben Sie das Schlüsselwort ein, das die Zielperson verwenden wird
+ um eine Verbindung zu Ihnen herzustellen. Wenn Sie über das Bearbeitungsfeld hinaus navigieren, finden Sie 
+ein Kontrollkästchen, das festlegt, ob während der Sitzung ein 
+gespräch während der Sitzung beginnen soll (dies kann auch während der Sitzung ein- oder ausgeschaltet werden) 
+der Sitzung ein- oder ausschalten). Danach finden Sie die Schaltfläche "Start". Wenn
+ sie darauf klicken, befinden Sie sich im Warteraum, bis Ihr Ziel 
+eine Verbindung herstellt. An diesem Punkt sollten Sie das Schlüsselwort, das Sie gerade eingegeben haben 
+das Sie gerade eingegeben haben, an die Person senden, mit der Sie sich verbinden werden
+ verbindung herzustellen. Sobald die Verbindung hergestellt ist, erhalten Sie eine Meldung 
+die Sie darüber informiert, dass die Fernsitzung in Kürze beginnen wird. Beachten Sie 
+die erwähnte
+<em class="winCmd" style="display: none;">Windows+Umschalt+Rücktaste</em>
+<em class="macCmd" style="display: none;">Wahltaste+Umschalttaste+Rücktaste</em>
+tastenkombination, mit der Sie 
+das RIM-Menü auf Ihrem Rechner aufruft. Wenn Sie sich ausschließlich auf die Tastatur verlassen 
+ausschließlich auf die Tastatur verlassen, ist dies die einzige Möglichkeit, Tastatureingaben auf Ihr 
+eigenen System zu leiten. Nachdem Sie diesen Dialog beendet haben, wird die Fernsitzung 
+eingeleitet.</p>
 </Layout>

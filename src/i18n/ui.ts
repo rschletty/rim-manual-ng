@@ -60,5 +60,17 @@ it: {
   'nav.changelog': 'Registro delle modifiche',
   'footer.langChange': 'Cambia lingua',
 },
+de: {
+  'nav.welcome': 'Willkommen',
+  'nav.systemspecs': 'Systemanforderungen',
+  'nav.installation': 'Einrichtung',
+  'nav.gettingconnected': 'Verbunden werden',
+  'nav.workingwithsessions': 'Arbeiten innerhalb einer Sitzung',
+  'nav.dashboard': 'Das RIM-Dashboard',
+  'nav.faq': 'Häufig gestellte Fragen',
+  'nav.pricing': 'Preisgestaltung',
+  'nav.changelog': 'Änderungsprotokoll',
+  'footer.langChange': 'Sprache ändern',
+},
 
 } as const;

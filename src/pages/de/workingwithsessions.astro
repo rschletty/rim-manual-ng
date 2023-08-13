@@ -3,346 +3,343 @@ import Layout from '../../layouts/toc.astro';
 import react from "react";
 ---
 <script src="../../components/runningPlatform.js"></script>
-<Layout title="Working within a Session">
+<Layout title="Arbeiten innerhalb einer Sitzung">
     <div id="platformButtons">
-        <button id="showWindows">Switch to Windows Installation Instructions</button>
-        <button id="showMac">Switch to Mac OS Installation Instructions</button>
+       <button id="showWindows">Zu Windows wechseln Anleitungen</button>
+       <button id="showMac">Zu Mac OS wechseln Anleitungen</button>
         </div>
-<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Things to Know before you Begin</a></h2>
-<p>A few things will happen immediately after the connection is established.</p>
+<h2 id="things-to-know-before-you-begin"><a class="header" href="#things-to-know-before-you-begin">Wissenswertes, bevor Sie beginnen</a></h2>
+<p>Unmittelbar nach dem Herstellen der Verbindung geschehen einige Dinge.</p>
 <ul>
-<li>The remote control window for the session will appear.</li>
-<li>You will be informed about the status of the running screen reader, or lack thereof, on the client's machine.</li>
-<li>If the client is running a screen reader, a toast notification 
-informing the user that the remote session has begun will provide 
-instant confirmation that the user's system audio is working.</li>
-<li>A Mac target will pop up the keyboard setup assistant if this is the first time a controller has connected to it.
+<li>Das Fernsteuerungsfenster für die Sitzung wird angezeigt.</li>
+<li>Sie werden über den Status des Bildschirmlesegeräts informiert, das auf dem Rechner des Kunden läuft.</li>
+<li>Wenn auf dem Client ein Bildschirmlesegerät installiert ist, wird eine Toast-Benachrichtigung 
+eine Toast-Benachrichtigung, die den Benutzer darüber informiert, dass die Fernsitzung begonnen hat, und 
+eine sofortige Bestätigung, dass der Systemton des Benutzers funktioniert.</li>
+<li>Bei einem Mac-Ziel wird der Assistent für die Tastatureinrichtung angezeigt, wenn zum ersten Mal eine Verbindung mit einem Controller hergestellt wurde.</li>
     <ul>
-    <li>This is for the Karabiner virtual keyboard, which listens to keyboard commands sent to it by a controller.</li>
-    <li>As such, you will want to walk the target computer through the setup
-     assistant, because it will be listening for remote keyboard presses in 
-    the identification process, not the Mac's own keyboard.</li>
+    <li>Dies ist für die virtuelle Karabiner-Tastatur, die auf Tastaturbefehle hört, die von einem Controller gesendet werden.</li>
+    <li>Daher sollten Sie den Zielcomputer durch den Einrichtungsassistenten
+     durch den Setup-Assistenten zu führen, da dieser bei der Identifizierung auf das Drücken der Ferntastatur 
+    identifizierungsprozess auf das Drücken einer entfernten Tastatur hört, nicht auf die eigene Tastatur des Macs.</li>
     </ul>
-    <li>Last but not least, all keyboard and mouse input will immediately be
- directed to the target computer. To direct control back to your 
-machine, do either of the following:
+    <li>Zu guter Letzt werden alle Tastatur- und Mauseingaben sofort an den
+ an den Zielcomputer weitergeleitet. Um die Steuerung wieder auf Ihren 
+computer zu leiten, führen Sie einen der folgenden Schritte aus:</li>
 <ul class="winCmd" style="display: none;">
-<li>press Windows+Shift+Backspace.</li>
-<li>right click the RIM window's title bar.</li>
-<li>left click the RIM icon.</li>
+<li>drücken Sie Windows+Umschalt+Leertaste.</li>
+<li>klicken Sie mit der rechten Maustaste auf die Titelleiste des RIM-Fensters.</li>
+<li>klicken Sie mit der linken Maustaste auf das RIM-Symbol.</li>
 </ul>
 <ul class="macCmd" style="display: none;">
-    <li>press Option+Shift+Backspace.</li>
-    <li>Click on the large RIM icon in the upper left hand corner of the session window.</li>
+    <li>drücken Sie Wahl+Umschalt+Leertaste.</li>
+    <li>Klicken Sie auf das große RIM-Symbol in der oberen linken Ecke des Sitzungsfensters.</li>
     </ul>
     
 </ul>
-<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Remote Control Zone</a></h2>
-<p>At this point, you're all set to perform whatever tasks need doing on
- the client side. Should you need to switch back to controlling your own
- machine, bring up the RIM menu, then select the "Minimize session" 
-option. You will be taken back to your machine until you switch back 
-into the session window or press Windows+Shift+Backspace again. When you
- go back into the session window, keyboard and mouse input will once again be 
-directed to the client computer.<br>
-Once you're done, either the controller or the target can go into the 
-RIM menu and choose the "Disconnect Session" option. When the session 
-ends, the target machine will get a toast notification informing them of
- this.</p>
-<h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">The RIM Menu</a></h2>
-<p>As mentioned earlier, accessing the RIM menu directs you back to your
- machine. There are a number of options in this menu. They include:</p>
+<h2 id="remote-control-zone"><a class="header" href="#remote-control-zone">Fernsteuerungsbereich</a></h2>
+<p>Jetzt sind Sie bereit für alle Aufgaben, die auf der Client-Seite
+ der Client-Seite zu erledigen. Sollten Sie wieder zur Steuerung Ihres eigenen Rechners wechseln wollen
+ zurückkehren möchten, rufen Sie das RIM-Menü auf und wählen Sie die Option "Sitzung minimieren" 
+option. Sie kehren dann zu Ihrem Rechner zurück, bis Sie wieder 
+in das Sitzungsfenster wechseln oder erneut die Tastenkombination Windows+Umschalt+Rücktaste drücken. Wenn Sie
+ wieder in das Sitzungsfenster wechseln, werden die Tastatur- und Mauseingaben wieder 
+wieder an den Client-Computer geleitet.<br>
+Wenn Sie fertig sind, kann entweder der Controller oder das Ziel in das 
+RIM-Menü die Option "Sitzung trennen" wählen. Wenn die Sitzung 
+endet, erhält der Zielcomputer eine Toast-Benachrichtigung, die ihn darüber
+ dies.</p>
+<h2 id="the-rim-menu"><a class="header" href="#the-rim-menu">Das RIM-Menü</a></h2>
+<p>Wie bereits erwähnt, führt Sie der Zugriff auf das RIM-Menü zurück zu Ihrem
+ rechner. In diesem Menü gibt es eine Reihe von Optionen. Dazu gehören:</p>
 <ul>
-<li>Update RIM on Target: Forces an update of RIM on the target computer
+<li>RIM auf dem Ziel aktualisieren: Erzwingt eine Aktualisierung von RIM auf dem Zielcomputer</li>
 <ul>
-<li>This option shows if the target's machine is running an older version of RIM</li>
+<li>Diese Option zeigt an, ob auf dem Zielcomputer eine ältere Version von RIM läuft</li>
 </ul>
-<li>Minimize Session: brings control back to your machine as described above
+<li>Sitzung minimieren: Bringt die Kontrolle zurück auf Ihren Rechner, wie oben beschrieben</li>
 <ul>
-<li>You can also use the shortcut
-    <em class="winCmd" style="display: none;">Windows+Shift+M</em>
-    <em class="macCmd" style="display: none;">Option+Shift+M</em>
-         to minimize the session.</li>
+<li>Sie können auch die Tastenkombination
+   <em class="winCmd" style="display: none;">Windows+Umschalt+M</em>
+   <em class="macCmd" style="display: none;">Wahl+Umschalt+M</em>
+         verwenden, um die Sitzung zu minimieren.</li>
 </ul>
-<li>Transfer File to Target: Appears if a file is on the clipboard.
+<li>Datei zum Ziel übertragen: Wird angezeigt, wenn sich eine Datei in der Zwischenablage befindet.</li>
 <ul>
-<li>Although this alternate method of completing a file transfer is 
-always available, it is only necessary for transferring files to Mac 
-targets.</li>
+<li>Diese alternative Methode zum Abschließen einer Dateiübertragung ist zwar 
+immer verfügbar ist, ist sie nur für die Übertragung von Dateien auf Mac 
+ziele.</li>
 </ul>
-<li>Flip Session: Allows your client to remote control your machine and 
-hear its audio. As the original controller, you can flip the session 
-back by selecting this option a second time.
+<li>Sitzung umdrehen: Ermöglicht es Ihrem Client, Ihren Rechner fernzusteuern und 
+audio hören. Als ursprünglicher Kontrolleur können Sie die Sitzung umkehren 
+zurückdrehen, indem Sie diese Option ein zweites Mal auswählen.</li>
 <ul>
-<li>You can also use the keyboard shortcut
-    <em class="winCmd" style="display: none;">Windows+Shift+F</em>
-    <em class="macCmd" style="display: none;">Option+Shift+F</em>
-    to flip the session back and forth.</li>
+<li>Sie können auch das Tastaturkürzel
+   <em class="winCmd" style="display: none;">Windows+Umschalt+F</em>
+   <em class="macCmd" style="display: none;">Wahl+Umschalt+F</em>
+    verwenden, um die Sitzung vor- und zurückzudrehen.</li>
 </ul>
-<li>Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
+<li>Sprachkonversation starten/stoppen: Ermöglicht es Ihnen, den Sprachchat für Ihre Sitzung ein- oder auszuschalten.</li>
 <ul>
-<li>Note that this option is unavailable in unattended sessions as they 
-do not support voice chat. However, prompted sessions still support 
-this.</li>
+<li>Beachten Sie, dass diese Option in unbeaufsichtigten Sitzungen nicht verfügbar ist, da diese 
+voice-Chat nicht unterstützt wird. Aufgeforderte Sitzungen unterstützen jedoch 
+dies.</li>
 </ul>
-<li>Start Remote Accessibility: This option appears when no screen 
-reader is running on the remote computer. This will enable speech on 
-your end, but the client will not need to worry about hearing speech.</li>
+<li>Fernzugriff starten: Diese Option wird angezeigt, wenn kein 
+bildschirmlesegerät auf dem entfernten Computer ausgeführt wird. Dadurch wird die Sprachausgabe auf 
+sie aktivieren damit die Sprachausgabe auf Ihrer Seite, aber der Client muss sich nicht um die Sprachausgabe kümmern.</li>
 <ul>
-<li>If a screen reader (including Remote Accessibility) is running, this option turns into a force quit for the running screen reader. This is useful when a target's screen reader stops responding to the extent you are unable to restart it normally.</li>
+<li>Wenn ein Bildschirmleseprogramm (einschließlich Fernzugänglichkeit) läuft, wird diese Option zu einem erzwungenen Beenden des laufenden Bildschirmleseprogramms. Dies ist nützlich, wenn der Bildschirmleser eines Ziels nicht mehr reagiert, so dass Sie ihn nicht normal neu starten können.</li>
 </ul>
-<li>Reboot and Reconnect: Allows you to reboot the computer and automatically reconnect the session.</li>
+<li>Neu starten und Verbindung wiederherstellen: Ermöglicht es Ihnen, den Computer neu zu starten und die Sitzung automatisch wieder zu verbinden.</li>
 <ul>
-    <li>Note that a Mac target cannot start RIM pre-login due to platform limitations, notably FileVault.</li>
-    <li>As such, RIM will reconnect once the user logs in.</li>
+    <li>Beachten Sie, dass ein Mac-Ziel aufgrund von Plattformbeschränkungen, insbesondere FileVault, RIM nicht vor der Anmeldung starten kann.</li>
+    <li>Daher wird RIM die Verbindung wiederherstellen, sobald sich der Benutzer anmeldet.</li>
     </ul>
-        <li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.</li>
+        <li>Strg+Alt+Entf senden: Sendet diese Tastenkombination an den entfernten Rechner.</li>
         <ul>
-            <li>An equivalent for this option is not yet implemented for Mac targets.</li>
+            <li>Eine Entsprechung für diese Option ist für Mac-Ziele noch nicht implementiert.</li>
             </ul>
-<li>Request Unattended or Prompted Access: Allows you to send a request 
-for unattended access to the client computer. This is useful if you are a
- sysadmin and need to perform routine maintenance, or even for something
- as simple as controlling your home machine while on the go.</li>
-<li>Lock the Target Machine: Performs the equivalent of Windows+L.</li>
-<li>View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:
+<li>Unbeaufsichtigten oder angeforderten Zugriff anfordern: Ermöglicht Ihnen das Senden einer Anfrage 
+für unbeaufsichtigten Zugriff auf den Client-Computer zu senden. Dies ist nützlich, wenn Sie ein
+ systemadministrator sind und routinemäßige Wartungsarbeiten durchführen müssen, oder auch für etwas
+ sie können aber auch einfach nur Ihren Heimcomputer von unterwegs aus steuern.</li>
+<li>Sperren Sie den Zielcomputer: Führt das Äquivalent von Windows+L aus.</li>
+<li>Verbindungsdetails anzeigen: Bietet eine detaillierte Übersicht über Ihre Verbindung und den Zielcomputer. Die Informationen umfassen:</li>
 <ul>
-<li>Connection statistics</li>
-<li>Information about the computer, including operating system version, available ram, etc.</li>
-<li>Running processes (Windows targets)</li>
-<li>Installed packages(Windows targets)</li>
+<li>Verbindungsstatistiken</li>
+<li>Informationen über den Computer, einschließlich Betriebssystemversion, verfügbarer Arbeitsspeicher usw.</li>
+<li>Laufende Prozesse (Windows-Ziele)</li>
+<li>Installierte Pakete (Windows-Ziele)</li>
 </ul>
-<li>Disconnect Session: Terminates the session.
+<li>Sitzung trennen: Beendet die Sitzung.</li>
 <ul>
-<li>Remember that this option is available to both sides of the session.</li>
-<li>This is also possible via the keyboard command
-    <em class="winCmd" style="display: none;">Windows+Shift+D.</em>
-    <em class="macCmd" style="display: none;">Option+Shift+D.</em>
+<li>Denken Sie daran, dass diese Option für beide Seiten der Sitzung verfügbar ist.</li>
+<li>Dies ist auch über den Tastaturbefehl
+   <em class="winCmd" style="display: none;">Windows+Umschalt+D.</em>
+   <em class="macCmd" style="display: none;">Wahl+Umschalt+D.</em>
 </li>
 </ul>
 </ul>
-<h2 id="file-transfers"><a class="header" href="#file-transfers">File Transfers</a></h2>
-<p>RIM provides a simple avenue for transferring files, irrespective of platform used.</p>
+<h2 id="file-transfers"><a class="header" href="#file-transfers">Dateiübertragungen</a></h2>
+<p>RIM bietet einen einfachen Weg, um Dateien zu übertragen, unabhängig von der verwendeten Plattform.</p>
 <ol>
-<li>Bring up the RIM menu, and click on "Minimize Session." Control will be directed back to your computer.</li>
-<li>Select the file(s) and/or folder(s) you want to transfer using your file manager.</li>
-<li>Copy the selected contents to the clipboard in the usual way. You 
-will receive a notification that a file is ready to be transferred. You 
-have two options.
+<li>Rufen Sie das RIM-Menü auf, und klicken Sie auf "Sitzung minimieren" Die Steuerung wird zurück auf Ihren Computer geleitet.</li>
+<li>Wählen Sie mit Ihrem Dateimanager die Datei(en) und/oder den/die Ordner aus, die Sie übertragen möchten.</li>
+<li>Kopieren Sie die ausgewählten Inhalte wie gewohnt in die Zwischenablage. Sie 
+erhalten eine Benachrichtigung, dass eine Datei zum Übertragen bereit ist. Sie 
+haben zwei Möglichkeiten.</li>
 <ol>
-<li>If the target is a Mac
+<li>Wenn das Ziel ein Mac ist:</li>
 <ol>
-<li>Activate the RIM session menu, and click on the "Transfer File to Target" option.</li>
-<li>Upon completion of the transfer, the target Mac will generate a 
-temporary directory containing the transferred contents. These should 
-then be copied and pasted to their intended directories.</li>
+<li>Aktivieren Sie das RIM-Sitzungsmenü, und klicken Sie auf die Option "Datei zum Ziel übertragen".</li>
+<li>Nach Abschluss der Übertragung erstellt der Ziel-Mac ein 
+temporäres Verzeichnis, das die übertragenen Inhalte enthält. Diese sollten 
+diese sollten dann kopiert und in die vorgesehenen Verzeichnisse eingefügt werden.</li>
 </ol>
-</li>
-<li>If the target is a Windows machine:
+<li>Wenn das Ziel ein Windows-Rechner ist:</li>
 <ol>
-<li>Switch back to the remote session, and locate the folder on the target machine where you wish to paste the content.</li>
-<li>Last but not least, paste as you normally would.</li>
+<li>Wechseln Sie zurück zur Remote-Sitzung und suchen Sie den Ordner auf dem Zielcomputer, in den Sie den Inhalt einfügen möchten.</li>
+<li>Zu guter Letzt fügen Sie den Inhalt wie gewohnt ein.</li>
 </ol>
-</li>
 </ol>
-</li>
 </ol>
 <!-- end -->
-<p>Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.</p>
-<h2 id="remote-accessibility-module"><a class="header" href="#remote-accessibility-module">Remote Accessibility Module</a></h2>
-<p>Whether you're assisting a user who doesn't use a screen reader, or 
-you're diagnosing an issue with a malfunctioning screen reader, RIM is 
-fully prepared to come to your aid.</p>
+<p>Beachten Sie, dass die Übertragungszeit ausschließlich von der Größe des zu übertragenden Inhalts und von der Geschwindigkeit Ihres Netzwerks abhängt.</p>
+<h2 id="remote-accessibility-module"><a class="header" href="#remote-accessibility-module">Modul für die Fernzugänglichkeit</a></h2>
+<p>Ob Sie einem Benutzer helfen, der kein Bildschirmlesegerät verwendet, oder 
+sie ein Problem mit einem nicht funktionierenden Bildschirmlesegerät diagnostizieren, RIM ist 
+ist voll und ganz darauf vorbereitet, Ihnen zu Hilfe zu kommen.</p>
 <div class="win" style="display: none;">
-    <p>The remote accessibility module consists of two components:</p>
+    <p>Das Modul für die Fernzugänglichkeit besteht aus zwei Komponenten:</p>
 <ul>
-<li>An addon for the <a href="https://nvaccess.org/">NVDA screen reader</a> that enables the screen reader to receive output from the remote computer</li>
-<li>A self-contained accessibility module initiated on the target 
-computer at the request of the controller. The advantage to this 
-approach is that the end user does not hear speech on their computer 
-while you're controlling it. Instead, the Remote Accessibility Module 
-pipes the speech output through to the running copy of NVDA on the 
-controller side. This way, you can accessibly assist an end user without
- them having to install or even download a screen reader.</li>
+<li>Einem Addon für den <a href="https://nvaccess.org/">NVDA-Bildschirmleser</a>, das es dem Bildschirmleser ermöglicht, Ausgaben vom entfernten Computer zu empfangen</li>
+<li>Ein eigenständiges Eingabehilfenmodul, das auf dem Zielcomputer 
+zielcomputer auf Anfrage des Controllers initiiert wird. Der Vorteil dieses 
+vorteil dieses Ansatzes ist, dass der Endbenutzer keine Sprache auf seinem Computer hört 
+während Sie ihn steuern. Stattdessen leitet das Remote Accessibility Module 
+die Sprachausgabe an die laufende Kopie von NVDA auf der Controllerseite weiter 
+controller-Seite. Auf diese Weise können Sie einen Endbenutzer barrierefrei unterstützen, ohne
+ ohne dass er einen Screenreader installieren oder gar herunterladen muss.</li>
 </ul>
 </div>
 <div class="mac" style="display: none">
-    <p>The remote accessibility module is a
-    special configuration initiated on the target Mac at the request of a
-    Windows or Mac controller. The advantage to this approach is that the 
-   end user does not hear speech on their computer while you're controlling
-    it. Instead, the Remote Accessibility Module pipes the speech output 
-   through to the speech system on the controller side. This way, you can 
-   accessibly assist an end user without them having to enable a screen 
-   reader.
-   If you are running VoiceOver on the controling Mac, the remote 
-   accessibility module will automatically start during remote sessions in 
-   which the remote computer does not have a screen reader running.
+    <p>Das Fernzugriffsmodul ist eine
+    spezielle Konfiguration, die auf dem Ziel-Mac auf Anforderung eines
+    Windows- oder Mac-Steuerung. Der Vorteil dieses Ansatzes ist, dass der 
+   endbenutzer keine Sprache auf seinem Computer hört, während Sie ihn steuern
+    steuern. Stattdessen leitet das Remote Accessibility Module die Sprachausgabe 
+   an das Sprachsystem auf der Controllerseite weiter. Auf diese Weise können Sie 
+   endbenutzer barrierefrei unterstützen, ohne dass dieser einen Bildschirmleser aktivieren 
+   lesegerät aktivieren muss.
+   Wenn Sie VoiceOver auf dem steuernden Mac einsetzen, wird das Remote Accessibility 
+   wird das Fernzugriffsmodul automatisch bei Fernsitzungen gestartet, in 
+   in denen auf dem entfernten Computer kein Bildschirmleseprogramm ausgeführt wird.
 </div>
 <div class="win" style="display: none">
-    <h3 id="setup-procedure"><a class="header" href="#setup-procedure">Setup Procedure</a></h3>
-<p>For first-time initialization of the accessibility module, here is what you will need to do:</p>
+    <h3 id="setup-procedure"><a class="header" href="#setup-procedure">Setup-Verfahren</a></h3>
+<p>Für die erstmalige Initialisierung des Eingabehilfenmoduls müssen Sie wie folgt vorgehen:</p>
 <ol>
-<li>Connect to a computer that does not have a screen reader running.</li>
-<li>If NVDA is currently running, you will be asked to install an addon 
-that will allow your copy of NVDA to communicate with the remote 
-computer during the session. Accept the installation prompts, and wait 
-for NVDA to restart.</li>
-<li>By now, the remote accessibility module will be fully initialized, 
-and you will hear speech output as you control the remote computer.</li>
+<li>Verbinden Sie sich mit einem Computer, auf dem kein Bildschirmleseprogramm läuft.</li>
+<li>Wenn NVDA bereits läuft, werden Sie aufgefordert, ein Addon zu installieren 
+zu installieren, das es Ihrer NVDA-Version ermöglicht, während der Sitzung mit dem 
+computer während der Sitzung kommunizieren kann. Akzeptieren Sie die Installationsaufforderungen und warten Sie 
+auf den Neustart von NVDA.</li>
+<li>Jetzt ist das Fernzugriffsmodul vollständig initialisiert, 
+und Sie hören eine Sprachausgabe, während Sie den entfernten Computer steuern.</li>
 </ol>
-<p>From this point forward, if you are running a screen reader on the 
-controling computer, the remote accessibility module will automatically 
-start during remote sessions in which the remote computer does not have a
- screen reader running. Should you be running a screen reader other than
- NVDA, RIM will disengage that screen reader and then switch you over to
- NVDA.
-If you need to stop the remote accessibility module on the remote 
-machine in order to start another screen reader, simply access the "Stop Remote Accessibility" option off the RIM menu.</p>
+<p>Wenn Sie auf dem steuernden Computer ein Bildschirmleseprogramm verwenden, wird ab diesem Zeitpunkt 
+computer ein Bildschirmlesegerät verwenden, wird das Fernzugriffsmodul automatisch 
+fernsitzungen, in denen auf dem entfernten Computer kein Bildschirmleseprogramm
+ bildschirmleser läuft. Sollten Sie einen anderen Screenreader als
+ NVDA verwenden, schaltet RIM diesen Bildschirmleser ab und wechselt dann zu
+ NVDA UM.
+Wenn Sie das Fernzugriffsmodul auf dem entfernten Rechner anhalten müssen 
+zu stoppen, um ein anderes Bildschirmleseprogramm zu starten, wählen Sie einfach die Option "Remote Accessibility stoppen" aus dem RIM-Menü.</p>
 </div>
-<h2 id="rebooting-and-reconnecting"><a class="header" href="#rebooting-and-reconnecting">Rebooting and Reconnecting</a></h2>
-<p>Whether you're installing system updates or working your way out of a
- system hang, RIM has got you covered during the reboot process. 
-Selecting the "Reboot and Reconnect" option off the RIM menu will allow 
-you to either perform a graceful reboot or an emergency reboot, 
-depending on what state the computer is in. While the computer is 
-rebooting, RIM will inform you that reconnection attempts are being 
-made.<br>
-Note that if the computer is rebooted by a software installation or 
-manually rebooted in the usual way, you will be asked if you wish to 
-reconnect the session. Of further note is that in either case, Mac 
-targets will only reconnect once the user logs in. This is due to the 
-fact that RIM cannot start automatically on the login screen due to 
-platform limitations, most notably FileVault disk encryption.</p>
-<h2 id="unattended-or-prompted-access"><a class="header" href="#unattended-or-prompted-access">Unattended or Prompted Access</a></h2>
-<p>RIM allows you, as the controller, to configure machines for 
-unattended or prompted access. This allows you to provide remote 
-assistance without the user having to launch RIM, enter a keyword, or 
-even be near the computer. This is useful if you are a sysadmin 
-performing routine maintenance on computers in your workgroup, or for 
-clients you provide support to on the regular. You may also want to 
-allow unattended access for your home computer should you need to access it 
-from someplace else.<br>
-There are a few ways to configure machines for unattended access.</p>
-<h3 id="during-an-interactive-session"><a class="header" href="#during-an-interactive-session">During an Interactive Session</a></h3>
+<h2 id="rebooting-and-reconnecting"><a class="header" href="#rebooting-and-reconnecting">Neustart und Wiederherstellung der Verbindung</a></h2>
+<p>Ob Sie nun System-Updates installieren oder einen Systemstillstand beheben wollen
+ rIM hat Sie während des Neustartvorgangs unterstützt. 
+Wenn Sie die Option "Neustart und Neuverbindung" aus dem RIM-Menü auswählen, können Sie 
+können Sie entweder einen ordnungsgemäßen Neustart oder einen Notfall-Neustart durchführen, 
+je nachdem, in welchem Zustand sich der Computer befindet. Während der Computer 
+neu startet, informiert Sie RIM, dass die Verbindung wiederhergestellt wird 
+gemacht werden.<br>
+Wenn der Computer durch eine Softwareinstallation neu gestartet wird oder 
+manuell neu gestartet wird, werden Sie gefragt, ob Sie die Verbindung wiederherstellen möchten 
+die Sitzung wieder aufbauen möchten. Außerdem ist zu beachten, dass in beiden Fällen Mac 
+targets die Verbindung nur dann wiederherstellt, wenn sich der Benutzer anmeldet. Dies ist darauf zurückzuführen, dass 
+tatsache, dass RIM aufgrund von Plattformbeschränkungen, insbesondere FileVault, nicht automatisch auf dem Anmeldebildschirm starten kann 
+plattformbeschränkungen, insbesondere der FileVault-Festplattenverschlüsselung, nicht automatisch starten kann.</p>
+<h2 id="unattended-or-prompted-access"><a class="header" href="#unattended-or-prompted-access">Unbeaufsichtigter oder abgefragter Zugriff</a></h2>
+<p>RIM ermöglicht es Ihnen als Controller, Rechner für den unbeaufsichtigten oder 
+unbeaufsichtigten oder abgefragten Zugriff zu konfigurieren. So können Sie Fernhilfe leisten 
+ohne dass der Benutzer RIM starten, ein Schlüsselwort eingeben oder 
+sogar in der Nähe des Computers sein muss. Dies ist nützlich, wenn Sie ein Systemadministrator sind 
+routinemäßige Wartungsarbeiten an Computern in Ihrer Arbeitsgruppe durchführen, oder für 
+kunden, die Sie regelmäßig unterstützen. Vielleicht möchten Sie auch 
+unbeaufsichtigten Zugriff für Ihren Heimcomputer erlauben, falls Sie von einem anderen Ort aus auf den Computer 
+von einem anderen Ort aus zugreifen müssen.<br>
+Es gibt mehrere Möglichkeiten, Rechner für den unbeaufsichtigten Zugriff zu konfigurieren.</p>
+<h3 id="during-an-interactive-session"><a class="header" href="#during-an-interactive-session">Während einer interaktiven Sitzung</a></h3>
 <ol>
-<li>Bring up the RIM menu.</li>
-<li>Select "Request Unattended or Prompted Access."</li>
-<li>You will be asked what kind of connection you want to configure. Your options are:
+<li>Rufen Sie das RIM-Menü auf.</li>
+<li>Wählen Sie "Unbeaufsichtigten oder abgefragten Zugriff anfordern"</li>
+<li>Sie werden gefragt, welche Art von Verbindung Sie konfigurieren möchten. Sie haben folgende Möglichkeiten:</li>
 <ol>
-<li>Unattended: Allows sessions to be initiated without any intervention whatsoever from the end user.</li>
-<li>Prompted: This configuration presents the user with a prompt 
-informing them that you are conecting to their machine. They will need 
-to press <em>Option+Shift+Y</em> on Mac OS, or <em>Windows+Shift+Y</em> on Windows, should they wish to accept the connection.</li>
+<li>Unbeaufsichtigt: Ermöglicht das Starten von Sitzungen ohne jegliches Eingreifen des Endbenutzers.</li>
+<li>Aufgefordert: Bei dieser Konfiguration wird der Benutzer mit einer Aufforderung 
+die ihn darüber informiert, dass Sie eine Verbindung zu seinem Rechner herstellen. Der Benutzer muss 
+ <em>option+Umschalt+Y</em> unter Mac OS bzw. <em>Windows+Umschalt+Y</em> unter Windows drücken, wenn er die Verbindung annehmen möchte.</li>
 </ol>
-<li>You will be asked to give this machine a name. Enter a personal name
- for the machine, or if applicable, the machine ID as it appears in your
- workgroup.</li>
-<li>Press enter.</li>
-<li>On the client machine, a dialogue pops up asking the user if they're
- fine with their computer being set up for the access you requested. If 
-they answer yes, then you will get a prompt informing you that the 
-access has been approved.</li>
+<li>Sie werden aufgefordert, diesem Rechner einen Namen zu geben. Geben Sie einen persönlichen Namen
+ für den Rechner ein, oder, falls zutreffend, die Rechner-ID, wie sie in Ihrer
+ arbeitsgruppe erscheint.</li>
+<li>Drücken Sie die Eingabetaste.</li>
+<li>Auf dem Client-Computer wird ein Dialogfeld angezeigt, in dem der Benutzer gefragt wird, ob er damit einverstanden ist, dass sein Computer
+ ob er damit einverstanden ist, dass sein Computer für den von Ihnen gewünschten Zugriff eingerichtet wird. Wenn 
+wenn er mit Ja antwortet, erhalten Sie eine Meldung, dass der 
+zugriff genehmigt wurde.</li>
 </ol>
-<h3 id="registering-a-machine-to-your-rim-account"><a class="header" href="#registering-a-machine-to-your-rim-account">Registering a Machine to your RIM account</a></h3>
-<p>Should you wish to register one of your own machines for unattended 
-access, you can do so without having to start an interactive session 
-with the machine. </p>
+<h3 id="registering-a-machine-to-your-rim-account"><a class="header" href="#registering-a-machine-to-your-rim-account">Registrierung eines Geräts in Ihrem RIM-Konto</a></h3>
+<p>Wenn Sie einen Ihrer eigenen Computer für den unbeaufsichtigten Zugang registrieren möchten 
+zugang registrieren möchten, können Sie dies tun, ohne eine interaktive Sitzung mit dem 
+mit dem Rechner zu starten. </p>
 <ol>
-<li>Start RIM in Receive Help Mode.</li>
-<li>Click on the "Add this machine to your RIM account" button.</li>
-<li>Enter your email, then click next.</li>
-<li>Wait for the two-step login code to arrive, enter it, then you should be logged in.</li>
-<li>You will be asked what type of access you would like configured for this machine. Your options are:
+<li>Starten Sie RIM im Empfangshilfemodus.</li>
+<li>Klicken Sie auf die Schaltfläche "Diesen Rechner zu Ihrem RIM-Konto hinzufügen".</li>
+<li>Geben Sie Ihre E-Mail-Adresse ein und klicken Sie dann auf Weiter.</li>
+<li>Warten Sie auf den zweistufigen Anmeldecode, geben Sie ihn ein, und Sie sollten angemeldet sein.</li>
+<li>Sie werden gefragt, welche Art von Zugang Sie für dieses Gerät konfigurieren möchten. Ihre Optionen sind:</li>
 <ol>
-<li>Unattended: Allows sessions to be initiated without any intervention whatsoever from the end user.</li>
-<li>Prompted: This configuration presents the user with a prompt informing them that you are conecting to their machine.</li>
+<li>Unbeaufsichtigt: Ermöglicht das Starten von Sitzungen ohne jegliches Eingreifen des Endbenutzers.</li>
+<li>Aufgefordert: Bei dieser Konfiguration wird dem Benutzer eine Aufforderung angezeigt, die ihn darüber informiert, dass Sie eine Verbindung zu seinem Rechner herstellen.</li>
 </ol>
-<li>Give the machine a name, then activate the "Add Machine" button.</li>
-<li>The machine will be registered to your account, which will allow any
- controller machines logged into your RIM account to connect to this 
-machine.</li>
+<li>Geben Sie dem Rechner einen Namen und aktivieren Sie dann die Schaltfläche "Rechner hinzufügen".</li>
+<li>Die Maschine wird in Ihrem Konto registriert, so dass alle
+ controller, die bei Ihrem RIM-Konto angemeldet sind, eine Verbindung zu diesem 
+maschine.</li>
 </ol>
-<h3 id="getting-connected-1"><a class="header" href="#getting-connected-1">Getting Connected</a></h3>
-<p>Now that we've registered the machine for unattended access, here is how we will start a session.</p>
+<h3 id="getting-connected-1"><a class="header" href="#getting-connected-1">Verbunden werden</a></h3>
+<p>Nachdem wir den Rechner für den unbeaufsichtigten Zugriff registriert haben, werden wir nun eine Sitzung starten.</p>
 <ol>
-<li>Start RIM in controller mode.</li>
-<li>Rather than entering a keyword, locate and activate the"Choose a machine" button.</li>
-<li>When you click this, a list of machines will appear. Choose the one 
-you want, then hit enter. You may also use the search bar to narrow the 
-list down to a specific machine.</li>
+<li>Starten Sie RIM im Controller-Modus.</li>
+<li>Anstatt ein Schlüsselwort einzugeben, suchen und aktivieren Sie die Schaltfläche "Rechner auswählen".</li>
+<li>Wenn Sie auf diese Schaltfläche klicken, wird eine Liste von Rechnern angezeigt. Wählen Sie die 
+und drücken Sie dann die Eingabetaste. Sie können auch die Suchleiste verwenden, um die 
+liste auf eine bestimmte Maschine einzugrenzen.</li>
 </ol>
-<p>If the target machine is configured for prompted access, the end user
- will get a prompt. Once they answer yes, you'll be connected. If the 
-session is unattended, you will immediately be connected and dropped 
-into the remote control zone.<br>
-Please note: Voice conversations are not supported during fully unattended sessions, however they are supported for prompted sessions.</p>
-<h3 id="creating-a-shortcut-for-an-unattended-session"><a class="header" href="#creating-a-shortcut-for-an-unattended-session">Creating a Shortcut for an Unattended Session</a></h3>
-<p>For extra convenience, you can create desktop shortcuts that allow 
-you to automatically launch unattended sessions. In order to do this:</p>
+<p>Wenn der Zielcomputer für den abgefragten Zugriff konfiguriert ist, erhält der Endbenutzer
+ eine Aufforderung erhalten. Sobald er mit Ja antwortet, wird die Verbindung hergestellt. Wenn die 
+sitzung unbeaufsichtigt ist, werden Sie sofort verbunden und 
+in die Fernsteuerungszone.<br>
+Bitte beachten Sie: Während völlig unbeaufsichtigter Sitzungen werden Telefongespräche nicht unterstützt, wohl aber bei angeforderten Sitzungen.</p>
+<h3 id="creating-a-shortcut-for-an-unattended-session"><a class="header" href="#creating-a-shortcut-for-an-unattended-session">Erstellen einer Verknüpfung für eine unbeaufsichtigte Sitzung</a></h3>
+<p>Für zusätzlichen Komfort können Sie Desktop-Verknüpfungen erstellen, mit denen 
+sie automatisch unbeaufsichtigte Sitzungen starten können. Um dies zu tun:</p>
 <ol>
-<li>Access the list of unattended computers, and select the one you want to create a shortcut for.</li>
-<li>Click on the "Create Shortcut" button.</li>
-<li>A shortcut will be automatically added to your desktop.</li>
+<li>Rufen Sie die Liste der unbeaufsichtigten Computer auf, und wählen Sie den Computer aus, für den Sie eine Verknüpfung erstellen möchten.</li>
+<li>Klicken Sie auf die Schaltfläche "Verknüpfung erstellen".</li>
+<li>Es wird automatisch eine Verknüpfung zu Ihrem Desktop hinzugefügt.</li>
 </ol>
-<!-- end -->
-<p>Now, when you activate this shortcut, you will either automatically 
-land in the remote session, or send a prompt to the user's machine that 
-they can accept.</p>
+<p>Wenn Sie nun diese Verknüpfung aktivieren, werden Sie entweder automatisch 
+in der Fernsitzung landen oder eine Aufforderung an den Rechner des Benutzers senden, die 
+er akzeptieren kann.</p>
 <div class="win" style="display: none">
-    <h4 id="more-ways-to-use-unattended-session-shortcuts"><a class="header" href="#more-ways-to-use-unattended-session-shortcuts">More Ways to use Unattended Session Shortcuts</a></h4>
-<p>Unattended session shortcuts, like any other shortcuts, can have 
-global hotkeys associated with them. This can be extremely useful if you
- are a maintenance tech managing multiple computers in a workgroup. For 
-example, if your workgroup consists of 6 computers that you perform 
-routine maintenance on, you could configure Alt+Control+1 through 6 as 
-hotkeys for each respective machine. This ought to significantly speed 
-up your workflow.<br>
-In addition, you can call up an unattended session via the run box if 
-you copy the shortcut into your user directory. Once you've copied the 
-shortcut, you may start an unattended session by typing 
-your-session-name.url in the run box.</p>
+    <h4 id="more-ways-to-use-unattended-session-shortcuts"><a class="header" href="#more-ways-to-use-unattended-session-shortcuts">Weitere Möglichkeiten, unbeaufsichtigte Sitzungsverknüpfungen zu verwenden</a></h4>
+<p>Tastenkombinationen für unbeaufsichtigte Sitzungen können wie alle anderen Tastenkombinationen 
+globale Tastenkombinationen zugewiesen werden. Dies kann äußerst nützlich sein, wenn Sie
+ ein Wartungstechniker sind, der mehrere Computer in einer Arbeitsgruppe verwaltet. Für 
+wenn Ihre Arbeitsgruppe beispielsweise aus 6 Computern besteht, die Sie 
+routinewartung durchführen, können Sie Alt+Steuerung+1 bis 6 als 
+hotkeys für jeden einzelnen Computer konfigurieren. Dies sollte Ihren Arbeitsablauf 
+arbeitsablauf erheblich beschleunigen.<br>
+Außerdem können Sie eine unbeaufsichtigte Sitzung über die Run-Box aufrufen, wenn Sie 
+sie die Verknüpfung in Ihr Benutzerverzeichnis kopieren. Sobald Sie die Verknüpfung 
+verknüpfung kopiert haben, können Sie eine unbeaufsichtigte Sitzung starten, indem Sie 
+ihr-Sitzungsname.url in das Ausführungsfenster eingeben.</p>
 </div>
-<h3 id="revoking-unattended-access"><a class="header" href="#revoking-unattended-access">Revoking Unattended Access</a></h3>
-<p>If you no longer want your machine to be controlled unattended, you 
-can revoke the controller's access. You do not need to be in a session 
-in order to do this.</p>
+<h3 id="revoking-unattended-access"><a class="header" href="#revoking-unattended-access">Unbeaufsichtigten Zugriff widerrufen</a></h3>
+<p>Wenn Sie nicht mehr möchten, dass Ihr Rechner unbeaufsichtigt gesteuert wird, können Sie 
+können Sie den Zugriff des Controllers widerrufen. Sie müssen sich nicht in einer Sitzung 
+zu sein, um dies zu tun.</p>
 <ol class="win" style="display: none;">
-<li>Access the Remote Incident Manager icon in your system tray.
+<li>Rufen Sie das Symbol für den Remote Incident Manager in Ihrer Taskleiste auf.</li>
 <ol>
-<li>If using the keyboard, press windows+b, then space, then left or right arrow until you find the icon.</li>
+<li>Wenn Sie die Tastatur verwenden, drücken Sie die Tastenkombination windows+b, dann die Leertaste, dann den Pfeil nach links oder rechts, bis Sie das Symbol finden.</li>
 </ol>
-<li>Right click this icon, or press the applications or shift+f10 key.</li>
-<li>Select the "Revoke Unattended Access" option.</li>
-<li>You will arrive at a list of computers, select the one you want to revoke.</li>
-<li>You will be asked if you wish to revoke the machine; answer yes.</li>
+<li>Klicken Sie mit der rechten Maustaste auf dieses Symbol, oder drücken Sie die Anwendungs- oder Umschalttaste+f10.</li>
+<li>Wählen Sie die Option "Unbeaufsichtigten Zugriff widerrufen".</li>
+<li>Sie erhalten eine Liste von Computern. Wählen Sie den Computer aus, dem Sie den Zugriff entziehen möchten.</li>
+<li>Sie werden gefragt, ob Sie den Computer sperren möchten; antworten Sie mit Ja.</li>
 </ol>
 <ol class="mac" style="display: none;">
-    <li>Access the Remote Incident Manager icon in your menu extras/status menus.
+    <li>Rufen Sie das Symbol Remote Incident Manager in Ihrem Menü Extras/Statusmenüs auf.</li>
     <ol>
-    <li>If using VoiceOver, press VO+M twice, then locate the Remote Incident Manager menu icon.</li>
+    <li>Wenn Sie VoiceOver verwenden, drücken Sie zweimal VO+M und suchen Sie dann das Symbol für das Remote Incident Manager-Menü.</li>
     </ol>
-    <li>Click this icon, or press VO+Space.</li>
-    <li>Select the "Revoke Unattended Access" option.</li>
-    <li>You will arrive at a list of computers, select the one you want to revoke.</li>
-    <li>You will be asked if you wish to revoke the machine; answer yes.</li>
+    <li>Klicken Sie auf dieses Symbol, oder drücken Sie VO+Space.</li>
+    <li>Wählen Sie die Option "Unbeaufsichtigten Zugriff widerrufen".</li>
+    <li>Sie erhalten eine Liste von Computern. Wählen Sie den Computer aus, dem Sie den Zugriff entziehen möchten.</li>
+    <li>Sie werden gefragt, ob Sie den Rechner sperren wollen; antworten Sie mit Ja.</li>
     </ol>
-    <p>That's it! The controller will receive a message stating that this 
-machine is no longer available for unattended access. Should they need 
-unattended access again, they can reinitiate the procedure to request 
-permission for unattended access as described above.</p>
-<h2 id="key-command-reference"><a class="header" href="#key-command-reference">Key Command Reference</a></h1>
-<div class="table-wrapper"><table class="win" style="display: none;"><thead><tr><th>Action</th><th>Command</th></tr></thead><tbody>
-<tr><td>Minimize Session</td><td>Windows+Shift+M</td></tr>
-<tr><td>Flip Session</td><td>Windows+Shift+F</td></tr>
-<tr><td>Disconnect Session (Controller or Target)</td><td>Windows+Shift+D</td></tr>
+    <p>Das war's! Der Kontrolleur erhält eine Meldung, dass dieser Rechner 
+maschine nicht mehr für den unbeaufsichtigten Zugang zur Verfügung steht. Sollte er 
+den unbeaufsichtigten Zugriff benötigen, können sie das Verfahren zur Beantragung 
+genehmigung für den unbeaufsichtigten Zugriff wie oben beschrieben anfordern.</p>
+<h2 id="key-command-reference"><a class="header" href="#key-command-reference">Taste Befehlsreferenz</a></h1>
+<div class="table-wrapper"><table class="win" style="display: none;"><thead><tr><th>Aktion</th><th>Befehl</th></tr></thead><tbody>
+<tr><td>Sitzung minimieren</td><td>Fenster+Umschalt+M</td></tr>
+<tr><td>Sitzung umdrehen</td><td>Fenster+Umschalt+F</td></tr>
+<tr><td>Sitzung trennen (Controller oder Ziel)</td><td>Fenster+Umschalt+D</td></tr>
 </tbody></table>
-<div class="table-wrapper"><table class="mac" style="display: none;"><thead><tr><th>Action</th><th>Command</th></tr></thead><tbody>
-    <tr><td>Activate RIM Menu</td><td>Option+Shift+Backspace</td></tr>
-    <tr><td>Minimize Session</td><td>Option+Shift+M</td></tr>
-    <tr><td>Flip Session</td><td>Option+Shift+F</td></tr>
-    <tr><td>Disconnect Session (Controller or Target)</td><td>Option+Shift+D</td></tr>
-    <tr><td>Accept Incoming Connection Request</td><td>Option+Shift+Y</td></tr>
-    <tr><td>Decline Incoming Connection Request</td><td>Option+Shift+N</td></tr>
+<div class="table-wrapper"><table class="mac" style="display: none;"><thead><tr><th>Aktion</th><th>Befehl</th></tr></thead><tbody>
+    <tr><td>RIM-Menü aktivieren</td><td>Option+Umschalttaste+Rücktaste</td></tr>
+    <tr><td>Sitzung minimieren</td><td>Wahl+Umschalt+M</td></tr>
+    <tr><td>Sitzung umdrehen</td><td>Wahl+Umschalt+F</td></tr>
+    <tr><td>Sitzung trennen (Controller oder Ziel)</td><td>Wahl+Umschalt+D</td></tr>
+    <tr><td>Eingehende Verbindungsanforderung annehmen</td><td>Wahl+Umschalt+Y</td></tr>
+    <tr><td>Eingehende Verbindungsanforderung ablehnen</td><td>Wahl+Umschalt+N</td></tr>
     </tbody></table>
     
+</layout>
