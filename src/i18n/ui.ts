@@ -48,4 +48,17 @@ fr: {
   'footer.langChange': 'Changer de langue',
 
 },
+it: {
+  'nav.welcome': 'Benvenuti',
+  'nav.systemspecs': 'Requisiti di sistema',
+  'nav.installation': 'Installazione',
+  'nav.gettingconnected': 'Connettersi',
+  'nav.workingwithsessions': "Lavorare all'interno di una sessione",
+  'nav.dashboard': 'Il cruscotto RIM',
+  'nav.faq': 'Domande frequenti',
+  'nav.pricing': 'Prezzi',
+  'nav.changelog': 'Registro delle modifiche',
+  'footer.langChange': 'Cambia lingua',
+},
+
 } as const;
