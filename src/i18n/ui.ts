@@ -1,7 +1,7 @@
 export const languages = {
   en: 'English',
   es: 'Spanish',
-  fr: "French",
+  fr: 'French',
   de: "German",
   it: "Italian",
   sv: "Swedish",
@@ -39,4 +39,15 @@ export const ui = {
     'footer.neverMind': 'Mantener su lengua tal cual.',
 
   },
+fr: {
+  'nav.welcome': 'Bienvenue',
+  'nav.systemspecs': 'Configuration requise',
+  'nav.installation': 'Installation',
+  'nav.gettingconnected': 'Se connecter',
+  'nav.workingwithsessions': "Travailler au sein d'une session",
+  'nav.dashboard': 'Le tableau de bord RIM',
+  'nav.faq': 'Questions fréquemment posées',
+  'nav.pricing': 'Tarification',
+  'nav.changelog': 'Journal des modifications',
+},
 } as const;
