@@ -4,57 +4,57 @@ title: "The RIM Management Dashboard"
 author: "Jack Falejczyk - Pneuma Solutions"
 date: "13 Jul 2023"
 ---
-RIM features a  web-based dashboard to facilitate various machine and account management tasks. You can manage your existing unattended computers, create preconfigured installers for target computers, and much more.  
-It should be noted that the feature set of the dashboard is largely dependent on which subscription tier your account is under. For example, enterprise users can assign machines to target groups, as well as create silent and/or MSI-based installers. On the other hand, creating standard (nonsilent) custom installers for unattended machines is possible with a pro subscription or above.
-## Locating the Dashboard
-If you're a controller, the easiest way to get to the dashboard is through the main RIM interface. Clicking the RIM Dashboard button will automatically open the dashboard in your default browser, with the login already taken care of.  
-If you are a network administrator who does not have RIM installed, you can simply log into your account on the RIM website and your dashboard will appear.
-## Managing Targets
-When you click the "Configure Targets" link, you will arrive at a page that allows you to manage all the machines you have configured for unattended access. You can click on any one of these machines in order to manage it. Once inside, you will be able to:
-* Rename the target
-* Move the target to a different group (more on target groups later)
-* Delete the target
+RIM har en webbaserad instrumentpanel som underlättar olika maskin- och kontohanteringsuppgifter. Du kan hantera dina befintliga obevakade datorer, skapa förkonfigurerade installationsprogram för måldatorer och mycket mer.  
+Det bör noteras att funktionerna i instrumentpanelen till stor del beror på vilken prenumerationsnivå ditt konto är under. Företagsanvändare kan t.ex. tilldela maskiner till målgrupper och skapa tysta och/eller MSI-baserade installationsprogram. Å andra sidan är det möjligt att skapa anpassade standardinstallatörer (ej tysta) för obevakade maskiner med en pro-prenumeration eller högre.
+## Hitta instrumentpanelen
+Om du är en styrenhet är det enklaste sättet att komma till instrumentpanelen via RIM:s huvudgränssnitt. Om du klickar på knappen RIM Dashboard öppnas instrumentpanelen automatiskt i din standardwebbläsare, med inloggningen redan hanterad.  
+Om du är en nätverksadministratör som inte har RIM installerat, kan du helt enkelt logga in på ditt konto på RIM-webbplatsen och din instrumentpanel kommer att visas.
+## Hantering av mål
+När du klickar på länken "Configure Targets" kommer du till en sida där du kan hantera alla maskiner som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa maskiner för att hantera den. När du är inne kommer du att kunna:
+* Byta namn på målet
+* Flytta målet till en annan grupp (mer om målgrupper senare)
+* Ta bort målet
 <!-- end -->
-## Target Groups (for Pro Accounts and Above)
-Say for instance you're workgroup is spread out among several different locations. Or maybe you want to designate groups of machines to your routine maintenance techs. Target groups allow you to do just that. In order to do this, simply click the "Create Target Group" button, name your group, and submit.  
-You may have as many target groups as is needed for your use case. 
-### Access Control (for Enterprise Organizations)
-If your organizations assign a support technician to a specific set of machines, you probably want to ensure they only have access to that specific set. This is where the access control setting for target groups comes in.  
-When you click on a target group, you are given options to manage the machines in the group, as well as the group itself. The access control section is where you may grant access to this group on a per-account basis. Simply enter the email address of the account you wish to add, then click the "Give Access" button. Once this is done, you will be presented with a table of accounts that are given access to this group. Below each account is a "Revoke Access" button. This button does not require further confirmation.  
-It should be noted that all organization administrators are automatically granted access to manage any and all groups that are created under the organization.
-## Setting up a Preconfigured RIM Installer (Pro or above, Windows targets only)
-One of the easiest ways to set up a machine for unattended or prompted connections is by creating a custom installer. This is incredibly useful if you are configuring mass deployments, or even as a simpler way to get RIM up and running on an end user's computer you plan on providing support for on the regular.
-IN order to do this:
-1. In the target management screen, click the "Build Target Installer" button.
-1. You will first be asked if you want this machine to be configured for fully unattended access, or for prompted access in which the user has to accept a prompt to initiate the connection.
-1. You will then be asked for a target group assignment. Note that the target group selection will automatically go to your chosen target group if you initiate the installer configuration from your group's page.
-1. You will be asked how long you want this installer to be valid for. It can be valid for anywhere between 7 to 30 days. Note that this timeframe only affects the functionality of the installation package. In other words, the machine's RIM configuration will not be disabled when the installation expires.
-1. You are then given the option to assign a bass name. Any machine provisioned via this installation package will have this base name assigned to it.
-1. If you are an enterprise admin, you will see a checkbox that allows you to build the installer as an MSI package. This option is useful for mass deployment of a custom installer to a machine cluster that will be designated to the given target group.
-1. You will be asked to provide an installer name, and optionally some notes. These are for internal records and will not appear within the created installer.
-1. Click on "Build Installer." You will be presented with the download link that you can either copy to the clipboard and send to your end user. Alternatively, you may download the installer directly for use in mass deployments.
+## Målgrupper (för Pro-konton och högre)
+Låt oss säga att din arbetsgrupp är utspridd på flera olika platser. Eller så kanske du vill utse grupper av maskiner till dina rutinunderhållstekniker. Med målgrupper kan du göra just det. För att göra detta klickar du helt enkelt på knappen "Skapa målgrupp", namnger din grupp och skickar in.  
+Du kan ha så många målgrupper som behövs för ditt användningsfall. 
+### Åtkomstkontroll (för företagsorganisationer)
+Om din organisation tilldelar en supporttekniker en viss uppsättning maskiner vill du förmodligen se till att de bara har åtkomst till den specifika uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in i bilden.  
+När du klickar på en målgrupp får du alternativ för att hantera maskinerna i gruppen, liksom själva gruppen. I avsnittet för åtkomstkontroll kan du ge åtkomst till den här gruppen per konto. Ange bara e-postadressen för det konto du vill lägga till och klicka sedan på knappen "Ge åtkomst". När detta är gjort visas en tabell med konton som ges åtkomst till den här gruppen. Under varje konto finns en knapp för "Återkalla åtkomst". Denna knapp kräver ingen ytterligare bekräftelse.  
+Det bör noteras att alla organisationsadministratörer automatiskt beviljas åtkomst för att hantera alla grupper som skapas under organisationen.
+## Konfigurera en förkonfigurerad RIM Installer (Pro eller högre, endast Windows-mål)
+Ett av de enklaste sätten att konfigurera en maskin för obevakade eller uppmanade anslutningar är att skapa ett anpassat installationsprogram. Detta är mycket användbart om du konfigurerar massdistributioner, eller som ett enklare sätt att få igång RIM på en slutanvändares dator som du planerar att ge support för regelbundet.
+FÖR att göra detta:
+1. Klicka på knappen "Build Target Installer" på skärmen för målhantering.
+1. Du kommer först att få frågan om du vill att maskinen ska konfigureras för helt obevakad åtkomst, eller för åtkomst med uppmaning där användaren måste acceptera en uppmaning för att initiera anslutningen.
+1. Du kommer sedan att bli ombedd att ange en målgrupp. Observera att målgruppsvalet automatiskt kommer att gå till din valda målgrupp om du initierar installationsprogrammets konfiguration från din grupps sida.
+1. Du kommer att bli tillfrågad om hur länge du vill att installationsprogrammet ska vara giltigt. Den kan vara giltig i mellan 7 och 30 dagar. Observera att denna tidsram endast påverkar installationspaketets funktionalitet. Med andra ord kommer maskinens RIM-konfiguration inte att inaktiveras när installationen löper ut.
+1. Du får sedan möjlighet att tilldela ett basnamn. Alla maskiner som tillhandahålls via det här installationspaketet kommer att tilldelas detta basnamn.
+1. Om du är företagsadministratör kommer du att se en kryssruta som låter dig bygga installationsprogrammet som ett MSI-paket. Det här alternativet är användbart för massdistribution av ett anpassat installationsprogram till ett maskinkluster som kommer att tilldelas den givna målgruppen.
+1. Du kommer att bli ombedd att ange ett namn på installationsprogrammet, och eventuellt några anteckningar. Dessa är för internt bruk och kommer inte att visas i det skapade installationsprogrammet.
+1. Klicka på "Bygg installationsprogrammet" Du kommer att se nedladdningslänken som du antingen kan kopiera till urklipp och skicka till din slutanvändare. Alternativt kan du ladda ner installationsprogrammet direkt för användning i massdistributioner.
 <!-- end -->
-Now that you have your installer, it can be run in one of two ways. In either case, the machine will be added to your list of machines in both your account as well as the RIM client after the installer is complete.
-### Normal Execution
-The user will get a prompt when running the installer, containing the following information:
-* The technician's name along with their organization, if applicable
-* the nature of the connection, I.E whether a prompt is required or not
+Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer maskinen att läggas till i listan över maskiner både i ditt konto och i RIM-klienten när installationsprogrammet är klart.
+### Normal körning
+Användaren får ett meddelande när installationsprogrammet körs, med följande information:
+* Teknikerns namn tillsammans med dennes organisation, om tillämpligt
+* typ av anslutning, dvs. om ett meddelande krävs eller inte
 <!-- end -->
-The user can choose to either answer yes or no to the installation. Answering no will cancel the installation. After the installer finishes, the user will get a prompt informing them that their machine is now set up for remote access.
-### Silent Install (Enterprise Installers Only)
-A silent install can be initiated by running the executable installer with the */S* command line parameter. This is useful when installing RIM as part of a mass deployment routine.
-## Session History
-You can view your entire history of past sessions through the RIM dashboard. The session history currently contains the date and time of each session, the name of the computer you connected to, and the duration of the session. You may also choose to add comments to a session via the "Add Comment" link within the session row. This is useful for adding notes on the current status of an incident for your own sake as well as for the sake of organization administrators.
-## Managing your Subscription (Personal )and Pro Plans)
-The dashboard allows you to easily view and manage your RIM subscription details. Upon clicking the "manage subscription" link, you can:
-* Upgrade your plan
-* Update your payment method
-* Cancel recurring payments
+Användaren kan välja att antingen svara ja eller nej till installationen. Om användaren svarar nej avbryts installationen. När installationen är klar får användaren ett meddelande om att maskinen nu är konfigurerad för fjärråtkomst.
+### Tyst installation (endast Enterprise-installatörer)
+En tyst installation kan initieras genom att köra det körbara installationsprogrammet med kommandoradsparametern */S*. Detta är användbart när RIM installeras som en del av en rutin för massdistribution.
+## Sessionshistorik
+Du kan visa hela din sessionshistorik via RIM:s instrumentpanel. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator du anslöt till och hur länge sessionen varade. Du kan också välja att lägga till kommentarer till en session via länken "Lägg till kommentar" i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident för din egen skull såväl som för organisationsadministratörer.
+## Hantera din prenumeration (Personlig )och Pro-planer)
+I instrumentpanelen kan du enkelt visa och hantera uppgifter om din RIM-prenumeration. När du klickar på länken "Hantera prenumeration" kan du:
+* Uppgradera din plan
+* Uppdatera din betalningsmetod
+* Avbryt återkommande betalningar
 <!-- end -->
-### Upgrading your Plan
-You can easily upgrade your subscription. If you are on a monthly plan, you will be prorated the remaining charge from the new amount, with the full new amount being charged for subsequent months. Clicking "Upgrade Subscription" reveals a page nearly identical to the initial plan selection page. There are a few notable differences which we will outline below:
-* You cannot downgrade your plan to one with fewer machines. You can, however, upgrade from a monthly to a yearly plan with the same number of machines as your current plan. In order to downgrade, you would need to cancel your plan, wait for it to expire, then initiate a new plan with fewer machines.
-* Enterprise plans, including the enterprise addon, cannot be acquired directly through this page.
+### Uppgradera din plan
+Du kan enkelt uppgradera din prenumeration. Om du har en månatlig plan kommer du att debiteras den återstående avgiften proportionellt från det nya beloppet, och hela det nya beloppet debiteras för efterföljande månader. Om du klickar på "Uppgradera abonnemang" visas en sida som är nästan identisk med den första sidan för val av abonnemang. Det finns några anmärkningsvärda skillnader som vi kommer att beskriva nedan:
+* Du kan inte nedgradera din plan till en plan med färre maskiner. Du kan dock uppgradera från en månads- till en årsplan med samma antal maskiner som din nuvarande plan. För att nedgradera måste du säga upp din plan, vänta på att den löper ut och sedan initiera en ny plan med färre maskiner.
+* Företagsplaner, inklusive företagstillägget, kan inte förvärvas direkt via denna sida.
 <!-- end -->
-### Canceling Recurring Payments
-When you click "Cancel Automatic Renewal," you will be asked for confirmation, after which your subscription will be set to expire at the end of the current term.
+### Annullera återkommande betalningar
+När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att löpa ut i slutet av den aktuella perioden.
