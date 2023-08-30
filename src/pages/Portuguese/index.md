@@ -1,39 +1,39 @@
 ---
 layout: ../../layouts/toc.astro
-title: "Welcome"
+title: "Bem-vindo"
 author: "Jack Falejczyk - Pneuma Solutions"
 date: "13 Jul 2023"
 ---
 Copyright © 2023 [Pneuma Solutions](https://www.pneumasolutions.com)  
-*Remote Incident Manager* (RIM) is a powerful, cross-platform fully accessible remote desktop application used to provide technical support, training, and system administration to clients both visually impaired and sighted alike. In addition to providing a streamlined remote desktop experience, RIM has a few unique qualities previously unseen in other remote desktop applications
-## Why RIM?
-If you are coming from previous remote desktop applications or screen reader-based assistance tools, you will find that RIM significantly streamlines your workflow.
-### Inclusive Design
-Remote Incident Manager is truly a first of its kind. It is the first *fully accessible* remote support solution that can be used by both blind and sighted support pros and end users. Thus, RIM can fully replace an existing solution, as it provides everything you could ask for in a secure remote support solution, plus complete accessibility.
-### Easy to Install and Deploy
-In a one-to-one situation, the installation could not be simpler. A one-click instant install ensures that the end user's process for setting up their machine to receive assistance will be quick and painless. What's more, the installation process launches RIM after it finishes, so they will be instantly ready to connect.
-Technicians can easily manage their machines via an easy to use web-based interface. Enterprise users can use this dashboard to deploy RIM to machines in their workplace. Ready-made installers can be issued to end users in seconds. The installer itself can be further customized via command line arguments which can in turn be utilized in an automated deployment.
-### Shared Session
-Unlike Windows Remote Desktop or other similar applications, a remote session sandbox is not created; what the end user's machine is doing is what you'll be seeing. This means that you can easily troubleshoot a problem they are having while keeping their existing configuration intact. This further allows you to work collaboratively on a project, send files to and from via the clipboard, etc.
-### Fast and stable connections
-Because RIM uses the latest advancements in direct computer-to-computer connections, the responsiveness is head and shoulders above other solutions. While RIM's central service initiates the connection, it gets out of your way once the connection is established. All this without the need to make cumbersome and invasive changes to network configurations.
-### High Quality Audio
-RIM uses the latest advancements in real-time audio encoding technology to provide extremely responsive, high-fidelity stereo audio. You will hear any and all audio that is playing on the end user's machine during the session.
-### High-Quality Visual Output
-Again, Remote Incident Manager is an all-inclusive solution designed to replace previous infrastructures, rather than be used alongside them. As such, RIM's screen output is equally as responsive and stable. Using the mouse is fully supported as well.
-### Voice Communication
-Gone are the days of having to place a separate phone call or web conference alongside the remote session. RIM provides crystal clear, low-latency voice communication right inside your session.
-### Accessible in *All* Use Cases
-RIM is the first remote access solution that provides unparalleled accessibility, irrespective of the screen reader (or lack thereof) that either party is using.
-#### differences in Screen Readers are now Irrelevant
-Before RIM, it used to be difficult to assist someone running a different screen reader than your own. With RIM, this is now a thing of the past. RIM doesn't care what either party is running. You could be running JAWS while the person you're assisting could be running NVDA or even VoiceOver; with RIM, none of that matters. Not only will you be able to hear the end user's speech irrespective of their screen reader, RIM's keyboard handling will be stable and reliable irrespective of screen reader configuration. This is a significant advantage of a screen reader-independent solution.
-#### No Screen Reader? No Problem!
-A blind IT professional can now easily help a sighted end user, even if they do not have a screen reader installed on their computer. In the absence of a screen reader on the remote computer, RIM will see to it that you will still be able to get speech provided you are using either the free [NVDA Screen Reader](https://nvaccess.org) or VoiceOver on Mac OS. Remote incident Manager will initiate its accessibility module which allows you to control the client's machine with speech as if they had a screen reader. Not only does the end user not have to worry about installing a screen reader, they don't even hear the speech that you're now hearing while you control their computer.
-## Documentation Conventions and Terminology
-* Because Remote Incident Manager is cross-platform, many sections of this documentation will tailor their contents to the operating system that you are running.
-    * In most cases, the manual will recognize whether you are running Windows or Mac, and adjust the content accordingly.
-    * In the event the platform recognition fails or you are reading the documentation on a different device such as a phone or tablet, you will find a button or set of buttons on the page to show the content for the platform you use.
-* RIM connections occur between a target and a controller.
-    * A target computer is the computer that will be receiving remote support.
-    * A controller connects to a target computer for remote support.
+*O Remote Incident Manager* (RIM) é um aplicativo de área de trabalho remota avançado, multiplataforma e totalmente acessível, usado para fornecer suporte técnico, treinamento e administração de sistemas a clientes com e sem deficiência visual. Além de proporcionar uma experiência de área de trabalho remota simplificada, o RIM tem algumas qualidades exclusivas que nunca foram vistas em outros aplicativos de área de trabalho remota
+## Por que o RIM?
+Se você estiver vindo de aplicativos anteriores de área de trabalho remota ou de ferramentas de assistência baseadas em leitores de tela, verá que o RIM simplifica significativamente o seu fluxo de trabalho.
+### Design inclusivo
+O Remote Incident Manager é realmente o primeiro de seu tipo. Ele é a primeira solução de suporte remoto *totalmente acessível* que pode ser usada por profissionais de suporte e usuários finais cegos e com visão. Assim, o RIM pode substituir totalmente uma solução existente, pois fornece tudo o que você poderia pedir em uma solução de suporte remoto seguro, além de acessibilidade completa.
+### Fácil de instalar e implantar
+Em uma situação de um para um, a instalação não poderia ser mais simples. A instalação instantânea com um clique garante que o processo de configuração da máquina do usuário final para receber assistência seja rápido e indolor. Além disso, o processo de instalação inicia a RIM após a conclusão, de modo que o usuário estará instantaneamente pronto para se conectar.
+Os técnicos podem gerenciar facilmente suas máquinas por meio de uma interface baseada na Web fácil de usar. Os usuários corporativos podem usar esse painel para implementar a RIM em máquinas no local de trabalho. Instaladores prontos podem ser enviados aos usuários finais em segundos. O instalador em si pode ser ainda mais personalizado por meio de argumentos de linha de comando que, por sua vez, podem ser utilizados em uma implementação automatizada.
+### Sessão compartilhada
+Diferentemente da Área de Trabalho Remota do Windows ou de outros aplicativos semelhantes, não é criada uma sandbox de sessão remota; o que a máquina do usuário final está fazendo é o que você verá. Isso significa que você pode solucionar facilmente um problema que ele esteja tendo, mantendo a configuração existente intacta. Isso também permite que você trabalhe de forma colaborativa em um projeto, envie arquivos de e para a área de transferência, etc.
+### Conexões rápidas e estáveis
+Como a RIM usa os últimos avanços em conexões diretas de computador para computador, a capacidade de resposta é muito superior à de outras soluções. Embora o serviço central da RIM inicie a conexão, ele sai do seu caminho depois que a conexão é estabelecida. Tudo isso sem a necessidade de fazer alterações incômodas e invasivas nas configurações de rede.
+### Áudio de alta qualidade
+A RIM usa os mais recentes avanços na tecnologia de codificação de áudio em tempo real para fornecer áudio estéreo de alta fidelidade e extremamente responsivo. Você ouvirá todo e qualquer áudio que estiver sendo reproduzido no computador do usuário final durante a sessão.
+### Saída visual de alta qualidade
+Mais uma vez, o Remote Incident Manager é uma solução completa projetada para substituir infraestruturas anteriores, em vez de ser usada junto com elas. Por isso, a saída de tela do RIM é igualmente ágil e estável. O uso do mouse também é totalmente compatível.
+### Comunicação por voz
+Já se foram os dias em que era necessário fazer uma chamada telefônica separada ou uma conferência na Web junto com a sessão remota. A RIM oferece comunicação de voz cristalina e de baixa latência diretamente em sua sessão.
+### Acessível em *todos* os casos de uso
+A RIM é a primeira solução de acesso remoto que oferece acessibilidade inigualável, independentemente do leitor de tela (ou da falta dele) que uma das partes esteja usando.
+#### diferenças nos leitores de tela agora são irrelevantes
+Antes da RIM, costumava ser difícil ajudar alguém que usava um leitor de tela diferente do seu. Com a RIM, isso agora é coisa do passado. A RIM não se importa com o que as partes estão usando. Você pode estar usando o JAWS, enquanto a pessoa que você está ajudando pode estar usando o NVDA ou até mesmo o VoiceOver; com a RIM, nada disso importa. Além de poder ouvir a fala do usuário final independentemente do leitor de tela, o manuseio do teclado da RIM será estável e confiável, independentemente da configuração do leitor de tela. Essa é uma vantagem significativa de uma solução independente de leitor de tela.
+#### Não tem leitor de tela? Não há problema!
+Um profissional de TI cego agora pode ajudar facilmente um usuário final com visão, mesmo que ele não tenha um leitor de tela instalado no computador. Na ausência de um leitor de tela no computador remoto, a RIM garantirá que você ainda conseguirá falar, desde que esteja usando o [NVDA Screen Reader] gratuito (https://nvaccess.org) ou o VoiceOver no Mac OS. O Remote incident Manager iniciará seu módulo de acessibilidade, que permite controlar a máquina do cliente com a fala, como se ele tivesse um leitor de tela. O usuário final não só não precisa se preocupar em instalar um leitor de tela, como também não ouve a fala que você está ouvindo enquanto controla o computador.
+## Convenções e terminologia da documentação
+* Como o Remote Incident Manager é multiplataforma, muitas seções desta documentação adaptarão seu conteúdo ao sistema operacional que você está executando.
+    * Na maioria dos casos, o manual reconhecerá se você está executando o Windows ou o Mac e ajustará o conteúdo de acordo.
+    * Caso o reconhecimento da plataforma falhe ou você esteja lendo a documentação em um dispositivo diferente, como um telefone ou tablet, você encontrará um botão ou conjunto de botões na página para mostrar o conteúdo da plataforma que você usa.
+* As conexões RIM ocorrem entre um alvo e um controlador.
+    * Um computador de destino é o computador que estará recebendo suporte remoto.
+    * Um controlador se conecta a um computador de destino para obter suporte remoto.
 <!-- end -->
