@@ -64,8 +64,8 @@ const { title } = Astro.props.frontmatter || Astro.props;
 
     // Define an array of page URLs and their corresponding "Next" and "Previous" URLs
     const pageData = [
-	{ url: '/', next: 'systemspecs', previous: null},
-	{ url: 'systemspecs', next: 'installation', previous: '/' },
+	{ url: 'index', next: 'systemspecs', previous: null},
+	{ url: 'systemspecs', next: 'installation', previous: 'index' },
     { url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
     { url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
     { url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
