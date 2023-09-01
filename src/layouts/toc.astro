@@ -66,19 +66,18 @@ const { title } = Astro.props.frontmatter || Astro.props;
     const pageData = [
 	{ url: '/', next: 'systemspecs'},
 	{ url: 'systemspecs', next: 'installation', previous: '/' },
-        { url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
-        { url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
-        { url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
-        { url: 'dashboard', next: 'faq', previous: 'workingwithsessions' },
-        { url: 'faq', next: 'pricing', previous: 'dashboard' },
-        { url: 'pricing', next: 'changelog', previous: 'faq' },
-        { url: 'changelog', previous: 'pricing' },
+    { url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
+    { url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
+    { url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
+    { url: 'dashboard', next: 'faq', previous: 'workingwithsessions' },
+    { url: 'faq', next: 'pricing', previous: 'dashboard' },
+    { url: 'pricing', next: 'changelog', previous: 'faq' },
+    { url: 'changelog', previous: 'pricing' },
 
     ];
 
     // Get the current page's URL
-    const currentUrl = window.location.pathname.split('/').pop();
-
+    const currentUrl = window.location.pathname.replace(/\/$/, '').split('/').pop();
     // Find the corresponding page data based on the current URL
     const currentPage = pageData.find(page => page.url === currentUrl);
 
