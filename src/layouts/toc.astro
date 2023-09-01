@@ -12,7 +12,8 @@ const { title } = Astro.props.frontmatter || Astro.props;
   <head>
   <title>{title}</title>
   <meta charset="UTF-8">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="navbar navbar-default" role="navigation">
@@ -100,8 +101,8 @@ const { title } = Astro.props.frontmatter || Astro.props;
             nextLink.style.display = 'none'; // Hide link if no next page
         }
     } else {
-        previousLink.style.display = 'none';
-        nextLink.style.display = 'none';
+        previousLink.style.display = 'none'; //hide if all else fails
+        nextLink.style.display = 'none'; //hide if all else fails
     }
 
     document.addEventListener('keydown', function(event) {
