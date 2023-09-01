@@ -19,7 +19,7 @@ This is unfortunately beyond our control, as Mac OS requires that we use their a
 ### Generally speaking, how responsive is RIM?
 The roundtrip latency during an RIM session is extremely minimal. Because we don't rely on a central service, most of the time your connections are direct from one computer to another - this is what is known as peer-to-peer. If your network configuration doesn't allow for peer-to-peer connections, we fall back to any number of relays located around the world rather than relying on one central server. Thus, even then your latency will still be farely minimal.
 ### Where are your relays located?
-Currently, we offe  r relays in the following locations:
+Currently, we offer relays in the following locations:
 * U.S.
     * Virginia
     * California

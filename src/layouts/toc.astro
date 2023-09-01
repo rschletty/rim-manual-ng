@@ -45,8 +45,8 @@ const { title } = Astro.props.frontmatter || Astro.props;
     <slot />
 </main>
 <footer>
-    <a aria-keyshortcuts="Alt+Shift+P" id="prev" href="#">{t('footer.prev')}</a>
-    <a aria-keyshortcuts="Alt+Shift+N" id="next" href="#">{t('footer.next')}</a>
+    <a id="prev" href="#" aria-keyshortcuts="Alt+Shift+P">{t('footer.prev')}</a>
+    <a id="next" href="#" aria-keyshortcuts="Alt+Shift+N">{t('footer.next')}</a>
 	<br>
 	<button id="changeLang">{t('footer.langChange')}</button>
 	<ul id="langMenu" style="display: none";>
