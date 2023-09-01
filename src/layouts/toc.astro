@@ -90,13 +90,13 @@ const { title } = Astro.props.frontmatter || Astro.props;
         const nextPage = pageData.find(page => page.previous === currentUrl);
 
         if (previousPage) {
-            previousLink.href = '/'+previousPage.url;
+            previousLink.href = '../'+previousPage.url;
         } else {
             previousLink.style.display = 'none'; // Hide link if no previous page
         }
 
         if (nextPage) {
-            nextLink.href = '/'+nextPage.url;
+            nextLink.href = '../'+nextPage.url;
         } else {
             nextLink.style.display = 'none'; // Hide link if no next page
         }
