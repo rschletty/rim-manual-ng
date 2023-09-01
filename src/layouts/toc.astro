@@ -61,29 +61,28 @@ const { title } = Astro.props.frontmatter || Astro.props;
 	<source src="../../components/page.wav" type="audio/wav">
 	</audio>
 	<script>
-
-    // Define an array of page URLs and their corresponding "Next" and "Previous" URLs
+    // Define an array of page URLs and their adjacent URLs
     const pageData = [
 	{ url: '', next: 'systemspecs', previous: null},
 	{ url: 'systemspecs', next: 'installation', previous: '' },
-    { url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
-    { url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
-    { url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
-    { url: 'dashboard', next: 'faq', previous: 'workingwithsessions' },
-    { url: 'faq', next: 'pricing', previous: 'dashboard' },
-    { url: 'pricing', next: 'changelog', previous: 'faq' },
-    { url: 'changelog', next: null, previous: 'pricing' },
+	{ url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
+	{ url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
+	{ url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
+	{ url: 'dashboard', next: 'faq', previous: 'workingwithsessions' },
+	{ url: 'faq', next: 'pricing', previous: 'dashboard' },
+	{ url: 'pricing', next: 'changelog', previous: 'faq' },
+	{ url: 'changelog', next: null, previous: 'pricing' },
 
-    ];
+];
 
-    // Get the current page's URL
-    const currentUrl = window.location.pathname.replace(/\/$/, '').split('/').pop();
-    // Find the corresponding page data based on the current URL
-    const currentPage = pageData.find(page => page.url === currentUrl);
+// Get the current page's URL
+const currentUrl = window.location.pathname.replace(/\/$/, '').split('/').pop();
+// Find the corresponding page data based on the current URL
+const currentPage = pageData.find(page => page.url === currentUrl);
 
-    // Update the "Next" and "Previous" link href attributes
-    const previousLink = document.getElementById('prev');
-    const nextLink = document.getElementById('next');
+// Update the "Next" and "Previous" link href attributes
+const previousLink = document.getElementById('prev');
+const nextLink = document.getElementById('next');
 
     if (currentPage) {
         const previousPage = pageData.find(page => page.next === currentUrl);
@@ -105,15 +104,15 @@ const { title } = Astro.props.frontmatter || Astro.props;
         nextLink.style.display = 'none'; //hide if all else fails
     }
 
-    document.addEventListener('keydown', function(event) {
-        if (event.altKey && event.shiftKey) {
-            if (event.key === 'N') {
-                event.preventDefault();
-                if (nextLink.style.display !== 'none') {
-                    window.location.href = nextLink.href;
-                }
-            } else if (event.key === 'P') {
-                event.preventDefault();
+document.addEventListener('keydown', function(event) {
+    if (event.altKey && event.shiftKey) {
+        if (event.key === 'N') {
+            event.preventDefault();
+        if (nextLink.style.display !== 'none') {
+              window.location.href = nextLink.href;
+          }
+        } else if (event.key === 'P') {
+            event.preventDefault();
                 if (previousLink.style.display !== 'none') {
                     window.location.href = previousLink.href;
                 }
