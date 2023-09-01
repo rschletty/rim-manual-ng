@@ -45,9 +45,9 @@ const { title } = Astro.props.frontmatter || Astro.props;
     <slot />
 </main>
 <footer>
-	<button id="prevBtn">Previous Chapter</button>
-	<button id="nextBtn">Next Chapter</button>
-
+    <a aria-keyshortcuts="Alt+Shift+P" id="prev" href="#">{t('footer.prev')}</a>
+    <a aria-keyshortcuts="Alt+Shift+N" id="next" href="#">{t('footer.next')}</a>
+	<br>
 	<button id="changeLang">{t('footer.langChange')}</button>
 	<ul id="langMenu" style="display: none";>
 	  {Object.entries(languages).map(([lang, label]) => (
@@ -61,53 +61,66 @@ const { title } = Astro.props.frontmatter || Astro.props;
 	<source src="../../components/page.wav" type="audio/wav">
 	</audio>
 	<script>
-		    const sections = document.querySelectorAll('#navList li');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-	const urlParams = new URLSearchParams(window.location.search);
-const initialSectionIndex = parseInt(urlParams.get('section')) || 0;
-let currentSectionIndex = parseInt(localStorage.getItem('currentSectionIndex')) || 0;
-	function updateButtons() {
-    prevBtn.disabled = currentSectionIndex === 0;
-    nextBtn.disabled = currentSectionIndex === sections.length - 1;
-}
-    function loadLink(index) {
-        const link = sections[index].querySelector('a');
-        if (link) {
-			const url = new URL(link.href);
-			url.searchParams.set('section', index.toString());
-			window.location.href = url.toString();
-		}
+
+    // Define an array of page URLs and their corresponding "Next" and "Previous" URLs
+    const pageData = [
+	{ url: '/', next: 'systemspecs'},
+	{ url: 'systemspecs', next: 'installation', previous: '/' },
+        { url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
+        { url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
+        { url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
+        { url: 'dashboard', next: 'faq', previous: 'workingwithsessions' },
+        { url: 'faq', next: 'pricing', previous: 'dashboard' },
+        { url: 'pricing', next: 'changelog', previous: 'faq' },
+        { url: 'changelog', previous: 'pricing' },
+
+    ];
+
+    // Get the current page's URL
+    const currentUrl = window.location.pathname.split('/').pop();
+
+    // Find the corresponding page data based on the current URL
+    const currentPage = pageData.find(page => page.url === currentUrl);
+
+    // Update the "Next" and "Previous" link href attributes
+    const previousLink = document.getElementById('prev');
+    const nextLink = document.getElementById('next');
+
+    if (currentPage) {
+        const previousPage = pageData.find(page => page.next === currentUrl);
+        const nextPage = pageData.find(page => page.previous === currentUrl);
+
+        if (previousPage) {
+            previousLink.href = previousPage.url;
+        } else {
+            previousLink.style.display = 'none'; // Hide link if no previous page
+        }
+
+        if (nextPage) {
+            nextLink.href = nextPage.url;
+        } else {
+            nextLink.style.display = 'none'; // Hide link if no next page
+        }
+    } else {
+        previousLink.style.display = 'none';
+        nextLink.style.display = 'none';
     }
 
-    prevBtn.addEventListener('click', () => {
-        if (currentSectionIndex > 0) {
-            currentSectionIndex--;
-            updateButtons();
-			turnThePage();
-
-            loadLink(currentSectionIndex);
+    document.addEventListener('keydown', function(event) {
+        if (event.altKey && event.shiftKey) {
+            if (event.key === 'N') {
+                event.preventDefault();
+                if (nextLink.style.display !== 'none') {
+                    window.location.href = nextLink.href;
+                }
+            } else if (event.key === 'P') {
+                event.preventDefault();
+                if (previousLink.style.display !== 'none') {
+                    window.location.href = previousLink.href;
+                }
+            }
         }
     });
-
-    nextBtn.addEventListener('click', () => {
-        if (currentSectionIndex < sections.length - 1) {
-            currentSectionIndex++;
-            updateButtons();
-			turnThePage();
-
-            loadLink(currentSectionIndex);
-        }
-    });
-	window.addEventListener('beforeunload', () => {
-    localStorage.setItem('currentSectionIndex', currentSectionIndex.toString());
-});
-function turnThePage() {
-	const pageTurn= document.getElementById("pageTurn");
-	pageTurn.play();
-}
-    // Initial setup
-    updateButtons();
 	function ariaAlert(message) {
 		const alertDiv = document.createElement('div');
 		alertDiv.setAttribute('role', 'alert');

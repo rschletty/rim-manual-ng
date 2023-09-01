@@ -20,6 +20,8 @@ export const ui = {
     'nav.faq': 'Frequently Asked Questions',
     'nav.pricing': 'Pricing',
     'nav.changelog': 'Change Log',
+    'footer.prev': 'Previous Section',
+    'footer.next': 'Next Section',
     'footer.langChange': 'Change Language',
   },
   es: {
@@ -32,6 +34,8 @@ export const ui = {
     'nav.faq': 'Preguntas frecuentes',
     'nav.pricing': 'Precios',
     'nav.changelog': 'Registro de cambios',
+    'footer.prev': 'Sección anterior',
+    'footer.next': 'Sección siguiente',
     'footer.langChange': 'Cambiar idioma',
 
   },
