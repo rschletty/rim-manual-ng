@@ -2,6 +2,8 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { languages } from '../i18n/ui';
+import '../css/general.css';
+import '../css/variables.css';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -17,16 +19,12 @@ const { title } = Astro.props.frontmatter || Astro.props;
   </head>
   <body>
     <div class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header logo">
-		  <a class="navbar-brand" href="#">Pneuma Solutions</a>
-<br>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-			Navigation <span class="navbar-toggler-icon"></span>
-		  </button>
-				</div>
-
-		 <div class="collapse navbar-collapse" id="navbarContent">
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto px-0">
+            <div id="sidebar" class="collapse show collapse-horizontal" aria-expanded="true">
+                <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
+   			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
 			<li class="nav-item"><a class="nav-link" href="../">{t('nav.welcome')}</a></li>
 			<li class="nav-item"><a class="nav-link" href={`../../${lang}/systemspecs`}>{t('nav.systemspecs')}</a></li>
 			<li class="nav-item"><a class="nav-link" href={`../../${lang}/installation`}>{t('nav.installation')}</a></li>
@@ -37,14 +35,27 @@ const { title } = Astro.props.frontmatter || Astro.props;
 			<li class="nav-item"><a class="nav-link" href={`../../${lang}/pricing`}>{t('nav.pricing')}</a></li>
 			<li class="nav-item"><a class="nav-link" href={`../../${lang}/changelog`}>{t('nav.changelog')}</a></li>
 		</ul>
-</div>
-</div>
-</div>
-<main>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <main class="col ps-md-2 pt-2">
+       <a href="https://pneumasolutions.com"><img src="/public/pneuma-solutions-logo-400px-wide.png" alt="Pneuma Solutions logo" width="180" /></a>
+       <hr></p>
+        <button data-bs-target="#sidebar" data-bs-toggle="collapse" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+			Navigation <span class="navbar-toggler-icon"></span>
+		  </button> 
+		    
+<div class="page-header pt-3">
 		<h1>{title}</h1>
+	</div>
     <slot />
 </main>
-<footer>
+</div>
+<footer text-center position-relative">
+  <!-- Grid container -->
+  <div class="container p-4">
     <a id="prev" href="#" aria-keyshortcuts="Alt+Shift+P">{t('footer.prev')}</a>
     <a id="next" href="#" aria-keyshortcuts="Alt+Shift+N">{t('footer.next')}</a>
 	<br>
@@ -137,6 +148,7 @@ document.addEventListener('keydown', function(event) {
 		}
 	  });
 	  </script>
+
 
 </footer>
 <script>
