@@ -1,0 +1,158 @@
+---
+import 'bootstrap/dist/css/bootstrap.css'
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+import '../css/general.css';
+import '../css/variables.css';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { title } = Astro.props.frontmatter || Astro.props;
+
+---
+<html lang={lang}>
+  <head>
+  <title>{title}</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto px-0">
+            <div id="sidebar" class="collapse show collapse-horizontal" aria-expanded="true">
+                <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
+   			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
+			<li class="nav-item"><a class="nav-link" href="../">{t('nav.welcome')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/systemspecs`}>{t('nav.systemspecs')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/installation`}>{t('nav.installation')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/gettingconnected`}>{t('nav.gettingconnected')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/workingwithsessions`}>{t('nav.workingwithsessions')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/dashboard`}>{t('nav.dashboard')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/faq`}>{t('nav.faq')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/pricing`}>{t('nav.pricing')}</a></li>
+			<li class="nav-item"><a class="nav-link" href={`../../${lang}/changelog`}>{t('nav.changelog')}</a></li>
+		</ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <main class="col ps-md-2 pt-2">
+       <a href="https://pneumasolutions.com"><img src="/public/pneuma-solutions-logo-400px-wide.png" alt="Pneuma Solutions logo" width="180" /></a>
+       <hr></p>
+        <button data-bs-target="#sidebar" data-bs-toggle="collapse" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+			Navigation <span class="navbar-toggler-icon"></span>
+		  </button> 
+		    
+<div class="page-header pt-3">
+		<h1>{title}</h1>
+	</div>
+    <slot />
+</main>
+</div>
+<footer text-center position-relative">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <a id="prev" href="#" aria-keyshortcuts="Alt+Shift+P">{t('footer.prev')}</a>
+    <a id="next" href="#" aria-keyshortcuts="Alt+Shift+N">{t('footer.next')}</a>
+	<br>
+	<button id="changeLang">{t('footer.langChange')}</button>
+	<ul id="langMenu" style="display: none";>
+	  {Object.entries(languages).map(([lang, label]) => (
+		<li>
+		  <a href={`/${lang}/`}>{label}</a>
+		</li>
+	  ))}
+	</ul>
+	<script>
+    // Define an array of page URLs and their adjacent URLs
+    const pageData = [
+	{ url: '', next: 'systemspecs', previous: null},
+	{ url: 'systemspecs', next: 'installation', previous: '' },
+	{ url: 'installation', next: 'gettingconnected', previous: 'systemspecs' },
+	{ url: 'gettingconnected', next: 'workingwithsessions', previous: 'installation'},
+	{ url: 'workingwithsessions', next: 'dashboard', previous: 'gettingconnected' },
+	{ url: 'dashboard', next: 'faq', previous: 'workingwithsessions' },
+	{ url: 'faq', next: 'pricing', previous: 'dashboard' },
+	{ url: 'pricing', next: 'changelog', previous: 'faq' },
+	{ url: 'changelog', next: null, previous: 'pricing' },
+
+];
+
+// Get the current page's URL
+const currentUrl = window.location.pathname.replace(/\/$/, '').split('/').pop();
+// Find the corresponding page data based on the current URL
+const currentPage = pageData.find(page => page.url === currentUrl);
+
+// Update the "Next" and "Previous" link href attributes
+const previousLink = document.getElementById('prev');
+const nextLink = document.getElementById('next');
+
+    if (currentPage) {
+        const previousPage = pageData.find(page => page.next === currentUrl);
+        const nextPage = pageData.find(page => page.previous === currentUrl);
+
+        if (previousPage) {
+            previousLink.href = '../'+previousPage.url;
+        } else {
+            previousLink.style.display = 'none'; // Hide link if no previous page
+        }
+
+        if (nextPage) {
+            nextLink.href = '../'+nextPage.url;
+        } else {
+            nextLink.style.display = 'none'; // Hide link if no next page
+        }
+    } else {
+        previousLink.style.display = 'none'; //hide if all else fails
+        nextLink.style.display = 'none'; //hide if all else fails
+    }
+
+document.addEventListener('keydown', function(event) {
+    if (event.altKey && event.shiftKey) {
+        if (event.key === 'N') {
+            event.preventDefault();
+        if (nextLink.style.display !== 'none') {
+              window.location.href = nextLink.href;
+          }
+        } else if (event.key === 'P') {
+            event.preventDefault();
+                if (previousLink.style.display !== 'none') {
+                    window.location.href = previousLink.href;
+                }
+            }
+        }
+    });
+	function ariaAlert(message) {
+		const alertDiv = document.createElement('div');
+		alertDiv.setAttribute('role', 'alert');
+		alertDiv.textContent = message;
+		alertDiv.style.position = 'absolute';
+		alertDiv.style.left = '-9999px';
+		document.body.appendChild(alertDiv);
+		setTimeout(() => {
+			document.body.removeChild(alertDiv);
+		}, 1000);
+	}
+	document.getElementById('changeLang').addEventListener('click', () => {
+		const languageList = document.getElementById('langMenu');
+		if (languageList.style.display === 'none') {
+		  languageList.style.display = 'block';
+		  ariaAlert("Select a language from the list below.");
+		} else {
+		  languageList.style.display = 'none';
+		  ariaAlert("Keeping language as is.");
+		}
+	  });
+	  </script>
+
+
+</footer>
+<script>
+  import 'bootstrap/js/dist/collapse';
+</script>
+</body>
+</html>
